@@ -1,0 +1,85 @@
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : demo
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 1000
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ RouterCollection: 21,528 params (24 × Linear(896,1))
+  ✓ Adapters loaded ← checkpoints/best_adapters.pt
+
+═══════════════════════════════════════════════════════
+  CONFGATE v6 DEMO
+  LoRA + Hard-Gated Skip Connections
+═══════════════════════════════════════════════════════
+
+[TOOL CALL] "<tool_call> search_database(table='AUFK', filter='AUFNR=100023')"
+  Layers run : 21/24  (skip 12.5%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'The'           p=0.1543
+    'A'             p=0.1367
+    'There'         p=0.0728
+    'SELECT'        p=0.0728
+    'You'           p=0.0442
+
+[TOOL CALL] '<tool_call> get_work_order_status(id=78234, priority=True)'
+  Layers run : 21/24  (skip 12.5%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'The'           p=0.4004
+    'There'         p=0.0894
+    'get'           p=0.0371
+    'We'            p=0.0349
+    'A'             p=0.0349
+
+[PLANNING] 'Given the current backlog of 450 open work orders across 3 plants'
+  Layers run : 23/24  (skip 4.2%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'The'           p=0.1699
+    'First'         p=0.1699
+    '1'             p=0.1030
+    'To'            p=0.0908
+    'A'             p=0.0430
+
+[PLANNING] 'Analyze the root cause of recurring pump failures in Plant B and '
+  Layers run : 22/24  (skip 8.3%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'The'           p=0.2324
+    'Plant'         p=0.0588
+    'An'            p=0.0457
+    'Root'          p=0.0356
+    'A'             p=0.0356
+
+═══════════════════════════════════════════════════════
+  GATE VALUES (lower = layer more often skipped)
+  Layer  0: 0.7167  ██████████████
+  Layer  1: 0.7242  ██████████████
+  Layer  2: 0.7283  ██████████████
+  Layer  3: 0.7265  ██████████████
+  Layer  4: 0.7259  ██████████████
+  Layer  5: 0.7277  ██████████████
+  Layer  6: 0.7287  ██████████████
+  Layer  7: 0.7280  ██████████████
+  Layer  8: 0.2731  █████
+  Layer  9: 0.2733  █████
+  Layer 10: 0.2733  █████
+  Layer 11: 0.2734  █████
+  Layer 12: 0.2736  █████
+  Layer 13: 0.2736  █████
+  Layer 14: 0.2733  █████
+  Layer 15: 0.2734  █████
+  Layer 16: 0.2732  █████
+  Layer 17: 0.7270  ██████████████
+  Layer 18: 0.7276  ██████████████
+  Layer 19: 0.7282  ██████████████
+  Layer 20: 0.7285  ██████████████
+  Layer 21: 0.7288  ██████████████
+  Layer 22: 0.7291  ██████████████
+  Layer 23: 0.7295  ██████████████

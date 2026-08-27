@@ -1,0 +1,40 @@
+/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Instantiating Qwen2Attention without passing `layer_idx` is not recommended and will to errors during the forward call, if caching is used. Please make sure to provide a `layer_idx` when creating this class.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+(Re-)Loading modeling...
+(Re-)Loading Qwen2 modeling...
+Output to outputs/cnndm/cnndm_10/model_answer/qwen2.5-0.5b/qwen2.5-0.5b-swift-bfloat16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512-opt_interval-1-bayes_interval-25-max_opt-1000-max_tolerance-300-max_score-0.93-context_window-50-skip_ratio-0.4.jsonl
+Check model training state: False
+CUDA VISIBLE DEVICES: None
+  0%|          | 0/10 [00:00<?, ?it/s]  0%|          | 0/10 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/workspace/swift_original/evaluation_llama/inference_swift.py", line 312, in <module>
+    run_eval(
+  File "/workspace/swift_original/evaluation_llama/eval.py", line 96, in run_eval
+    get_answers_func(
+  File "/usr/local/lib/python3.11/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/swift_original/evaluation_llama/eval.py", line 142, in get_model_answers
+    output_ids, new_token_num, step, accept_length_tree, draft_token_num = forward_func(
+                                                                           ^^^^^^^^^^^^^
+  File "/workspace/swift_original/evaluation_llama/inference_swift.py", line 40, in swift_forward
+    swift_logits, sample_token, top1_prob = initialize_swift(input_ids, model, max_new_tokens,
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/swift_original/model/swift/utils.py", line 328, in initialize_swift
+    swift_logits, top1_prob = swift_draft(
+                              ^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/swift_original/model/swift/utils.py", line 446, in swift_draft
+    with model.self_draft():
+         ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/dist-packages/torch/nn/modules/module.py", line 1928, in __getattr__
+    raise AttributeError(
+AttributeError: 'Qwen2ForCausalLM' object has no attribute 'self_draft'

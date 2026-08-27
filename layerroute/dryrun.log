@@ -1,0 +1,106 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : train
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 10
+
+[Model] Loading Qwen2.5-0.5B-Instruct + LoRA + Routers...
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:01<08:46,  1.56s/it]Loading weights:   4%|▎         | 12/338 [00:01<00:33,  9.70it/s]Loading weights:   5%|▌         | 18/338 [00:01<00:22, 14.08it/s]Loading weights:   8%|▊         | 26/338 [00:02<00:16, 19.24it/s]Loading weights:   9%|▉         | 31/338 [00:02<00:15, 19.65it/s]Loading weights:  12%|█▏        | 39/338 [00:02<00:16, 18.47it/s]Loading weights:  12%|█▏        | 42/338 [00:02<00:16, 17.93it/s]Loading weights:  14%|█▍        | 49/338 [00:03<00:11, 24.46it/s]Loading weights:  16%|█▌        | 53/338 [00:03<00:22, 12.86it/s]Loading weights:  19%|█▊        | 63/338 [00:04<00:16, 16.99it/s]Loading weights:  20%|█▉        | 66/338 [00:04<00:14, 18.25it/s]Loading weights:  22%|██▏       | 75/338 [00:04<00:12, 21.19it/s]Loading weights:  23%|██▎       | 78/338 [00:04<00:13, 19.92it/s]Loading weights:  26%|██▌       | 88/338 [00:05<00:11, 22.52it/s]Loading weights:  29%|██▉       | 99/338 [00:05<00:10, 23.59it/s]Loading weights:  33%|███▎      | 111/338 [00:05<00:07, 29.33it/s]Loading weights:  34%|███▍      | 115/338 [00:06<00:07, 29.43it/s]Loading weights:  36%|███▋      | 123/338 [00:06<00:06, 34.94it/s]Loading weights:  38%|███▊      | 127/338 [00:06<00:07, 29.27it/s]Loading weights:  41%|████      | 137/338 [00:06<00:05, 35.83it/s]Loading weights:  46%|████▋     | 157/338 [00:06<00:02, 61.40it/s]Loading weights:  49%|████▉     | 165/338 [00:07<00:05, 32.08it/s]Loading weights:  51%|█████     | 171/338 [00:07<00:05, 32.64it/s]Loading weights:  52%|█████▏    | 177/338 [00:07<00:05, 31.72it/s]Loading weights:  54%|█████▍    | 184/338 [00:07<00:04, 36.79it/s]Loading weights:  58%|█████▊    | 195/338 [00:08<00:03, 38.34it/s]Loading weights:  59%|█████▉    | 200/338 [00:08<00:03, 35.80it/s]Loading weights:  61%|██████    | 205/338 [00:08<00:03, 36.63it/s]Loading weights:  65%|██████▍   | 219/338 [00:08<00:02, 45.20it/s]Loading weights:  66%|██████▋   | 224/338 [00:08<00:03, 34.51it/s]Loading weights:  71%|███████▏  | 241/338 [00:09<00:01, 55.09it/s]Loading weights:  74%|███████▎  | 249/338 [00:09<00:02, 43.87it/s]Loading weights:  75%|███████▌  | 255/338 [00:09<00:02, 33.48it/s]Loading weights:  77%|███████▋  | 260/338 [00:09<00:02, 33.49it/s]Loading weights:  79%|███████▉  | 267/338 [00:09<00:01, 36.45it/s]Loading weights:  80%|████████  | 272/338 [00:10<00:02, 28.37it/s]Loading weights:  83%|████████▎ | 279/338 [00:10<00:02, 23.85it/s]Loading weights:  84%|████████▎ | 283/338 [00:10<00:02, 24.93it/s]Loading weights:  86%|████████▌ | 291/338 [00:11<00:01, 28.69it/s]Loading weights:  87%|████████▋ | 295/338 [00:11<00:01, 27.60it/s]Loading weights:  88%|████████▊ | 299/338 [00:11<00:01, 27.46it/s]Loading weights:  90%|█████████ | 305/338 [00:11<00:01, 29.79it/s]Loading weights:  96%|█████████▌| 324/338 [00:11<00:00, 59.15it/s]Loading weights:  98%|█████████▊| 332/338 [00:12<00:00, 35.37it/s]Loading weights: 100%|██████████| 338/338 [00:12<00:00, 27.77it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ RouterCollection: 43,036 params (24 × Linear(1536,1))
+  Trainable : 2,222,108
+  Total     : 1,545,936,412
+
+[Data] Building dataloaders...
+
+  Loading datasets...
+  [Hermes] Loading...
+  [Hermes] 1,893 conversations
+  [Glaive] Loading...
+  [Glaive] 5,000 conversations
+  [GSM8K] Loading...
+  [GSM8K] 5,000 conversations
+  [Turing] Loading...
+  [Turing] 50 conversations
+
+  Train: 10,749 samples (2687 batches)
+  Val  : 1,194 samples (299 batches)
+
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  Trainable params : 2,222,108
+  Total params     : 1,545,936,412
+  LoRA rank        : 8
+  Grad accum       : 4 (effective batch=16)
+  Max steps        : 10
+  LR               : 0.0002
+=======================================================
+
+
+  Training complete. Best val loss: inf
+  Total time: 4s
+
+  Final gate values (lower = more often skipped):
+  Layer  0: 0.7311  ██████████████
+  Layer  1: 0.7311  ██████████████
+  Layer  2: 0.7311  ██████████████
+  Layer  3: 0.7310  ██████████████
+  Layer  4: 0.7310  ██████████████
+  Layer  5: 0.7311  ██████████████
+  Layer  6: 0.7310  ██████████████
+  Layer  7: 0.7310  ██████████████
+  Layer  8: 0.2690  █████
+  Layer  9: 0.2690  █████
+  Layer 10: 0.2690  █████
+  Layer 11: 0.2690  █████
+  Layer 12: 0.2690  █████
+  Layer 13: 0.2690  █████
+  Layer 14: 0.2690  █████
+  Layer 15: 0.2690  █████
+  Layer 16: 0.2690  █████
+  Layer 17: 0.7310  ██████████████
+  Layer 18: 0.7310  ██████████████
+  Layer 19: 0.7310  ██████████████
+  Layer 20: 0.7310  ██████████████
+  Layer 21: 0.7310  ██████████████
+  Layer 22: 0.7310  ██████████████
+  Layer 23: 0.7311  ██████████████
+  Layer 24: 0.7310  ██████████████
+  Layer 25: 0.7310  ██████████████
+  Layer 26: 0.7311  ██████████████
+  Layer 27: 0.7310  ██████████████
+  Logs → ./checkpoints_dryrun/
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   4%|▍         | 15/338 [00:00<00:02, 149.91it/s]Loading weights:  15%|█▌        | 51/338 [00:00<00:01, 267.72it/s]Loading weights:  23%|██▎       | 78/338 [00:00<00:00, 265.21it/s]Loading weights:  33%|███▎      | 110/338 [00:00<00:00, 260.59it/s]Loading weights:  43%|████▎     | 147/338 [00:00<00:00, 295.75it/s]Loading weights:  52%|█████▏    | 177/338 [00:00<00:00, 288.70it/s]Loading weights:  62%|██████▏   | 208/338 [00:00<00:00, 291.23it/s]Loading weights:  72%|███████▏  | 243/338 [00:00<00:00, 284.68it/s]Loading weights:  83%|████████▎ | 280/338 [00:00<00:00, 303.76it/s]Loading weights:  93%|█████████▎| 314/338 [00:01<00:00, 300.90it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 293.33it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ RouterCollection: 43,036 params (24 × Linear(1536,1))
+Traceback (most recent call last):
+  File "/workspace/layerroute/main.py", line 197, in <module>
+    run_train(args)
+  File "/workspace/layerroute/main.py", line 85, in run_train
+    run_demo(args)
+  File "/workspace/layerroute/main.py", line 94, in run_demo
+    model.load_adapters(args.ckpt)
+  File "/workspace/layerroute/models/gated_qwen.py", line 208, in load_adapters
+    state = torch.load(path, map_location="cpu", weights_only=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './checkpoints_dryrun/best_adapters.pt'

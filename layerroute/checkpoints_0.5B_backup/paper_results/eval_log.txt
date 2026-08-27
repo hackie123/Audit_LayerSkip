@@ -1,0 +1,33 @@
+============================================================
+  CONFGATE v6 — PAPER EVALUATION
+============================================================
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ RouterCollection: 21,528 params (24 × Linear(896,1))
+  ✓ Adapters loaded ← checkpoints/best_adapters.pt
+
+[Data] Loading eval samples...
+  tool_call: 50 samples
+  planning: 50 samples
+
+[1/6] Gate values...
+  Saved → checkpoints/paper_results/gate_values.csv
+  Range: [0.2731, 0.7295]
+  Layers with gate < 0.5 (skip candidates): 9
+
+[2/6] Routing by step type (100 samples)...
+  Saved → checkpoints/paper_results/routing_by_type.csv
+  tool_call: avg_layers=22.68/24  skip=5.51%
+  planning : avg_layers=21.38/24  skip=10.92%
+
+[3/6] Perplexity — gated vs baseline (100 samples)...
+Traceback (most recent call last):
+  File "/workspace/conf_gate6/evaluate.py", line 389, in <module>
+    all_metrics["quality"] = eval_perplexity(model, samples, tok, cfg, out_dir)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/conf_gate6/evaluate.py", line 170, in eval_perplexity
+    r.linear.bias.data.fill_(cfg.router.init_bias)
+                             ^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'RouterConfig' object has no attribute 'init_bias'

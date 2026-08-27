@@ -1,0 +1,4 @@
+config,avg_layers,flops_per_seq,reduction_pct
+Full model (no skip),24,377688686592,0.0
+tool_call (avg 20.3 layers),20.34,320091161886,15.2
+planning (avg 23.4 layers),23.44,368875950571,2.3

@@ -1,0 +1,444 @@
+/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Instantiating Qwen2Attention without passing `layer_idx` is not recommended and will to errors during the forward call, if caching is used. Please make sure to provide a `layer_idx` when creating this class.
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+(Re-)Loading modeling...
+(Re-)Loading Qwen2 modeling...
+Output to outputs/cnndm/cnndm_10/model_answer/qwen2.5-0.5b/qwen2.5-0.5b-swift-bfloat16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512-opt_interval-1-bayes_interval-25-max_opt-1000-max_tolerance-300-max_score-0.93-context_window-50-skip_ratio-0.4.jsonl
+Check model training state: False
+CUDA VISIBLE DEVICES: None
+  0%|          | 0/10 [00:00<?, ?it/s]opt_iter 0, matchness 0.5800
+==============================matchness changed from 0.0000 to 0.5800==============================
+opt_iter 1, matchness 0.0400
+opt_iter 2, matchness 0.1800
+opt_iter 3, matchness 0.1600
+opt_iter 4, matchness 0.0200
+opt_iter 5, matchness 0.0400
+opt_iter 6, matchness 0.5000
+opt_iter 7, matchness 0.0800
+opt_iter 8, matchness 0.0400
+opt_iter 9, matchness 0.1200
+opt_iter 10, matchness 0.0400
+opt_iter 11, matchness 0.1000
+opt_iter 12, matchness 0.0600
+opt_iter 13, matchness 0.1400
+opt_iter 14, matchness 0.0400
+opt_iter 15, matchness 0.5000
+opt_iter 16, matchness 0.0800
+opt_iter 17, matchness 0.0400
+opt_iter 18, matchness 0.4800
+opt_iter 19, matchness 0.0400
+opt_iter 20, matchness 0.0200
+opt_iter 21, matchness 0.1800
+opt_iter 22, matchness 0.0000
+opt_iter 23, matchness 0.2000
+******************************Bayes Search!******************************
+opt_iter 24, matchness 0.5800
+opt_iter 25, matchness 0.0200
+opt_iter 26, matchness 0.0200
+opt_iter 27, matchness 0.1000
+opt_iter 28, matchness 0.0600
+opt_iter 29, matchness 0.2400
+opt_iter 30, matchness 0.0000
+opt_iter 31, matchness 0.0400
+opt_iter 32, matchness 0.0800
+opt_iter 33, matchness 0.0400
+opt_iter 34, matchness 0.0800
+opt_iter 35, matchness 0.0400
+opt_iter 36, matchness 0.0400
+opt_iter 37, matchness 0.0400
+opt_iter 38, matchness 0.2000
+opt_iter 39, matchness 0.0000
+opt_iter 40, matchness 0.0200
+opt_iter 41, matchness 0.0200
+opt_iter 42, matchness 0.2600
+opt_iter 43, matchness 0.1200
+opt_iter 44, matchness 0.0600
+opt_iter 45, matchness 0.0600
+opt_iter 46, matchness 0.1800
+opt_iter 47, matchness 0.0400
+opt_iter 48, matchness 0.1400
+******************************Bayes Search!******************************
+opt_iter 49, matchness 0.5800
+opt_iter 50, matchness 0.2400
+opt_iter 51, matchness 0.0000
+opt_iter 52, matchness 0.1200
+opt_iter 53, matchness 0.0800
+opt_iter 54, matchness 0.2200
+opt_iter 55, matchness 0.0600
+opt_iter 56, matchness 0.1000
+opt_iter 57, matchness 0.0400
+opt_iter 58, matchness 0.0400
+opt_iter 59, matchness 0.2200
+opt_iter 60, matchness 0.0000
+opt_iter 61, matchness 0.1000
+opt_iter 62, matchness 0.0800
+opt_iter 63, matchness 0.0800
+opt_iter 64, matchness 0.1400
+opt_iter 65, matchness 0.0800
+opt_iter 66, matchness 0.0400
+opt_iter 67, matchness 0.0800
+opt_iter 68, matchness 0.0000
+opt_iter 69, matchness 0.2200
+opt_iter 70, matchness 0.0400
+opt_iter 71, matchness 0.1200
+opt_iter 72, matchness 0.2000
+opt_iter 73, matchness 0.0600
+******************************Bayes Search!******************************
+opt_iter 74, matchness 0.5600
+opt_iter 75, matchness 0.1600
+opt_iter 76, matchness 0.1400
+opt_iter 77, matchness 0.0800
+opt_iter 78, matchness 0.0800
+opt_iter 79, matchness 0.2600
+opt_iter 80, matchness 0.0400
+opt_iter 81, matchness 0.1000
+opt_iter 82, matchness 0.1200
+opt_iter 83, matchness 0.0200
+opt_iter 84, matchness 0.4200
+opt_iter 85, matchness 0.1200
+opt_iter 86, matchness 0.0000
+opt_iter 87, matchness 0.1600
+opt_iter 88, matchness 0.0200
+opt_iter 89, matchness 0.0400
+opt_iter 90, matchness 0.1800
+opt_iter 91, matchness 0.0200
+opt_iter 92, matchness 0.1000
+opt_iter 93, matchness 0.0000
+opt_iter 94, matchness 0.1000
+opt_iter 95, matchness 0.0800
+opt_iter 96, matchness 0.0800
+opt_iter 97, matchness 0.1600
+opt_iter 98, matchness 0.0200
+******************************Bayes Search!******************************
+opt_iter 99, matchness 0.6400
+==============================matchness changed from 0.5800 to 0.6400==============================
+opt_iter 100, matchness 0.0400
+opt_iter 101, matchness 0.0200
+opt_iter 102, matchness 0.1200
+opt_iter 103, matchness 0.0400
+opt_iter 104, matchness 0.3000
+opt_iter 105, matchness 0.1000
+opt_iter 106, matchness 0.0200
+opt_iter 107, matchness 0.1000
+opt_iter 108, matchness 0.4200
+opt_iter 109, matchness 0.0200
+opt_iter 110, matchness 0.0200
+opt_iter 111, matchness 0.0400
+opt_iter 112, matchness 0.2000
+opt_iter 113, matchness 0.0800
+opt_iter 114, matchness 0.0800
+opt_iter 115, matchness 0.1400
+opt_iter 116, matchness 0.0600
+opt_iter 117, matchness 0.0600
+opt_iter 118, matchness 0.3400
+opt_iter 119, matchness 0.0400
+opt_iter 120, matchness 0.2400
+opt_iter 121, matchness 0.0200
+opt_iter 122, matchness 0.0400
+opt_iter 123, matchness 0.2000
+******************************Bayes Search!******************************
+opt_iter 124, matchness 0.4000
+opt_iter 125, matchness 0.0000
+opt_iter 126, matchness 0.0800
+opt_iter 127, matchness 0.0000
+opt_iter 128, matchness 0.0800
+opt_iter 129, matchness 0.0000
+opt_iter 130, matchness 0.2200
+opt_iter 131, matchness 0.2200
+opt_iter 132, matchness 0.1600
+opt_iter 133, matchness 0.2400
+opt_iter 134, matchness 0.1400
+opt_iter 135, matchness 0.0200
+opt_iter 136, matchness 0.0400
+opt_iter 137, matchness 0.1800
+opt_iter 138, matchness 0.0400
+opt_iter 139, matchness 0.1200
+opt_iter 140, matchness 0.0400
+opt_iter 141, matchness 0.1000
+opt_iter 142, matchness 0.2000
+opt_iter 143, matchness 0.0000
+opt_iter 144, matchness 0.1000
+opt_iter 145, matchness 0.0200
+opt_iter 146, matchness 0.0000
+opt_iter 147, matchness 0.0000
+opt_iter 148, matchness 0.0000
+******************************Bayes Search!******************************
+opt_iter 149, matchness 0.6400
+opt_iter 150, matchness 0.1200
+opt_iter 151, matchness 0.0200
+opt_iter 152, matchness 0.0000
+opt_iter 153, matchness 0.0400
+opt_iter 154, matchness 0.0000
+opt_iter 155, matchness 0.2200
+opt_iter 156, matchness 0.1800
+opt_iter 157, matchness 0.3000
+opt_iter 158, matchness 0.0600
+opt_iter 159, matchness 0.2800
+opt_iter 160, matchness 0.0800
+opt_iter 161, matchness 0.3000
+opt_iter 162, matchness 0.0600
+opt_iter 163, matchness 0.0600
+opt_iter 164, matchness 0.0200
+opt_iter 165, matchness 0.0400
+opt_iter 166, matchness 0.0600
+opt_iter 167, matchness 0.2800
+opt_iter 168, matchness 0.0600
+opt_iter 169, matchness 0.0200
+opt_iter 170, matchness 0.1400
+opt_iter 171, matchness 0.1200
+opt_iter 172, matchness 0.0800
+opt_iter 173, matchness 0.0400
+******************************Bayes Search!******************************
+opt_iter 174, matchness 0.6400
+opt_iter 175, matchness 0.1600
+opt_iter 176, matchness 0.0800
+opt_iter 177, matchness 0.4400
+opt_iter 178, matchness 0.0000
+opt_iter 179, matchness 0.1600
+opt_iter 180, matchness 0.2200
+opt_iter 181, matchness 0.2200
+opt_iter 182, matchness 0.0000
+opt_iter 183, matchness 0.1800
+opt_iter 184, matchness 0.0600
+opt_iter 185, matchness 0.1600
+opt_iter 186, matchness 0.2800
+opt_iter 187, matchness 0.2400
+opt_iter 188, matchness 0.0600
+opt_iter 189, matchness 0.0600
+opt_iter 190, matchness 0.0400
+opt_iter 191, matchness 0.2200
+opt_iter 192, matchness 0.2600
+opt_iter 193, matchness 0.0200
+opt_iter 194, matchness 0.0600
+opt_iter 195, matchness 0.2800
+opt_iter 196, matchness 0.1600
+opt_iter 197, matchness 0.1600
+opt_iter 198, matchness 0.1400
+******************************Bayes Search!******************************
+opt_iter 199, matchness 0.5800
+opt_iter 200, matchness 0.1800
+opt_iter 201, matchness 0.0600
+opt_iter 202, matchness 0.0600
+opt_iter 203, matchness 0.0400
+opt_iter 204, matchness 0.1400
+opt_iter 205, matchness 0.0400
+opt_iter 206, matchness 0.0600
+opt_iter 207, matchness 0.1000
+opt_iter 208, matchness 0.0400
+token acceptance rate: 0.7565982404692082
+ 10%|█         | 1/10 [00:40<06:07, 40.87s/it]opt_iter 209, matchness 0.0800
+opt_iter 210, matchness 0.2200
+opt_iter 211, matchness 0.0400
+opt_iter 212, matchness 0.2600
+opt_iter 213, matchness 0.0800
+opt_iter 214, matchness 0.0400
+opt_iter 215, matchness 0.1800
+opt_iter 216, matchness 0.2000
+opt_iter 217, matchness 0.0600
+opt_iter 218, matchness 0.0600
+opt_iter 219, matchness 0.0400
+opt_iter 220, matchness 0.0800
+opt_iter 221, matchness 0.0000
+opt_iter 222, matchness 0.0000
+opt_iter 223, matchness 0.1400
+******************************Bayes Search!******************************
+opt_iter 224, matchness 0.3800
+opt_iter 225, matchness 0.2400
+opt_iter 226, matchness 0.2600
+opt_iter 227, matchness 0.0200
+opt_iter 228, matchness 0.1600
+opt_iter 229, matchness 0.0800
+opt_iter 230, matchness 0.0000
+opt_iter 231, matchness 0.0800
+opt_iter 232, matchness 0.1600
+opt_iter 233, matchness 0.0800
+opt_iter 234, matchness 0.3200
+opt_iter 235, matchness 0.0400
+opt_iter 236, matchness 0.2200
+opt_iter 237, matchness 0.0200
+opt_iter 238, matchness 0.1600
+opt_iter 239, matchness 0.1600
+opt_iter 240, matchness 0.0600
+opt_iter 241, matchness 0.0600
+opt_iter 242, matchness 0.2000
+opt_iter 243, matchness 0.2200
+opt_iter 244, matchness 0.1200
+opt_iter 245, matchness 0.0400
+opt_iter 246, matchness 0.2800
+opt_iter 247, matchness 0.0800
+opt_iter 248, matchness 0.1200
+******************************Bayes Search!******************************
+opt_iter 249, matchness 0.4000
+opt_iter 250, matchness 0.2200
+opt_iter 251, matchness 0.0400
+opt_iter 252, matchness 0.4000
+opt_iter 253, matchness 0.3600
+opt_iter 254, matchness 0.0400
+opt_iter 255, matchness 0.1200
+opt_iter 256, matchness 0.0200
+opt_iter 257, matchness 0.1400
+opt_iter 258, matchness 0.0000
+opt_iter 259, matchness 0.1800
+opt_iter 260, matchness 0.0600
+opt_iter 261, matchness 0.0000
+opt_iter 262, matchness 0.0600
+opt_iter 263, matchness 0.1000
+opt_iter 264, matchness 0.0400
+opt_iter 265, matchness 0.1000
+opt_iter 266, matchness 0.2000
+opt_iter 267, matchness 0.0200
+opt_iter 268, matchness 0.0400
+opt_iter 269, matchness 0.0000
+opt_iter 270, matchness 0.1800
+opt_iter 271, matchness 0.1600
+opt_iter 272, matchness 0.1800
+opt_iter 273, matchness 0.1200
+******************************Bayes Search!******************************
+opt_iter 274, matchness 0.4200
+opt_iter 275, matchness 0.0200
+opt_iter 276, matchness 0.0200
+opt_iter 277, matchness 0.1200
+opt_iter 278, matchness 0.0400
+opt_iter 279, matchness 0.0400
+opt_iter 280, matchness 0.2800
+opt_iter 281, matchness 0.0600
+opt_iter 282, matchness 0.1000
+opt_iter 283, matchness 0.1400
+opt_iter 284, matchness 0.2200
+opt_iter 285, matchness 0.0000
+opt_iter 286, matchness 0.0200
+opt_iter 287, matchness 0.0200
+opt_iter 288, matchness 0.0600
+opt_iter 289, matchness 0.0400
+opt_iter 290, matchness 0.0600
+opt_iter 291, matchness 0.0000
+opt_iter 292, matchness 0.0000
+opt_iter 293, matchness 0.0800
+opt_iter 294, matchness 0.1400
+opt_iter 295, matchness 0.3000
+opt_iter 296, matchness 0.0000
+opt_iter 297, matchness 0.1400
+opt_iter 298, matchness 0.1800
+******************************Bayes Search!******************************
+opt_iter 299, matchness 0.3000
+opt_iter 300, matchness 0.1800
+opt_iter 301, matchness 0.0600
+opt_iter 302, matchness 0.0600
+opt_iter 303, matchness 0.0600
+opt_iter 304, matchness 0.0600
+opt_iter 305, matchness 0.0800
+opt_iter 306, matchness 0.2200
+opt_iter 307, matchness 0.1600
+opt_iter 308, matchness 0.0000
+opt_iter 309, matchness 0.2000
+opt_iter 310, matchness 0.2600
+opt_iter 311, matchness 0.0600
+opt_iter 312, matchness 0.1000
+opt_iter 313, matchness 0.0600
+opt_iter 314, matchness 0.0200
+opt_iter 315, matchness 0.0600
+opt_iter 316, matchness 0.0800
+opt_iter 317, matchness 0.2400
+opt_iter 318, matchness 0.1400
+opt_iter 319, matchness 0.1400
+opt_iter 320, matchness 0.0000
+opt_iter 321, matchness 0.0200
+opt_iter 322, matchness 0.1000
+opt_iter 323, matchness 0.0000
+******************************Bayes Search!******************************
+opt_iter 324, matchness 0.3000
+opt_iter 325, matchness 0.0200
+opt_iter 326, matchness 0.2600
+opt_iter 327, matchness 0.4000
+opt_iter 328, matchness 0.0000
+opt_iter 329, matchness 0.3000
+opt_iter 330, matchness 0.0200
+opt_iter 331, matchness 0.2400
+opt_iter 332, matchness 0.1200
+opt_iter 333, matchness 0.1800
+opt_iter 334, matchness 0.2600
+opt_iter 335, matchness 0.1800
+opt_iter 336, matchness 0.1200
+opt_iter 337, matchness 0.0000
+opt_iter 338, matchness 0.1400
+opt_iter 339, matchness 0.0000
+opt_iter 340, matchness 0.3000
+opt_iter 341, matchness 0.0000
+opt_iter 342, matchness 0.1400
+opt_iter 343, matchness 0.1600
+opt_iter 344, matchness 0.1400
+opt_iter 345, matchness 0.0000
+opt_iter 346, matchness 0.0000
+opt_iter 347, matchness 0.1200
+opt_iter 348, matchness 0.2200
+******************************Bayes Search!******************************
+opt_iter 349, matchness 0.3800
+opt_iter 350, matchness 0.1000
+opt_iter 351, matchness 0.0200
+opt_iter 352, matchness 0.0600
+opt_iter 353, matchness 0.0000
+opt_iter 354, matchness 0.2800
+opt_iter 355, matchness 0.1400
+opt_iter 356, matchness 0.2800
+opt_iter 357, matchness 0.0600
+opt_iter 358, matchness 0.2800
+opt_iter 359, matchness 0.0400
+opt_iter 360, matchness 0.3400
+opt_iter 361, matchness 0.0000
+opt_iter 362, matchness 0.1200
+opt_iter 363, matchness 0.0200
+opt_iter 364, matchness 0.1000
+opt_iter 365, matchness 0.1200
+opt_iter 366, matchness 0.1200
+opt_iter 367, matchness 0.0600
+opt_iter 368, matchness 0.1200
+opt_iter 369, matchness 0.2600
+opt_iter 370, matchness 0.0000
+opt_iter 371, matchness 0.1000
+opt_iter 372, matchness 0.0200
+opt_iter 373, matchness 0.1000
+******************************Bayes Search!******************************
+opt_iter 374, matchness 0.4200
+opt_iter 375, matchness 0.0200
+opt_iter 376, matchness 0.0800
+opt_iter 377, matchness 0.1200
+opt_iter 378, matchness 0.0400
+opt_iter 379, matchness 0.0200
+opt_iter 380, matchness 0.0000
+opt_iter 381, matchness 0.0800
+opt_iter 382, matchness 0.1600
+opt_iter 383, matchness 0.1400
+opt_iter 384, matchness 0.0000
+opt_iter 385, matchness 0.2400
+opt_iter 386, matchness 0.0400
+opt_iter 387, matchness 0.0000
+opt_iter 388, matchness 0.3000
+opt_iter 389, matchness 0.2200
+opt_iter 390, matchness 0.2400
+opt_iter 391, matchness 0.2600
+opt_iter 392, matchness 0.0600
+opt_iter 393, matchness 0.1800
+opt_iter 394, matchness 0.0600
+opt_iter 395, matchness 0.2200
+opt_iter 396, matchness 0.0400
+opt_iter 397, matchness 0.0400
+opt_iter 398, matchness 0.0000
+******************************Bayes Search!******************************
+opt_iter 399, matchness 0.3600
+opt_iter 400, matchness 0.0800
+==============================Optimization Stopped because the optimization iter reaches the max tolerance!==============================
+token acceptance rate: 0.9259259259259259
+ 20%|██        | 2/10 [01:34<06:27, 48.39s/it]token acceptance rate: 0.8977635782747604
+ 30%|███       | 3/10 [01:43<03:33, 30.51s/it]token acceptance rate: 0.8664495114006515
+ 40%|████      | 4/10 [01:52<02:12, 22.05s/it]token acceptance rate: 0.8264984227129337
+ 50%|█████     | 5/10 [02:02<01:27, 17.45s/it]token acceptance rate: 0.9149560117302052
+ 60%|██████    | 6/10 [02:10<00:57, 14.41s/it]token acceptance rate: 0.8714733542319749
+ 70%|███████   | 7/10 [02:19<00:37, 12.65s/it]token acceptance rate: 0.8637770897832817
+ 80%|████████  | 8/10 [02:28<00:22, 11.48s/it]token acceptance rate: 0.9656357388316151
+ 90%|█████████ | 9/10 [02:37<00:10, 10.56s/it]token acceptance rate: 0.9185667752442996
+100%|██████████| 10/10 [02:45<00:00,  9.97s/it]100%|██████████| 10/10 [02:45<00:00, 16.58s/it]
+#Mean accepted tokens: 2.173434856175973
+Token acceptance rate: 0.8789607097591888

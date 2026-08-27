@@ -1,0 +1,51 @@
+============================================================
+  CONFGATE v6 — PAPER EVALUATION
+============================================================
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ RouterCollection: 21,528 params (24 × Linear(896,1))
+  ✓ Adapters loaded ← checkpoints/adapters_3000.pt
+
+[Data] Loading eval samples...
+  tool_call: 50 samples
+  planning: 50 samples
+
+[1/6] Gate values...
+  Saved → checkpoints/paper_results/gate_values.csv
+  Range: [0.2735, 0.7290]
+  Layers with gate < 0.5 (skip candidates): 9
+
+[2/6] Routing by step type (100 samples)...
+  Saved → checkpoints/paper_results/routing_by_type.csv
+  tool_call: avg_layers=20.34/24  skip=15.25%
+  planning : avg_layers=23.44/24  skip=2.34%
+
+[3/6] Perplexity — gated vs baseline (100 samples)...
+  Saved → checkpoints/paper_results/quality_degradation.csv
+  tool_call: ppl_full=4.747  ppl_gated=3.454  delta=-1.294
+  planning : ppl_full=4.928  ppl_gated=3.66  delta=-1.267
+
+[4/6] FLOPs table...
+  Saved → checkpoints/paper_results/flops_table.csv
+  Full model  : 377,688,686,592 FLOPs/seq
+  tool_call   : 320,091,161,886  (-15.2%)
+  planning    : 368,875,950,571  (-2.3%)
+
+[5/6] LoRA impact — base vs fine-tuned (20 samples)...
+  Saved → checkpoints/paper_results/lora_impact.csv
+  tool_call: base=2.7546  lora=1.3188  delta=-1.4358
+  planning : base=2.2126  lora=1.3625  delta=-0.8501
+
+[6/6] Writing paper summary...
+  Saved → checkpoints/paper_results/paper_summary.csv
+  Saved → checkpoints/paper_results/paper_results.txt
+
+  Done in 16s
+  All results → checkpoints/paper_results/
+
+  Key metrics:
+    tool_call skip : 15.25%  planning skip: 2.34%
+    skip diff      : 12.91%
+    FLOPs reduction: tool=15.2%  plan=2.3%

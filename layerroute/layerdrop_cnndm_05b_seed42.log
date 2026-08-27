@@ -1,0 +1,21 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=0.5b] QWEN_SPEC set to Qwen/Qwen2.5-0.5B-Instruct (24 layers, hidden=896)
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  16%|█▌        | 46/290 [00:00<00:00, 459.04it/s]Loading weights:  36%|███▌      | 105/290 [00:00<00:00, 534.71it/s]Loading weights:  56%|█████▌    | 162/290 [00:00<00:00, 549.94it/s]Loading weights:  75%|███████▍  | 217/290 [00:00<00:00, 530.70it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 592.92it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ LayerDrop: train-time rate=0.2, inference-time fixed drop set (6/24 layers): [1, 4, 7, 10, 13, 16]
+  [10/100] routed=27.3ms  baseline=35.7ms  identical_so_far=4/10
+  [20/100] routed=367.2ms  baseline=1850.3ms  identical_so_far=7/20
+  [30/100] routed=36.2ms  baseline=45.0ms  identical_so_far=10/30
+  [40/100] routed=30.5ms  baseline=35.3ms  identical_so_far=14/40
+  [50/100] routed=26.8ms  baseline=36.3ms  identical_so_far=17/50
+  [60/100] routed=428.0ms  baseline=1078.1ms  identical_so_far=20/60
+  [70/100] routed=213.6ms  baseline=5222.4ms  identical_so_far=24/70
+  [80/100] routed=26.2ms  baseline=34.5ms  identical_so_far=26/80
+  [90/100] routed=18.4ms  baseline=23.9ms  identical_so_far=28/90
+  [100/100] routed=25.9ms  baseline=33.8ms  identical_so_far=31/100
+
+Saved 100 query cost records -> results/layerdrop_timed_cnndm_05b_seed42/layerdrop_query_costs.json
+Identical routed/baseline outputs: 31/100 (expected some overlap on short/easy prompts)

@@ -1,0 +1,21 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=1.5b] QWEN_SPEC set to Qwen/Qwen2.5-1.5B-Instruct (28 layers, hidden=1536)
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   7%|▋         | 22/338 [00:00<00:01, 219.17it/s]Loading weights:  19%|█▊        | 63/338 [00:00<00:00, 320.74it/s]Loading weights:  29%|██▉       | 99/338 [00:00<00:00, 336.66it/s]Loading weights:  40%|███▉      | 135/338 [00:00<00:00, 332.60it/s]Loading weights:  51%|█████     | 172/338 [00:00<00:00, 340.99it/s]Loading weights:  62%|██████▏   | 208/338 [00:00<00:00, 345.19it/s]Loading weights:  72%|███████▏  | 244/338 [00:00<00:00, 345.61it/s]Loading weights:  83%|████████▎ | 279/338 [00:00<00:00, 337.88it/s]Loading weights:  93%|█████████▎| 316/338 [00:00<00:00, 346.86it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 343.73it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ LayerDrop: train-time rate=0.2, inference-time fixed drop set (6/28 layers): [1, 5, 9, 13, 17, 21]
+  [10/100] routed=23.6ms  baseline=29.7ms  identical_so_far=6/10
+  [20/100] routed=1175.7ms  baseline=1457.9ms  identical_so_far=13/20
+  [30/100] routed=24.4ms  baseline=30.4ms  identical_so_far=18/30
+  [40/100] routed=25.5ms  baseline=30.3ms  identical_so_far=23/40
+  [50/100] routed=25.2ms  baseline=30.7ms  identical_so_far=27/50
+  [60/100] routed=854.1ms  baseline=1058.3ms  identical_so_far=31/60
+  [70/100] routed=3897.3ms  baseline=2059.9ms  identical_so_far=36/70
+  [80/100] routed=24.9ms  baseline=30.2ms  identical_so_far=43/80
+  [90/100] routed=24.7ms  baseline=30.5ms  identical_so_far=47/90
+  [100/100] routed=23.6ms  baseline=29.3ms  identical_so_far=50/100
+
+Saved 100 query cost records -> results/layerdrop_timed_cnndm_15b_seed42/layerdrop_query_costs.json
+Identical routed/baseline outputs: 50/100 (expected some overlap on short/easy prompts)

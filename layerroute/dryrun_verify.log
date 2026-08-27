@@ -1,0 +1,106 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : train
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 10
+
+[Model] Loading Qwen2.5-0.5B-Instruct + LoRA + Routers...
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  12%|█▏        | 36/290 [00:00<00:00, 356.81it/s]Loading weights:  36%|███▌      | 105/290 [00:00<00:00, 551.89it/s]Loading weights:  59%|█████▉    | 171/290 [00:00<00:00, 596.01it/s]Loading weights:  83%|████████▎ | 242/290 [00:00<00:00, 631.06it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 623.17it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ RouterCollection: 21,528 params (24 × Linear(896,1))
+  Trainable : 1,102,872
+  Total     : 495,135,640
+
+[Data] Building dataloaders...
+
+  Loading datasets...
+  [Hermes] Loading...
+Generating train split:   0%|          | 0/1893 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 1893/1893 [00:00<00:00, 4972.10 examples/s]Generating train split: 100%|██████████| 1893/1893 [00:00<00:00, 3278.20 examples/s]
+  [Hermes] 1,893 conversations
+  [Glaive] Loading...
+Generating train split:   0%|          | 0/112960 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 112960/112960 [00:03<00:00, 28988.35 examples/s]Generating train split: 100%|██████████| 112960/112960 [00:04<00:00, 27620.07 examples/s]
+  [Glaive] 5,000 conversations
+  [GSM8K] Loading...
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 38370.47 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 17803.24 examples/s]
+  [GSM8K] 5,000 conversations
+  [Turing] Loading...
+Generating train split:   0%|          | 0/50 [00:00<?, ? examples/s]Generating train split: 100%|██████████| 50/50 [00:00<00:00, 637.79 examples/s]
+  [Turing] 50 conversations
+
+  Train: 10,749 samples (2687 batches)
+  Val  : 1,194 samples (299 batches)
+
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  Trainable params : 1,102,872
+  Total params     : 495,135,640
+  LoRA rank        : 8
+  Grad accum       : 4 (effective batch=16)
+  Max steps        : 10
+  LR               : 0.0002
+=======================================================
+
+
+  Training complete. Best val loss: inf
+  Total time: 2s
+
+  Final gate values (lower = more often skipped):
+  Layer  0: 0.7311  ██████████████
+  Layer  1: 0.7311  ██████████████
+  Layer  2: 0.7311  ██████████████
+  Layer  3: 0.7311  ██████████████
+  Layer  4: 0.7310  ██████████████
+  Layer  5: 0.7310  ██████████████
+  Layer  6: 0.7310  ██████████████
+  Layer  7: 0.7310  ██████████████
+  Layer  8: 0.2690  █████
+  Layer  9: 0.2690  █████
+  Layer 10: 0.2690  █████
+  Layer 11: 0.2690  █████
+  Layer 12: 0.2690  █████
+  Layer 13: 0.2690  █████
+  Layer 14: 0.2690  █████
+  Layer 15: 0.2690  █████
+  Layer 16: 0.2690  █████
+  Layer 17: 0.7310  ██████████████
+  Layer 18: 0.7310  ██████████████
+  Layer 19: 0.7310  ██████████████
+  Layer 20: 0.7310  ██████████████
+  Layer 21: 0.7310  ██████████████
+  Layer 22: 0.7311  ██████████████
+  Layer 23: 0.7310  ██████████████
+  Logs → ./checkpoints_dryrun_verify/
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  38%|███▊      | 110/290 [00:00<00:00, 1099.25it/s]Loading weights:  76%|███████▌  | 220/290 [00:00<00:00, 977.81it/s] Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1011.28it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ RouterCollection: 21,528 params (24 × Linear(896,1))
+Traceback (most recent call last):
+  File "/workspace/layerroute/main.py", line 197, in <module>
+    run_train(args)
+  File "/workspace/layerroute/main.py", line 85, in run_train
+    run_demo(args)
+  File "/workspace/layerroute/main.py", line 94, in run_demo
+    model.load_adapters(args.ckpt)
+  File "/workspace/layerroute/models/gated_qwen.py", line 210, in load_adapters
+    state = torch.load(path, map_location="cpu", weights_only=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './checkpoints_dryrun_verify/best_adapters.pt'

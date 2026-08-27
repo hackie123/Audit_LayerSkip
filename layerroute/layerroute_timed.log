@@ -1,0 +1,21 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:01<08:02,  1.43s/it]Loading weights:   1%|          | 3/338 [00:01<02:22,  2.35it/s]Loading weights:   4%|▍         | 15/338 [00:01<00:24, 13.23it/s]Loading weights:   5%|▌         | 18/338 [00:02<00:28, 11.24it/s]Loading weights:   8%|▊         | 27/338 [00:02<00:15, 19.46it/s]Loading weights:   9%|▉         | 31/338 [00:02<00:16, 18.44it/s]Loading weights:  12%|█▏        | 39/338 [00:02<00:15, 19.83it/s]Loading weights:  12%|█▏        | 42/338 [00:03<00:15, 18.74it/s]Loading weights:  15%|█▌        | 51/338 [00:03<00:11, 25.52it/s]Loading weights:  16%|█▋        | 55/338 [00:03<00:11, 23.91it/s]Loading weights:  19%|█▊        | 63/338 [00:03<00:11, 24.42it/s]Loading weights:  20%|█▉        | 66/338 [00:04<00:12, 22.30it/s]Loading weights:  22%|██▏       | 75/338 [00:04<00:08, 30.29it/s]Loading weights:  23%|██▎       | 79/338 [00:04<00:12, 21.06it/s]Loading weights:  26%|██▌       | 87/338 [00:04<00:10, 24.89it/s]Loading weights:  27%|██▋       | 90/338 [00:05<00:11, 22.09it/s]Loading weights:  30%|██▉       | 100/338 [00:05<00:07, 33.21it/s]Loading weights:  35%|███▍      | 117/338 [00:05<00:03, 56.76it/s]Loading weights:  37%|███▋      | 126/338 [00:05<00:05, 36.77it/s]Loading weights:  40%|████      | 136/338 [00:05<00:05, 38.27it/s]Loading weights:  42%|████▏     | 142/338 [00:06<00:04, 40.42it/s]Loading weights:  44%|████▍     | 148/338 [00:06<00:05, 34.69it/s]Loading weights:  45%|████▌     | 153/338 [00:06<00:04, 37.01it/s]Loading weights:  47%|████▋     | 158/338 [00:07<00:10, 17.17it/s]Loading weights:  48%|████▊     | 162/338 [00:07<00:09, 18.35it/s]Loading weights:  51%|█████     | 173/338 [00:07<00:05, 29.08it/s]Loading weights:  53%|█████▎    | 179/338 [00:07<00:05, 30.64it/s]Loading weights:  57%|█████▋    | 194/338 [00:07<00:02, 48.71it/s]Loading weights:  60%|█████▉    | 202/338 [00:07<00:02, 48.69it/s]Loading weights:  62%|██████▏   | 209/338 [00:08<00:03, 38.00it/s]Loading weights:  65%|██████▍   | 219/338 [00:08<00:02, 44.73it/s]Loading weights:  67%|██████▋   | 225/338 [00:08<00:03, 36.83it/s]Loading weights:  71%|███████   | 240/338 [00:08<00:01, 53.92it/s]Loading weights:  73%|███████▎  | 248/338 [00:09<00:02, 35.60it/s]Loading weights:  75%|███████▌  | 254/338 [00:09<00:02, 38.97it/s]Loading weights:  77%|███████▋  | 260/338 [00:09<00:03, 23.67it/s]Loading weights:  79%|███████▊  | 266/338 [00:10<00:02, 24.42it/s]Loading weights:  80%|███████▉  | 270/338 [00:10<00:02, 25.07it/s]Loading weights:  81%|████████  | 274/338 [00:10<00:04, 15.01it/s]Loading weights:  84%|████████▍ | 285/338 [00:11<00:02, 23.05it/s]Loading weights:  89%|████████▉ | 302/338 [00:11<00:00, 40.69it/s]Loading weights:  92%|█████████▏| 310/338 [00:11<00:00, 33.97it/s]Loading weights:  94%|█████████▍| 317/338 [00:11<00:00, 33.02it/s]Loading weights:  97%|█████████▋| 327/338 [00:11<00:00, 40.36it/s]Loading weights:  99%|█████████▊| 333/338 [00:12<00:00, 30.97it/s]Loading weights: 100%|██████████| 338/338 [00:12<00:00, 27.45it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ RouterCollection: 43,036 params (28 × Linear(1536,1))
+  [10/100] routed=4470.3ms  baseline=4498.0ms
+  [20/100] routed=4949.3ms  baseline=4886.6ms
+  [30/100] routed=2462.5ms  baseline=2608.0ms
+  [40/100] routed=3003.6ms  baseline=3061.7ms
+  [50/100] routed=1922.5ms  baseline=1930.4ms
+  [60/100] routed=1647.8ms  baseline=1627.4ms
+  [70/100] routed=2762.8ms  baseline=2824.9ms
+  [80/100] routed=3125.9ms  baseline=3060.9ms
+  [90/100] routed=4547.6ms  baseline=5095.1ms
+  [100/100] routed=2711.1ms  baseline=2719.9ms
+
+Saved 100 query cost records -> results/layerroute_timed/layerroute_query_costs.json
+NOTE: verify `generated_text` against gold answers separately for quality_score (exact_match/ROUGE) before feeding into cost_accounting.py

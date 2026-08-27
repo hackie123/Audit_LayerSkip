@@ -1,0 +1,79 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=0.5b] QWEN_SPEC set to Qwen/Qwen2.5-0.5B-Instruct (24 layers, hidden=896)
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : train
+  model_family : qwen
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 10
+
+[Model] Loading Qwen2.5 (LayerDrop, rate set via --layerdrop_rate) + LoRA + Routers...
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  39%|███▉      | 113/290 [00:00<00:00, 1107.23it/s]Loading weights:  77%|███████▋  | 224/290 [00:00<00:00, 1020.52it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1023.62it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ LayerDrop: train-time rate=0.2, inference-time fixed drop set (6/24 layers): [1, 4, 7, 10, 13, 16]
+  Trainable : 1,081,344
+  Total     : 495,114,112
+
+[Data] Building dataloaders...
+
+  Loading datasets...
+  [Hermes] Loading...
+  [Hermes] 1,893 conversations
+  [Glaive] Loading...
+  [Glaive] 5,000 conversations
+  [GSM8K] Loading...
+  [GSM8K] 5,000 conversations
+  [Turing] Loading...
+  [Turing] 50 conversations
+
+  Train: 10,749 samples (2687 batches)
+  Val  : 1,194 samples (299 batches)
+
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  Trainable params : 1,081,344
+  Total params     : 495,114,112
+  LoRA rank        : 8
+  Grad accum       : 4 (effective batch=16)
+  Max steps        : 10
+  LR               : 0.0002
+=======================================================
+
+
+  Training complete. Best val loss: inf
+  Total time: 2s
+
+  Final fixed drop set: [1, 4, 7, 10, 13, 16]
+  Logs → ./checkpoints_layerdrop_dryrun/
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  44%|████▍     | 129/290 [00:00<00:00, 1274.34it/s]Loading weights:  89%|████████▊ | 257/290 [00:00<00:00, 1052.81it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 1087.16it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ LayerDrop: train-time rate=0.2, inference-time fixed drop set (6/24 layers): [1, 4, 7, 10, 13, 16]
+Traceback (most recent call last):
+  File "/workspace/layerroute/main.py", line 321, in <module>
+    run_train(args)
+  File "/workspace/layerroute/main.py", line 165, in run_train
+    run_demo(args)
+  File "/workspace/layerroute/main.py", line 175, in run_demo
+    model.load_adapters(args.ckpt)
+  File "/workspace/layerroute/models/layerdrop_qwen.py", line 158, in load_adapters
+    state = torch.load(path, map_location="cpu", weights_only=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './checkpoints_layerdrop_dryrun/best_adapters.pt'

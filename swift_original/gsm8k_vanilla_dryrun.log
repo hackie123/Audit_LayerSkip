@@ -1,0 +1,19 @@
+/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Output to test/gsm8k/gsm8k_10/model_answer/qwen2.5-0.5b/qwen2.5-0.5b-vanilla-bfloat16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512.jsonl
+Generating train split:   0%|          | 0/7473 [00:00<?, ? examples/s]Generating train split:  40%|████      | 3000/7473 [00:00<00:00, 27799.55 examples/s]Generating train split: 100%|██████████| 7473/7473 [00:00<00:00, 50428.33 examples/s]
+Generating test split:   0%|          | 0/1319 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 1319/1319 [00:00<00:00, 14489.79 examples/s]
+Check model training state: False
+CUDA VISIBLE DEVICES: None
+  0%|          | 0/10 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:397: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.85` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:407: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+ 10%|█         | 1/10 [00:03<00:30,  3.42s/it] 20%|██        | 2/10 [00:06<00:25,  3.24s/it] 30%|███       | 3/10 [00:12<00:31,  4.48s/it] 40%|████      | 4/10 [00:16<00:24,  4.10s/it] 50%|█████     | 5/10 [00:24<00:29,  5.84s/it] 60%|██████    | 6/10 [00:29<00:21,  5.44s/it] 70%|███████   | 7/10 [00:40<00:21,  7.19s/it] 80%|████████  | 8/10 [00:43<00:11,  5.80s/it] 90%|█████████ | 9/10 [00:44<00:04,  4.46s/it]100%|██████████| 10/10 [00:46<00:00,  3.69s/it]100%|██████████| 10/10 [00:46<00:00,  4.67s/it]

@@ -1,0 +1,17 @@
+/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:949: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+Output to test/cnndm/cnndm_10/model_answer/qwen2.5-0.5b/qwen2.5-0.5b-vanilla-bfloat16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512.jsonl
+Check model training state: False
+CUDA VISIBLE DEVICES: None
+  0%|          | 0/10 [00:00<?, ?it/s]/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:397: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.85` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/transformers/generation/configuration_utils.py:407: UserWarning: `do_sample` is set to `False`. However, `top_k` is set to `20` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_k`.
+  warnings.warn(
+ 10%|█         | 1/10 [00:10<01:36, 10.73s/it] 20%|██        | 2/10 [00:19<01:16,  9.62s/it] 30%|███       | 3/10 [00:21<00:43,  6.22s/it] 40%|████      | 4/10 [00:25<00:30,  5.05s/it] 50%|█████     | 5/10 [00:32<00:28,  5.78s/it] 60%|██████    | 6/10 [00:40<00:27,  6.82s/it] 70%|███████   | 7/10 [00:44<00:17,  5.88s/it] 80%|████████  | 8/10 [00:53<00:13,  6.79s/it] 90%|█████████ | 9/10 [00:58<00:06,  6.11s/it]100%|██████████| 10/10 [01:07<00:00,  6.97s/it]100%|██████████| 10/10 [01:07<00:00,  6.71s/it]

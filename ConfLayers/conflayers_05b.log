@@ -1,0 +1,327 @@
+/usr/local/lib/python3.11/dist-packages/transformers/utils/hub.py:124: FutureWarning: Using `TRANSFORMERS_CACHE` is deprecated and will be removed in v5 of Transformers. Use `HF_HOME` instead.
+  warnings.warn(
+/usr/local/lib/python3.11/dist-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+(Re-)Loading modeling...
+(Re-)Loading modeling...
+Output to outputs/gsm8k/gsm8k_100/model_answer/qwen2.5-0.5b/qwen2.5-0.5b-conflayers-bfloat16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512-search_interval-30-max_opt-100-max_score-0.95-context_window-100-skip_ratio-0.4.jsonl
+Check model training state: False
+CUDA VISIBLE DEVICES: 0
+  0%|                                                                                                                 | 0/100 [00:00<?, ?it/s]Opt_iter 0 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 1 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 2 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 3 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 4 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 5 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 6 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 7 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 8 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 9 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 10 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 11 with 11 layers skipped
+Number of layers skipped: 11
+
+==============================New best found! Mean # Acc Tokens 1.2903225806451613, Score = 0.7741935483870968 and Layers skipped = [2, 5, 9, 10, 12, 13, 15, 17, 18, 19, 22]==============================
+
+Opt_iter 12 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 13 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 14 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 15 with 12 layers skipped
+Number of layers skipped: 12
+token acceptance rate: 0.3669724770642202
+  1%|█                                                                                                        | 1/100 [00:09<15:02,  9.12s/it]Opt_iter 16 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 17 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 18 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 19 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 20 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 21 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 22 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 23 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 24 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 25 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 26 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 27 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 28 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 29 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 30 with 11 layers skipped
+Number of layers skipped: 11
+token acceptance rate: 0.7475409836065574
+  2%|██                                                                                                       | 2/100 [00:16<13:07,  8.04s/it]Opt_iter 31 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 32 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 33 with 15 layers skipped
+Number of layers skipped: 15
+Opt_iter 34 with 15 layers skipped
+Number of layers skipped: 15
+Opt_iter 35 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 36 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 37 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 38 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 39 with 16 layers skipped
+Number of layers skipped: 16
+Opt_iter 40 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 41 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 42 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 43 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 44 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 45 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 46 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 47 with 13 layers skipped
+Number of layers skipped: 13
+token acceptance rate: 0.5305555555555556
+  3%|███▏                                                                                                     | 3/100 [00:24<13:03,  8.07s/it]Opt_iter 48 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 49 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 50 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 51 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 52 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 53 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 54 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 55 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 56 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 57 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 58 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 59 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 60 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 61 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 62 with 10 layers skipped
+Number of layers skipped: 10
+token acceptance rate: 0.5234159779614325
+  4%|████▏                                                                                                    | 4/100 [00:32<12:49,  8.02s/it]Opt_iter 63 with 10 layers skipped
+Number of layers skipped: 10
+Opt_iter 64 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 65 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 66 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 67 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 68 with 10 layers skipped
+Number of layers skipped: 10
+Opt_iter 69 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 70 with 10 layers skipped
+Number of layers skipped: 10
+Opt_iter 71 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 72 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 73 with 10 layers skipped
+Number of layers skipped: 10
+Opt_iter 74 with 10 layers skipped
+Number of layers skipped: 10
+Opt_iter 75 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 76 with 13 layers skipped
+Number of layers skipped: 13
+token acceptance rate: 0.7048192771084337
+  5%|█████▎                                                                                                   | 5/100 [00:39<12:09,  7.68s/it]Opt_iter 77 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 78 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 79 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 80 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 81 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 82 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 83 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 84 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 85 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 86 with 9 layers skipped
+Number of layers skipped: 9
+Opt_iter 87 with 13 layers skipped
+Number of layers skipped: 13
+Opt_iter 88 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 89 with 12 layers skipped
+Number of layers skipped: 12
+Opt_iter 90 with 14 layers skipped
+Number of layers skipped: 14
+Opt_iter 91 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 92 with 11 layers skipped
+Number of layers skipped: 11
+token acceptance rate: 0.43209876543209874
+  6%|██████▎                                                                                                  | 6/100 [00:48<12:37,  8.06s/it]Opt_iter 93 with 10 layers skipped
+Number of layers skipped: 10
+
+==============================New best found! Mean # Acc Tokens 1.3225806451612903, Score = 0.7741935483870968 and Layers skipped = [2, 4, 9, 10, 12, 13, 15, 18, 19, 22]==============================
+
+Opt_iter 94 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 95 with 11 layers skipped
+Number of layers skipped: 11
+Opt_iter 96 with 10 layers skipped
+Number of layers skipped: 10
+
+==============================New best found! Mean # Acc Tokens 2.2903225806451615, Score = 0.9290322580645162 and Layers skipped = [2, 4, 9, 10, 12, 15, 17, 18, 19, 22]==============================
+
+Opt_iter 97 with 10 layers skipped
+Number of layers skipped: 10
+Opt_iter 98 with 10 layers skipped
+Number of layers skipped: 10
+token acceptance rate: 0.7804878048780488
+  7%|███████▎                                                                                                 | 7/100 [00:54<11:45,  7.59s/it]Opt_iter 99 with 12 layers skipped
+Number of layers skipped: 12
+
+==============================Optimization Stopped because the optimization iter reaches the maximum!==============================
+
+Final Skipped Layer Set: [2, 4, 9, 10, 12, 15, 17, 18, 19, 22]
+Final Skipped Layer Set Size: 10
+token acceptance rate: 0.7192118226600985
+  8%|████████▍                                                                                                | 8/100 [01:01<11:16,  7.36s/it]token acceptance rate: 0.8494623655913979
+  9%|█████████▍                                                                                               | 9/100 [01:07<10:32,  6.95s/it]token acceptance rate: 0.8267045454545454
+ 10%|██████████▍                                                                                             | 10/100 [01:14<10:19,  6.88s/it]token acceptance rate: 0.7780612244897959
+ 11%|███████████▍                                                                                            | 11/100 [01:21<10:07,  6.83s/it]token acceptance rate: 0.7589041095890411
+ 12%|████████████▍                                                                                           | 12/100 [01:28<09:57,  6.79s/it]token acceptance rate: 0.7185354691075515
+ 13%|█████████████▌                                                                                          | 13/100 [01:34<09:48,  6.76s/it]token acceptance rate: 0.5930735930735931
+ 14%|██████████████▌                                                                                         | 14/100 [01:42<09:59,  6.97s/it]token acceptance rate: 0.6967418546365914
+ 15%|███████████████▌                                                                                        | 15/100 [01:49<09:55,  7.01s/it]token acceptance rate: 0.6866028708133971
+ 16%|████████████████▋                                                                                       | 16/100 [01:56<09:49,  7.01s/it]token acceptance rate: 0.6882217090069284
+ 17%|█████████████████▋                                                                                      | 17/100 [02:03<09:46,  7.07s/it]token acceptance rate: 0.6783042394014963
+ 18%|██████████████████▋                                                                                     | 18/100 [02:10<09:42,  7.10s/it]token acceptance rate: 0.7160194174757282
+ 19%|███████████████████▊                                                                                    | 19/100 [02:17<09:39,  7.15s/it]token acceptance rate: 0.767379679144385
+ 20%|████████████████████▊                                                                                   | 20/100 [02:25<09:30,  7.14s/it]token acceptance rate: 0.32926829268292684
+ 21%|█████████████████████▊                                                                                  | 21/100 [02:37<11:24,  8.67s/it]token acceptance rate: 0.7007672634271099
+ 22%|██████████████████████▉                                                                                 | 22/100 [02:44<10:34,  8.13s/it]token acceptance rate: 0.7090464547677262
+ 23%|███████████████████████▉                                                                                | 23/100 [02:50<09:56,  7.74s/it]token acceptance rate: 0.8261904761904761
+ 24%|████████████████████████▉                                                                               | 24/100 [02:57<09:11,  7.25s/it]token acceptance rate: 0.7573333333333333
+ 25%|██████████████████████████                                                                              | 25/100 [03:03<08:52,  7.10s/it]token acceptance rate: 0.7507002801120448
+ 26%|███████████████████████████                                                                             | 26/100 [03:10<08:36,  6.98s/it]token acceptance rate: 0.7382198952879581
+ 27%|████████████████████████████                                                                            | 27/100 [03:17<08:33,  7.03s/it]token acceptance rate: 0.8293333333333334
+ 28%|█████████████████████████████                                                                           | 28/100 [03:24<08:13,  6.85s/it]token acceptance rate: 0.7361623616236163
+ 29%|██████████████████████████████▏                                                                         | 29/100 [03:30<08:02,  6.80s/it]token acceptance rate: 0.8753462603878116
+ 30%|███████████████████████████████▏                                                                        | 30/100 [03:36<07:40,  6.58s/it]token acceptance rate: 0.7818696883852692
+ 31%|████████████████████████████████▏                                                                       | 31/100 [03:43<07:34,  6.58s/it]token acceptance rate: 0.7403846153846154
+ 32%|█████████████████████████████████▎                                                                      | 32/100 [03:50<07:32,  6.66s/it]token acceptance rate: 0.8451443569553806
+ 33%|██████████████████████████████████▎                                                                     | 33/100 [03:56<07:12,  6.45s/it]token acceptance rate: 0.771513353115727
+ 34%|███████████████████████████████████▎                                                                    | 34/100 [04:02<07:07,  6.48s/it]token acceptance rate: 0.7572559366754618
+ 35%|████████████████████████████████████▍                                                                   | 35/100 [04:10<07:24,  6.84s/it]token acceptance rate: 0.7339901477832512
+ 36%|█████████████████████████████████████▍                                                                  | 36/100 [04:18<07:35,  7.11s/it]token acceptance rate: 0.727710843373494
+ 37%|██████████████████████████████████████▍                                                                 | 37/100 [04:25<07:28,  7.12s/it]token acceptance rate: 0.726063829787234
+ 38%|███████████████████████████████████████▌                                                                | 38/100 [04:33<07:32,  7.30s/it]token acceptance rate: 0.6958762886597938
+ 39%|████████████████████████████████████████▌                                                               | 39/100 [04:39<07:17,  7.18s/it]token acceptance rate: 0.76
+ 40%|█████████████████████████████████████████▌                                                              | 40/100 [04:46<07:01,  7.03s/it]token acceptance rate: 0.8312655086848635
+ 41%|██████████████████████████████████████████▋                                                             | 41/100 [04:53<06:45,  6.88s/it]token acceptance rate: 0.8015717092337917
+ 42%|███████████████████████████████████████████▋                                                            | 42/100 [04:59<06:29,  6.72s/it]token acceptance rate: 0.4161915621436716
+ 43%|████████████████████████████████████████████▋                                                           | 43/100 [05:12<08:03,  8.48s/it]token acceptance rate: 0.6856435643564357
+ 44%|█████████████████████████████████████████████▊                                                          | 44/100 [05:19<07:30,  8.04s/it]token acceptance rate: 0.7684210526315789
+ 45%|██████████████████████████████████████████████▊                                                         | 45/100 [05:26<07:07,  7.78s/it]token acceptance rate: 0.7256410256410256
+ 46%|███████████████████████████████████████████████▊                                                        | 46/100 [05:35<07:19,  8.14s/it]token acceptance rate: 0.45434543454345433
+ 47%|████████████████████████████████████████████████▉                                                       | 47/100 [05:47<08:23,  9.49s/it]token acceptance rate: 0.5036496350364964
+ 48%|█████████████████████████████████████████████████▉                                                      | 48/100 [05:58<08:33,  9.88s/it]token acceptance rate: 0.7817679558011049
+ 49%|██████████████████████████████████████████████████▉                                                     | 49/100 [06:07<08:12,  9.65s/it]token acceptance rate: 0.8187134502923976
+ 50%|████████████████████████████████████████████████████                                                    | 50/100 [06:20<08:40, 10.42s/it]token acceptance rate: 0.7320574162679426
+ 51%|█████████████████████████████████████████████████████                                                   | 51/100 [06:29<08:13, 10.07s/it]token acceptance rate: 0.7215189873417721
+ 52%|██████████████████████████████████████████████████████                                                  | 52/100 [06:39<08:11, 10.24s/it]token acceptance rate: 0.7743732590529248
+ 53%|███████████████████████████████████████████████████████                                                 | 53/100 [06:53<08:51, 11.32s/it]token acceptance rate: 0.7478260869565218
+ 54%|████████████████████████████████████████████████████████▏                                               | 54/100 [07:02<08:09, 10.64s/it]token acceptance rate: 0.6820276497695853
+ 55%|█████████████████████████████████████████████████████████▏                                              | 55/100 [07:15<08:20, 11.12s/it]token acceptance rate: 0.7506361323155216
+ 56%|██████████████████████████████████████████████████████████▏                                             | 56/100 [07:27<08:22, 11.43s/it]token acceptance rate: 0.7480719794344473
+ 57%|███████████████████████████████████████████████████████████▎                                            | 57/100 [07:39<08:19, 11.63s/it]token acceptance rate: 0.5611650485436893
+ 58%|████████████████████████████████████████████████████████████▎                                           | 58/100 [07:50<08:08, 11.64s/it]token acceptance rate: 0.8802395209580839
+ 59%|█████████████████████████████████████████████████████████████▎                                          | 59/100 [08:02<07:53, 11.55s/it]token acceptance rate: 0.871866295264624
+ 60%|██████████████████████████████████████████████████████████████▍                                         | 60/100 [08:09<06:52, 10.32s/it]token acceptance rate: 0.6793478260869565
+ 61%|███████████████████████████████████████████████████████████████▍                                        | 61/100 [08:21<06:54, 10.64s/it]token acceptance rate: 0.7513227513227513
+ 62%|████████████████████████████████████████████████████████████████▍                                       | 62/100 [08:37<07:52, 12.42s/it]token acceptance rate: 0.8809523809523809
+ 63%|█████████████████████████████████████████████████████████████████▌                                      | 63/100 [08:47<07:12, 11.68s/it]token acceptance rate: 0.7162471395881007
+ 64%|██████████████████████████████████████████████████████████████████▌                                     | 64/100 [08:58<06:46, 11.29s/it]token acceptance rate: 0.8530259365994236
+ 65%|███████████████████████████████████████████████████████████████████▌                                    | 65/100 [09:08<06:23, 10.96s/it]token acceptance rate: 0.707808564231738
+ 66%|████████████████████████████████████████████████████████████████████▋                                   | 66/100 [09:16<05:47, 10.23s/it]token acceptance rate: 0.75
+ 67%|█████████████████████████████████████████████████████████████████████▋                                  | 67/100 [09:28<05:57, 10.83s/it]token acceptance rate: 0.7
+ 68%|██████████████████████████████████████████████████████████████████████▋                                 | 68/100 [09:44<06:26, 12.09s/it]token acceptance rate: 0.7633802816901408
+ 69%|███████████████████████████████████████████████████████████████████████▊                                | 69/100 [09:53<05:52, 11.37s/it]token acceptance rate: 0.832271762208068
+ 70%|████████████████████████████████████████████████████████████████████████▊                               | 70/100 [10:02<05:14, 10.49s/it]token acceptance rate: 0.868421052631579
+ 71%|█████████████████████████████████████████████████████████████████████████▊                              | 71/100 [10:11<04:55, 10.18s/it]token acceptance rate: 0.9377593360995851
+ 72%|██████████████████████████████████████████████████████████████████████████▉                             | 72/100 [10:18<04:20,  9.29s/it]token acceptance rate: 0.6551724137931034
+ 73%|███████████████████████████████████████████████████████████████████████████▉                            | 73/100 [10:31<04:41, 10.44s/it]token acceptance rate: 0.7228915662650602
+ 74%|████████████████████████████████████████████████████████████████████████████▉                           | 74/100 [10:45<04:56, 11.40s/it]token acceptance rate: 0.5857142857142857
+ 75%|██████████████████████████████████████████████████████████████████████████████                          | 75/100 [11:00<05:15, 12.60s/it]token acceptance rate: 0.4208588957055215
+ 76%|███████████████████████████████████████████████████████████████████████████████                         | 76/100 [11:18<05:39, 14.14s/it]token acceptance rate: 0.7378640776699029
+ 77%|████████████████████████████████████████████████████████████████████████████████                        | 77/100 [11:30<05:09, 13.46s/it]token acceptance rate: 0.7577319587628866
+ 78%|█████████████████████████████████████████████████████████████████████████████████                       | 78/100 [11:49<05:30, 15.01s/it]token acceptance rate: 0.8863198458574181
+ 79%|██████████████████████████████████████████████████████████████████████████████████▏                     | 79/100 [12:02<05:04, 14.50s/it]token acceptance rate: 0.8199445983379502
+ 80%|███████████████████████████████████████████████████████████████████████████████████▏                    | 80/100 [12:18<05:00, 15.02s/it]token acceptance rate: 0.7655367231638418
+ 81%|████████████████████████████████████████████████████████████████████████████████████▏                   | 81/100 [12:30<04:27, 14.06s/it]token acceptance rate: 0.6946386946386947
+ 82%|█████████████████████████████████████████████████████████████████████████████████████▎                  | 82/100 [12:39<03:42, 12.39s/it]token acceptance rate: 0.7272727272727273
+ 83%|██████████████████████████████████████████████████████████████████████████████████████▎                 | 83/100 [12:47<03:11, 11.25s/it]token acceptance rate: 0.8800959232613909
+ 84%|███████████████████████████████████████████████████████████████████████████████████████▎                | 84/100 [12:55<02:45, 10.34s/it]token acceptance rate: 0.7413333333333333
+ 85%|████████████████████████████████████████████████████████████████████████████████████████▍               | 85/100 [13:07<02:41, 10.79s/it]token acceptance rate: 0.7777777777777778
+ 86%|█████████████████████████████████████████████████████████████████████████████████████████▍              | 86/100 [13:21<02:44, 11.75s/it]token acceptance rate: 0.7700831024930748
+ 87%|██████████████████████████████████████████████████████████████████████████████████████████▍             | 87/100 [13:42<03:09, 14.59s/it]token acceptance rate: 0.9121813031161473
+ 88%|███████████████████████████████████████████████████████████████████████████████████████████▌            | 88/100 [13:54<02:45, 13.77s/it]token acceptance rate: 0.7758186397984886
+ 89%|████████████████████████████████████████████████████████████████████████████████████████████▌           | 89/100 [14:09<02:34, 14.01s/it]token acceptance rate: 0.7883008356545961
+ 90%|█████████████████████████████████████████████████████████████████████████████████████████████▌          | 90/100 [14:22<02:18, 13.83s/it]token acceptance rate: 0.8279569892473119
+ 91%|██████████████████████████████████████████████████████████████████████████████████████████████▋         | 91/100 [14:37<02:06, 14.06s/it]token acceptance rate: 0.7714285714285715
+ 92%|███████████████████████████████████████████████████████████████████████████████████████████████▋        | 92/100 [14:52<01:54, 14.25s/it]token acceptance rate: 0.7481481481481481
+ 93%|████████████████████████████████████████████████████████████████████████████████████████████████▋       | 93/100 [14:58<01:24, 12.02s/it]token acceptance rate: 0.76775956284153
+ 94%|█████████████████████████████████████████████████████████████████████████████████████████████████▊      | 94/100 [15:05<01:02, 10.39s/it]token acceptance rate: 0.5342960288808665
+ 95%|██████████████████████████████████████████████████████████████████████████████████████████████████▊     | 95/100 [15:13<00:48,  9.64s/it]token acceptance rate: 0.7721179624664879
+ 96%|███████████████████████████████████████████████████████████████████████████████████████████████████▊    | 96/100 [15:19<00:34,  8.66s/it]token acceptance rate: 0.7905236907730673
+ 97%|████████████████████████████████████████████████████████████████████████████████████████████████████▉   | 97/100 [15:25<00:23,  7.95s/it]token acceptance rate: 0.7464788732394366
+ 98%|█████████████████████████████████████████████████████████████████████████████████████████████████████▉  | 98/100 [15:32<00:15,  7.55s/it]token acceptance rate: 0.8133333333333334
+ 99%|██████████████████████████████████████████████████████████████████████████████████████████████████████▉ | 99/100 [15:39<00:07,  7.36s/it]token acceptance rate: 0.7237569060773481
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [15:46<00:00,  7.16s/it]100%|███████████████████████████████████████████████████████████████████████████████████████████████████████| 100/100 [15:46<00:00,  9.46s/it]
+#Mean accepted tokens: 2.3719340385237193
+Token acceptance rate: 0.7077227345295113

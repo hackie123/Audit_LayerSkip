@@ -1,0 +1,33 @@
+============================================================
+  CONFGATE v6 — PAPER RESULTS
+  LoRA + Hard-Gated Skip Connections on TinyLlama/TinyLlama-1.1B-Chat-v1.0
+============================================================
+
+  Checkpoint   : checkpoints_llama_seed42/best_adapters.pt
+  Model family : llama
+  Eval samples : 100
+  LoRA rank    : 8
+
+── Gate Learning ────────────────────────────────────────
+  Gate range         : [0.2739, 0.7271]
+  Gate variance      : 0.050943
+  Skip candidates    : 9/22
+
+── Adaptive Routing ─────────────────────────────────────
+  tool_call avg layers : 19.0/22  (skip 13.62%)
+  planning  avg layers : 18.32/22  (skip 16.73%)
+  Skip differential    : -3.11% more skipping on tool calls
+
+── FLOPs ────────────────────────────────────────────────
+  Full model    : 1,015,759,765,504
+  tool_call     : 877,247,070,208  (-13.6%)
+  planning      : 845,850,859,274  (-16.7%)
+
+── Perplexity (quality) ─────────────────────────────────
+  tool_call: ppl_full=4.62  ppl_gated=3.641  delta=-0.98
+  planning : ppl_full=7.746  ppl_gated=6.732  delta=-1.014
+
+── LoRA Impact ──────────────────────────────────────────
+  tool_call loss delta : nan
+  planning  loss delta : nan
+============================================================

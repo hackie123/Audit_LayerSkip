@@ -1,0 +1,205 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=0.5b] QWEN_SPEC set to Qwen/Qwen2.5-0.5B-Instruct (24 layers, hidden=896)
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : train
+  model_family : qwen
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 3000
+
+[Model] Loading Qwen2.5 (Mixture-of-Depths, capacity set via --mod_capacity) + LoRA + Routers...
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:  31%|███       | 89/290 [00:00<00:00, 877.83it/s]Loading weights:  61%|██████    | 177/290 [00:00<00:00, 863.46it/s]Loading weights:  96%|█████████▌| 279/290 [00:00<00:00, 914.16it/s]Loading weights: 100%|██████████| 290/290 [00:00<00:00, 919.55it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ MoD routers: 43,056 params (24 × 2 × Linear(896,1)), capacity=0.75
+  Trainable : 1,124,400
+  Total     : 495,157,168
+
+[Data] Building dataloaders...
+
+  Loading datasets...
+  [Hermes] Loading...
+  [Hermes] 1,893 conversations
+  [Glaive] Loading...
+  [Glaive] 5,000 conversations
+  [GSM8K] Loading...
+  [GSM8K] 5,000 conversations
+  [Turing] Loading...
+  [Turing] 50 conversations
+
+  Train: 10,749 samples (2687 batches)
+  Val  : 1,194 samples (299 batches)
+
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  Trainable params : 1,124,400
+  Total params     : 495,157,168
+  LoRA rank        : 8
+  Grad accum       : 4 (effective batch=16)
+  Max steps        : 3000
+  LR               : 0.001
+=======================================================
+
+  step    50/3000 | loss=11.7451 | ppl=9999.0 | layers_run=24.0/24 | skip=25.0% | lr=1.00e-03 | 9s
+  step   100/3000 | loss=8.9028 | ppl=7352.5 | layers_run=24.0/24 | skip=25.0% | lr=1.00e-03 | 16s
+  step   150/3000 | loss=7.9869 | ppl=2942.1 | layers_run=24.0/24 | skip=25.0% | lr=1.00e-03 | 24s
+  step   200/3000 | loss=7.5095 | ppl=1825.3 | layers_run=24.0/24 | skip=25.0% | lr=9.99e-04 | 31s
+  [Val] step=200 loss=7.3743 ppl=1594.5 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_200.pt  (288 tensors)
+  step   250/3000 | loss=7.3469 | ppl=1551.4 | layers_run=24.0/24 | skip=25.0% | lr=9.99e-04 | 41s
+  step   300/3000 | loss=7.3041 | ppl=1486.3 | layers_run=24.0/24 | skip=25.0% | lr=9.98e-04 | 48s
+  step   350/3000 | loss=7.7164 | ppl=2244.8 | layers_run=24.0/24 | skip=25.0% | lr=9.98e-04 | 55s
+  step   400/3000 | loss=7.5230 | ppl=1850.2 | layers_run=24.0/24 | skip=25.0% | lr=9.97e-04 | 63s
+  [Val] step=400 loss=7.6404 ppl=2080.6 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_400.pt  (288 tensors)
+  step   450/3000 | loss=7.5856 | ppl=1969.7 | layers_run=24.0/24 | skip=25.0% | lr=9.97e-04 | 72s
+  step   500/3000 | loss=7.7732 | ppl=2376.1 | layers_run=24.0/24 | skip=25.0% | lr=9.96e-04 | 80s
+  step   550/3000 | loss=7.5189 | ppl=1842.5 | layers_run=24.0/24 | skip=25.0% | lr=9.95e-04 | 88s
+  step   600/3000 | loss=7.3323 | ppl=1528.9 | layers_run=24.0/24 | skip=25.0% | lr=9.94e-04 | 95s
+  [Val] step=600 loss=7.3554 ppl=1564.6 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_600.pt  (288 tensors)
+  step   650/3000 | loss=7.3219 | ppl=1513.1 | layers_run=24.0/24 | skip=25.0% | lr=9.93e-04 | 104s
+  step   700/3000 | loss=7.3943 | ppl=1626.8 | layers_run=24.0/24 | skip=25.0% | lr=9.92e-04 | 112s
+  step   750/3000 | loss=7.2961 | ppl=1474.5 | layers_run=24.0/24 | skip=25.0% | lr=9.90e-04 | 119s
+  step   800/3000 | loss=7.4113 | ppl=1654.6 | layers_run=24.0/24 | skip=25.0% | lr=9.89e-04 | 126s
+  [Val] step=800 loss=7.6089 ppl=2016.1 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_800.pt  (288 tensors)
+  step   850/3000 | loss=7.4787 | ppl=1770.0 | layers_run=24.0/24 | skip=25.0% | lr=9.88e-04 | 136s
+  step   900/3000 | loss=7.3151 | ppl=1502.8 | layers_run=24.0/24 | skip=25.0% | lr=9.86e-04 | 143s
+  step   950/3000 | loss=7.3817 | ppl=1606.4 | layers_run=24.0/24 | skip=25.0% | lr=9.85e-04 | 151s
+  step  1000/3000 | loss=7.5536 | ppl=1907.6 | layers_run=24.0/24 | skip=25.0% | lr=9.83e-04 | 158s
+  [Val] step=1000 loss=7.2104 ppl=1353.4 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_1000.pt  (288 tensors)
+  step  1050/3000 | loss=7.2899 | ppl=1465.4 | layers_run=24.0/24 | skip=25.0% | lr=9.81e-04 | 168s
+  step  1100/3000 | loss=7.3042 | ppl=1486.5 | layers_run=24.0/24 | skip=25.0% | lr=9.79e-04 | 175s
+  step  1150/3000 | loss=7.1745 | ppl=1305.8 | layers_run=24.0/24 | skip=25.0% | lr=9.78e-04 | 183s
+  step  1200/3000 | loss=7.2859 | ppl=1459.6 | layers_run=24.0/24 | skip=25.0% | lr=9.76e-04 | 191s
+  [Val] step=1200 loss=7.3262 ppl=1519.6 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_1200.pt  (288 tensors)
+  step  1250/3000 | loss=7.0990 | ppl=1210.8 | layers_run=24.0/24 | skip=25.0% | lr=9.74e-04 | 201s
+  step  1300/3000 | loss=7.1004 | ppl=1212.5 | layers_run=24.0/24 | skip=25.0% | lr=9.71e-04 | 208s
+  step  1350/3000 | loss=7.2713 | ppl=1438.4 | layers_run=24.0/24 | skip=25.0% | lr=9.69e-04 | 216s
+  step  1400/3000 | loss=7.0407 | ppl=1142.2 | layers_run=24.0/24 | skip=25.0% | lr=9.67e-04 | 223s
+  [Val] step=1400 loss=7.0606 ppl=1165.1 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_1400.pt  (288 tensors)
+  step  1450/3000 | loss=7.1464 | ppl=1269.6 | layers_run=24.0/24 | skip=25.0% | lr=9.65e-04 | 232s
+  step  1500/3000 | loss=7.0812 | ppl=1189.5 | layers_run=24.0/24 | skip=25.0% | lr=9.62e-04 | 240s
+  step  1550/3000 | loss=6.9529 | ppl=1046.1 | layers_run=24.0/24 | skip=25.0% | lr=9.60e-04 | 247s
+  step  1600/3000 | loss=7.0286 | ppl=1128.4 | layers_run=24.0/24 | skip=25.0% | lr=9.57e-04 | 254s
+  [Val] step=1600 loss=6.8347 ppl=929.5 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_1600.pt  (288 tensors)
+  step  1650/3000 | loss=6.8261 | ppl=921.6 | layers_run=24.0/24 | skip=25.0% | lr=9.54e-04 | 264s
+  step  1700/3000 | loss=6.8129 | ppl=909.5 | layers_run=24.0/24 | skip=25.0% | lr=9.51e-04 | 271s
+  step  1750/3000 | loss=6.6962 | ppl=809.3 | layers_run=24.0/24 | skip=25.0% | lr=9.49e-04 | 278s
+  step  1800/3000 | loss=7.2790 | ppl=1449.6 | layers_run=24.0/24 | skip=25.0% | lr=9.46e-04 | 286s
+  [Val] step=1800 loss=7.0126 ppl=1110.5 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_1800.pt  (288 tensors)
+  step  1850/3000 | loss=6.9430 | ppl=1035.9 | layers_run=24.0/24 | skip=25.0% | lr=9.43e-04 | 295s
+  step  1900/3000 | loss=6.8185 | ppl=914.6 | layers_run=24.0/24 | skip=25.0% | lr=9.39e-04 | 302s
+  step  1950/3000 | loss=6.8201 | ppl=916.0 | layers_run=24.0/24 | skip=25.0% | lr=9.36e-04 | 309s
+  step  2000/3000 | loss=6.6499 | ppl=772.7 | layers_run=24.0/24 | skip=25.0% | lr=9.33e-04 | 317s
+  [Val] step=2000 loss=6.6345 ppl=760.9 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_2000.pt  (288 tensors)
+  step  2050/3000 | loss=6.7686 | ppl=870.1 | layers_run=24.0/24 | skip=25.0% | lr=9.30e-04 | 326s
+  step  2100/3000 | loss=6.6032 | ppl=737.5 | layers_run=24.0/24 | skip=25.0% | lr=9.26e-04 | 334s
+  step  2150/3000 | loss=6.2782 | ppl=532.8 | layers_run=24.0/24 | skip=25.0% | lr=9.23e-04 | 341s
+  step  2200/3000 | loss=6.4498 | ppl=632.6 | layers_run=24.0/24 | skip=25.0% | lr=9.19e-04 | 349s
+  [Val] step=2200 loss=6.3524 ppl=573.9 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_2200.pt  (288 tensors)
+  step  2250/3000 | loss=6.4003 | ppl=602.0 | layers_run=24.0/24 | skip=25.0% | lr=9.16e-04 | 359s
+  step  2300/3000 | loss=6.3195 | ppl=555.3 | layers_run=24.0/24 | skip=25.0% | lr=9.12e-04 | 366s
+  step  2350/3000 | loss=6.4896 | ppl=658.3 | layers_run=24.0/24 | skip=25.0% | lr=9.09e-04 | 374s
+  step  2400/3000 | loss=6.5352 | ppl=688.9 | layers_run=24.0/24 | skip=25.0% | lr=9.05e-04 | 381s
+  [Val] step=2400 loss=6.3892 ppl=595.4 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_2400.pt  (288 tensors)
+  step  2450/3000 | loss=6.1660 | ppl=476.3 | layers_run=24.0/24 | skip=25.0% | lr=9.01e-04 | 390s
+  step  2500/3000 | loss=6.2380 | ppl=511.8 | layers_run=24.0/24 | skip=25.0% | lr=8.97e-04 | 398s
+  step  2550/3000 | loss=6.3462 | ppl=570.3 | layers_run=24.0/24 | skip=25.0% | lr=8.93e-04 | 405s
+  step  2600/3000 | loss=6.1572 | ppl=472.1 | layers_run=24.0/24 | skip=25.0% | lr=8.89e-04 | 412s
+  [Val] step=2600 loss=6.0454 ppl=422.2 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_2600.pt  (288 tensors)
+  step  2650/3000 | loss=6.4600 | ppl=639.0 | layers_run=24.0/24 | skip=25.0% | lr=8.85e-04 | 422s
+  step  2700/3000 | loss=6.2494 | ppl=517.7 | layers_run=24.0/24 | skip=25.0% | lr=8.80e-04 | 429s
+  step  2750/3000 | loss=6.1437 | ppl=465.8 | layers_run=24.0/24 | skip=25.0% | lr=8.76e-04 | 437s
+  step  2800/3000 | loss=6.2352 | ppl=510.4 | layers_run=24.0/24 | skip=25.0% | lr=8.72e-04 | 444s
+  [Val] step=2800 loss=6.1401 ppl=464.1 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_2800.pt  (288 tensors)
+  step  2850/3000 | loss=6.0437 | ppl=421.4 | layers_run=24.0/24 | skip=25.0% | lr=8.67e-04 | 454s
+  step  2900/3000 | loss=5.9432 | ppl=381.2 | layers_run=24.0/24 | skip=25.0% | lr=8.63e-04 | 461s
+  step  2950/3000 | loss=5.7144 | ppl=303.2 | layers_run=24.0/24 | skip=25.0% | lr=8.58e-04 | 468s
+  step  3000/3000 | loss=5.5203 | ppl=249.7 | layers_run=24.0/24 | skip=25.0% | lr=8.54e-04 | 476s
+  [Val] step=3000 loss=5.6824 ppl=293.6 layers_run=24.0 skip=25.0%
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/best_adapters.pt  (288 tensors)
+  ✓ Adapters saved → ./checkpoints_mod_05b_highlr/adapters_3000.pt  (288 tensors)
+
+  Training complete. Best val loss: 5.6824
+  Total time: 478s
+  Logs → ./checkpoints_mod_05b_highlr/
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<04:06,  1.17it/s]Loading weights:   9%|▉         | 27/290 [00:01<00:07, 35.25it/s]Loading weights:  13%|█▎        | 37/290 [00:01<00:06, 41.59it/s]Loading weights:  16%|█▌        | 46/290 [00:01<00:05, 40.96it/s]Loading weights:  18%|█▊        | 53/290 [00:01<00:05, 43.75it/s]Loading weights:  22%|██▏       | 64/290 [00:01<00:04, 55.14it/s]Loading weights:  26%|██▌       | 75/290 [00:01<00:03, 63.22it/s]Loading weights:  29%|██▊       | 83/290 [00:01<00:03, 62.21it/s]Loading weights:  31%|███▏      | 91/290 [00:02<00:03, 53.82it/s]Loading weights:  34%|███▍      | 98/290 [00:02<00:04, 46.64it/s]Loading weights:  39%|███▊      | 112/290 [00:02<00:03, 51.48it/s]Loading weights:  42%|████▏     | 123/290 [00:02<00:02, 62.06it/s]Loading weights:  45%|████▌     | 131/290 [00:02<00:02, 54.25it/s]Loading weights:  48%|████▊     | 138/290 [00:03<00:03, 40.55it/s]Loading weights:  51%|█████     | 147/290 [00:03<00:03, 47.28it/s]Loading weights:  53%|█████▎    | 153/290 [00:03<00:02, 47.31it/s]Loading weights:  55%|█████▍    | 159/290 [00:03<00:03, 42.46it/s]Loading weights:  59%|█████▉    | 172/290 [00:03<00:02, 56.67it/s]Loading weights:  63%|██████▎   | 183/290 [00:03<00:01, 67.06it/s]Loading weights:  67%|██████▋   | 195/290 [00:03<00:01, 67.86it/s]Loading weights:  71%|███████▏  | 207/290 [00:04<00:01, 67.00it/s]Loading weights:  74%|███████▍  | 215/290 [00:04<00:01, 60.95it/s]Loading weights:  77%|███████▋  | 222/290 [00:04<00:01, 44.78it/s]Loading weights:  79%|███████▉  | 230/290 [00:04<00:01, 43.50it/s]Loading weights:  81%|████████  | 235/290 [00:04<00:01, 41.54it/s]Loading weights:  84%|████████▍ | 243/290 [00:05<00:01, 46.33it/s]Loading weights:  86%|████████▌ | 248/290 [00:05<00:00, 43.65it/s]Loading weights:  88%|████████▊ | 256/290 [00:05<00:00, 49.66it/s]Loading weights:  92%|█████████▏| 267/290 [00:05<00:00, 47.18it/s]Loading weights:  97%|█████████▋| 280/290 [00:05<00:00, 57.36it/s]Loading weights: 100%|██████████| 290/290 [00:05<00:00, 49.52it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ MoD routers: 43,056 params (24 × 2 × Linear(896,1)), capacity=0.75
+  ✓ Adapters loaded ← ./checkpoints_mod_05b_highlr/best_adapters.pt
+
+═══════════════════════════════════════════════════════
+  CONFGATE v6 DEMO (Qwen2.5 (Mixture-of-Depths, capacity set via --mod_capacity))
+  LoRA + Hard-Gated Skip Connections
+═══════════════════════════════════════════════════════
+
+[TOOL CALL] "<tool_call> search_database(table='AUFK', filter='AUFNR=100023')"
+  Layers run : 24/24  (skip 25.5%)
+  Gate values: []
+  Top-5 next tokens:
+    ' '             p=0.1982
+    '.'             p=0.0366
+    ' the'          p=0.0344
+    ' to'           p=0.0237
+    ' of'           p=0.0153
+
+[TOOL CALL] '<tool_call> get_work_order_status(id=78234, priority=True)'
+  Layers run : 24/24  (skip 24.4%)
+  Gate values: []
+  Top-5 next tokens:
+    ' '             p=0.3320
+    ' the'          p=0.0449
+    '.\n'           p=0.0422
+    ' $'            p=0.0330
+    ' total'        p=0.0256
+
+[PLANNING] 'Given the current backlog of 450 open work orders across 3 plants'
+  Layers run : 24/24  (skip 24.2%)
+  Gate values: []
+  Top-5 next tokens:
+    ' '             p=0.1328
+    ' the'          p=0.0297
+    '.'             p=0.0278
+    ' total'        p=0.0204
+    ','             p=0.0204
+
+[PLANNING] 'Analyze the root cause of recurring pump failures in Plant B and '
+  Layers run : 24/24  (skip 25.0%)
+  Gate values: []
+  Top-5 next tokens:
+    ' '             p=0.0574
+    '.'             p=0.0540
+    ' to'           p=0.0371
+    '1'             p=0.0371
+    ' function'     p=0.0349
+
+═══════════════════════════════════════════════════════
+  MOD: routing is per-token, not per-layer -- see skip_pct per sample above.

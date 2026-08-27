@@ -1,0 +1,99 @@
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : train
+  model_family : llama
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 10
+
+[Model] Loading TinyLlama-1.1B-Chat-v1.0 + LoRA + Routers...
+  Loading 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:   0%|          | 1/201 [00:00<01:43,  1.94it/s]Loading weights:   1%|          | 2/201 [00:00<01:12,  2.74it/s]Loading weights:   2%|▏         | 5/201 [00:00<00:26,  7.26it/s]Loading weights:   7%|▋         | 15/201 [00:01<00:08, 22.97it/s]Loading weights:  10%|▉         | 20/201 [00:01<00:08, 21.47it/s]Loading weights:  12%|█▏        | 24/201 [00:01<00:08, 21.31it/s]Loading weights:  14%|█▍        | 28/201 [00:01<00:07, 24.15it/s]Loading weights:  15%|█▌        | 31/201 [00:01<00:07, 23.40it/s]Loading weights:  17%|█▋        | 34/201 [00:01<00:08, 20.71it/s]Loading weights:  18%|█▊        | 37/201 [00:02<00:07, 22.41it/s]Loading weights:  20%|█▉        | 40/201 [00:02<00:08, 18.25it/s]Loading weights:  21%|██▏       | 43/201 [00:02<00:13, 11.36it/s]Loading weights:  23%|██▎       | 46/201 [00:02<00:11, 13.70it/s]Loading weights:  25%|██▍       | 50/201 [00:03<00:09, 16.71it/s]Loading weights:  26%|██▋       | 53/201 [00:03<00:07, 18.75it/s]Loading weights:  29%|██▉       | 58/201 [00:03<00:05, 24.04it/s]Loading weights:  30%|███       | 61/201 [00:03<00:10, 13.56it/s]Loading weights:  32%|███▏      | 64/201 [00:03<00:09, 14.95it/s]Loading weights:  33%|███▎      | 67/201 [00:04<00:09, 13.65it/s]Loading weights:  34%|███▍      | 69/201 [00:04<00:16,  7.98it/s]Loading weights:  36%|███▌      | 72/201 [00:04<00:12, 10.26it/s]Loading weights:  37%|███▋      | 74/201 [00:05<00:11, 11.00it/s]Loading weights:  38%|███▊      | 76/201 [00:05<00:11, 11.22it/s]Loading weights:  39%|███▉      | 78/201 [00:05<00:15,  7.93it/s]Loading weights:  41%|████▏     | 83/201 [00:05<00:08, 13.25it/s]Loading weights:  43%|████▎     | 86/201 [00:06<00:10, 11.37it/s]Loading weights:  45%|████▍     | 90/201 [00:06<00:07, 15.06it/s]Loading weights:  47%|████▋     | 94/201 [00:06<00:05, 18.94it/s]Loading weights:  48%|████▊     | 97/201 [00:06<00:06, 15.98it/s]Loading weights:  51%|█████     | 103/201 [00:06<00:04, 23.03it/s]Loading weights:  53%|█████▎    | 107/201 [00:07<00:04, 19.13it/s]Loading weights:  55%|█████▍    | 110/201 [00:07<00:05, 17.31it/s]Loading weights:  56%|█████▌    | 113/201 [00:07<00:06, 13.08it/s]Loading weights:  57%|█████▋    | 115/201 [00:07<00:06, 12.86it/s]Loading weights:  59%|█████▊    | 118/201 [00:08<00:05, 14.40it/s]Loading weights:  60%|██████    | 121/201 [00:08<00:04, 16.34it/s]Loading weights:  61%|██████    | 123/201 [00:08<00:04, 16.83it/s]Loading weights:  65%|██████▍   | 130/201 [00:08<00:02, 25.02it/s]Loading weights:  66%|██████▌   | 133/201 [00:08<00:02, 23.33it/s]Loading weights:  68%|██████▊   | 136/201 [00:08<00:02, 22.81it/s]Loading weights:  70%|██████▉   | 140/201 [00:08<00:02, 24.67it/s]Loading weights:  71%|███████   | 143/201 [00:09<00:02, 22.80it/s]Loading weights:  73%|███████▎  | 146/201 [00:09<00:02, 18.83it/s]Loading weights:  74%|███████▍  | 149/201 [00:09<00:03, 14.78it/s]Loading weights:  76%|███████▌  | 153/201 [00:09<00:02, 18.65it/s]Loading weights:  78%|███████▊  | 157/201 [00:09<00:02, 19.51it/s]Loading weights:  80%|███████▉  | 160/201 [00:10<00:02, 17.40it/s]Loading weights:  83%|████████▎ | 166/201 [00:10<00:01, 21.86it/s]Loading weights:  84%|████████▍ | 169/201 [00:10<00:01, 16.70it/s]Loading weights:  87%|████████▋ | 175/201 [00:10<00:01, 19.65it/s]Loading weights:  89%|████████▊ | 178/201 [00:11<00:01, 15.46it/s]Loading weights:  90%|█████████ | 181/201 [00:11<00:01, 15.79it/s]Loading weights:  92%|█████████▏| 184/201 [00:11<00:00, 17.64it/s]Loading weights:  93%|█████████▎| 187/201 [00:11<00:00, 17.64it/s]Loading weights:  96%|█████████▌| 193/201 [00:11<00:00, 23.09it/s]Loading weights:  98%|█████████▊| 196/201 [00:11<00:00, 21.60it/s]Loading weights: 100%|██████████| 201/201 [00:11<00:00, 16.83it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,100,048,384 backbone parameters
+  ✓ LoRA applied to 88 projections — 2,252,800 trainable params
+  ✓ RouterCollection: 45,078 params (22 × Linear(2048,1))  [middle band: 7-16]
+  Trainable : 2,297,878
+  Total     : 1,102,346,262
+
+[Data] Building dataloaders...
+
+  Loading datasets...
+  [Hermes] Loading...
+  [Hermes] 1,893 conversations
+  [Glaive] Loading...
+  [Glaive] 5,000 conversations
+  [GSM8K] Loading...
+  [GSM8K] 5,000 conversations
+  [Turing] Loading...
+  [Turing] 50 conversations
+
+  Train: 10,749 samples (2687 batches)
+  Val  : 1,194 samples (299 batches)
+
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  Trainable params : 2,297,878
+  Total params     : 1,102,346,262
+  LoRA rank        : 8
+  Grad accum       : 4 (effective batch=16)
+  Max steps        : 10
+  LR               : 0.0002
+=======================================================
+
+
+  Training complete. Best val loss: inf
+  Total time: 3s
+
+  Final gate values (lower = more often skipped):
+  Layer  0: 0.7311  ██████████████
+  Layer  1: 0.7311  ██████████████
+  Layer  2: 0.7311  ██████████████
+  Layer  3: 0.7311  ██████████████
+  Layer  4: 0.7311  ██████████████
+  Layer  5: 0.7311  ██████████████
+  Layer  6: 0.7311  ██████████████
+  Layer  7: 0.2690  █████
+  Layer  8: 0.2690  █████
+  Layer  9: 0.2690  █████
+  Layer 10: 0.2690  █████
+  Layer 11: 0.2690  █████
+  Layer 12: 0.2690  █████
+  Layer 13: 0.2690  █████
+  Layer 14: 0.2690  █████
+  Layer 15: 0.2690  █████
+  Layer 16: 0.7310  ██████████████
+  Layer 17: 0.7310  ██████████████
+  Layer 18: 0.7310  ██████████████
+  Layer 19: 0.7310  ██████████████
+  Layer 20: 0.7310  ██████████████
+  Layer 21: 0.7310  ██████████████
+  Logs → ./checkpoints_llama_dryrun2/
+  Loading 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:  11%|█         | 22/201 [00:00<00:00, 191.80it/s]Loading weights:  25%|██▍       | 50/201 [00:00<00:00, 219.51it/s]Loading weights:  38%|███▊      | 77/201 [00:00<00:00, 238.01it/s]Loading weights:  51%|█████     | 102/201 [00:00<00:00, 235.23it/s]Loading weights:  65%|██████▍   | 130/201 [00:00<00:00, 246.65it/s]Loading weights:  77%|███████▋  | 155/201 [00:00<00:00, 244.13it/s]Loading weights:  90%|████████▉ | 180/201 [00:00<00:00, 237.42it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 238.84it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,100,048,384 backbone parameters
+  ✓ LoRA applied to 88 projections — 2,252,800 trainable params
+  ✓ RouterCollection: 45,078 params (22 × Linear(2048,1))  [middle band: 7-16]
+Traceback (most recent call last):
+  File "/workspace/layerroute/main.py", line 225, in <module>
+    run_train(args)
+  File "/workspace/layerroute/main.py", line 107, in run_train
+    run_demo(args)
+  File "/workspace/layerroute/main.py", line 117, in run_demo
+    model.load_adapters(args.ckpt)
+  File "/workspace/layerroute/models/gated_llama.py", line 244, in load_adapters
+    state = torch.load(path, map_location="cpu", weights_only=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 1425, in load
+    with _open_file_like(f, "rb") as opened_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 751, in _open_file_like
+    return _open_file(name_or_buffer, mode)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/layerroute_venv/lib/python3.11/site-packages/torch/serialization.py", line 732, in __init__
+    super().__init__(open(name, mode))
+                     ^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: './checkpoints_llama_dryrun2/best_adapters.pt'

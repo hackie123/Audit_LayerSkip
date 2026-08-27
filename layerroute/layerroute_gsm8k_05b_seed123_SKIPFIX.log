@@ -1,0 +1,22 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=0.5b] QWEN_SPEC set to Qwen/Qwen2.5-0.5B-Instruct (24 layers, hidden=896)
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<04:01,  1.19it/s]Loading weights:   9%|▉         | 26/290 [00:01<00:07, 33.19it/s]Loading weights:  12%|█▏        | 34/290 [00:01<00:07, 32.73it/s]Loading weights:  14%|█▍        | 40/290 [00:01<00:06, 36.28it/s]Loading weights:  16%|█▌        | 47/290 [00:01<00:05, 41.42it/s]Loading weights:  18%|█▊        | 53/290 [00:01<00:06, 37.21it/s]Loading weights:  22%|██▏       | 64/290 [00:01<00:04, 45.61it/s]Loading weights:  24%|██▍       | 70/290 [00:01<00:04, 48.19it/s]Loading weights:  26%|██▌       | 76/290 [00:02<00:05, 42.78it/s]Loading weights:  31%|███       | 89/290 [00:02<00:03, 58.69it/s]Loading weights:  35%|███▍      | 101/290 [00:02<00:02, 70.21it/s]Loading weights:  39%|███▊      | 112/290 [00:02<00:02, 76.73it/s]Loading weights:  42%|████▏     | 123/290 [00:02<00:02, 56.14it/s]Loading weights:  47%|████▋     | 136/290 [00:02<00:02, 65.58it/s]Loading weights:  50%|████▉     | 144/290 [00:03<00:02, 67.40it/s]Loading weights:  54%|█████▍    | 158/290 [00:03<00:01, 79.58it/s]Loading weights:  58%|█████▊    | 167/290 [00:03<00:01, 81.33it/s]Loading weights:  61%|██████    | 176/290 [00:03<00:01, 79.11it/s]Loading weights:  64%|██████▍   | 185/290 [00:03<00:01, 72.50it/s]Loading weights:  68%|██████▊   | 197/290 [00:03<00:01, 79.35it/s]Loading weights:  72%|███████▏  | 208/290 [00:03<00:01, 74.62it/s]Loading weights:  74%|███████▍  | 216/290 [00:03<00:01, 68.05it/s]Loading weights:  77%|███████▋  | 224/290 [00:04<00:01, 48.07it/s]Loading weights:  79%|███████▉  | 230/290 [00:04<00:01, 46.49it/s]Loading weights:  83%|████████▎ | 241/290 [00:04<00:00, 53.89it/s]Loading weights:  85%|████████▌ | 247/290 [00:04<00:00, 44.98it/s]Loading weights:  88%|████████▊ | 255/290 [00:05<00:00, 37.52it/s]Loading weights:  90%|████████▉ | 260/290 [00:05<00:00, 38.37it/s]Loading weights:  92%|█████████▏| 267/290 [00:05<00:00, 39.55it/s]Loading weights:  94%|█████████▍| 272/290 [00:05<00:00, 30.87it/s]Loading weights:  96%|█████████▌| 279/290 [00:05<00:00, 35.75it/s]Loading weights:  98%|█████████▊| 284/290 [00:06<00:00, 32.05it/s]Loading weights: 100%|██████████| 290/290 [00:06<00:00, 48.22it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ RouterCollection: 21,528 params (24 × Linear(896,1))
+  [10/100] routed=2189.9ms  baseline=2328.6ms  identical_so_far=3/10
+  [20/100] routed=6560.4ms  baseline=6228.3ms  identical_so_far=8/20
+  [30/100] routed=5216.3ms  baseline=5106.6ms  identical_so_far=8/30
+  [40/100] routed=1906.0ms  baseline=1873.3ms  identical_so_far=10/40
+  [50/100] routed=2307.6ms  baseline=3244.0ms  identical_so_far=11/50
+  [60/100] routed=1204.6ms  baseline=1206.7ms  identical_so_far=13/60
+  [70/100] routed=2933.6ms  baseline=3999.5ms  identical_so_far=14/70
+  [80/100] routed=2087.1ms  baseline=1607.9ms  identical_so_far=15/80
+  [90/100] routed=3098.4ms  baseline=2806.7ms  identical_so_far=15/90
+  [100/100] routed=2365.0ms  baseline=6602.1ms  identical_so_far=18/100
+
+Saved 100 query cost records -> results/layerroute_timed_gsm8k_05b_seed123_SKIPFIX/layerroute_query_costs.json
+Identical routed/baseline outputs: 18/100 (expected some overlap on short/easy prompts)
+NOTE: verify `generated_text` against gold answers separately for quality_score (exact_match/ROUGE) before feeding into cost_accounting.py

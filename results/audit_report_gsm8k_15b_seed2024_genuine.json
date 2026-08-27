@@ -1,0 +1,83 @@
+{
+  "query_volumes": [
+    1,
+    10,
+    100,
+    1000,
+    10000,
+    100000
+  ],
+  "methods": {
+    "LayerRoute": {
+      "model_id": "Qwen2.5-1.5B",
+      "train_cost_seconds": 1010.61,
+      "pure_inference_ms_per_query": 3162.9868777561933,
+      "search_overhead_ms_per_query": 0.0,
+      "search_overhead_fraction": 0.0,
+      "single_query_speedup_AS_REPORTED_BY_PRIOR_PAPERS": 0.003,
+      "amortized_speedup_by_volume": {
+        "1": 0.003,
+        "10": 0.03,
+        "100": 0.238,
+        "1000": 0.756,
+        "10000": 0.966,
+        "100000": 0.994
+      },
+      "quality_score": 0.44
+    },
+    "ConfLayers": {
+      "model_id": "Qwen2.5-1.5B",
+      "train_cost_seconds": 0.0,
+      "pure_inference_ms_per_query": 12702.0512342453,
+      "search_overhead_ms_per_query": 0.0,
+      "search_overhead_fraction": 0.0,
+      "single_query_speedup_AS_REPORTED_BY_PRIOR_PAPERS": 0.548,
+      "amortized_speedup_by_volume": {
+        "1": 0.548,
+        "10": 0.548,
+        "100": 0.548,
+        "1000": 0.548,
+        "10000": 0.548,
+        "100000": 0.548
+      },
+      "quality_score": 0.05
+    },
+    "SWIFT": {
+      "model_id": "Qwen2.5-1.5B",
+      "train_cost_seconds": 0.0,
+      "pure_inference_ms_per_query": 11735.206818580627,
+      "search_overhead_ms_per_query": 0.0,
+      "search_overhead_fraction": 0.0,
+      "single_query_speedup_AS_REPORTED_BY_PRIOR_PAPERS": 0.593,
+      "amortized_speedup_by_volume": {
+        "1": 0.593,
+        "10": 0.593,
+        "100": 0.593,
+        "1000": 0.593,
+        "10000": 0.593,
+        "100000": 0.593
+      },
+      "quality_score": 0.29
+    }
+  },
+  "crossovers": [
+    {
+      "method_a": "LayerRoute",
+      "method_b": "ConfLayers",
+      "crossover_query_volume": 106,
+      "interpretation": "Below N=106, one method is cheaper; above it, ranking flips."
+    },
+    {
+      "method_a": "LayerRoute",
+      "method_b": "SWIFT",
+      "crossover_query_volume": 118,
+      "interpretation": "Below N=118, one method is cheaper; above it, ranking flips."
+    },
+    {
+      "method_a": "ConfLayers",
+      "method_b": "SWIFT",
+      "crossover_query_volume": null,
+      "interpretation": "SWIFT dominates at all tested volumes (no crossover)."
+    }
+  ]
+}

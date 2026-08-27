@@ -1,0 +1,247 @@
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  mode         : train
+  model_family : llama
+  LoRA r       : 8  alpha=16.0
+  Router thresh: 0.5
+  Max steps    : 3000
+
+[Model] Loading TinyLlama-1.1B-Chat-v1.0 + LoRA + Routers...
+  Loading 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:   9%|▉         | 18/201 [00:00<00:01, 175.67it/s]Loading weights:  20%|██        | 41/201 [00:00<00:00, 187.19it/s]Loading weights:  34%|███▍      | 68/201 [00:00<00:00, 221.23it/s]Loading weights:  48%|████▊     | 96/201 [00:00<00:00, 235.25it/s]Loading weights:  61%|██████    | 123/201 [00:00<00:00, 244.22it/s]Loading weights:  74%|███████▎  | 148/201 [00:00<00:00, 246.00it/s]Loading weights:  87%|████████▋ | 175/201 [00:00<00:00, 252.60it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 243.53it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,100,048,384 backbone parameters
+  ✓ LoRA applied to 88 projections — 2,252,800 trainable params
+  ✓ RouterCollection: 45,078 params (22 × Linear(2048,1))  [middle band: 7-16]
+  Trainable : 2,297,878
+  Total     : 1,102,346,262
+
+[Data] Building dataloaders...
+
+  Loading datasets...
+  [Hermes] Loading...
+  [Hermes] 1,893 conversations
+  [Glaive] Loading...
+  [Glaive] 5,000 conversations
+  [GSM8K] Loading...
+  [GSM8K] 5,000 conversations
+  [Turing] Loading...
+  [Turing] 50 conversations
+
+  Train: 10,749 samples (2687 batches)
+  Val  : 1,194 samples (299 batches)
+
+=======================================================
+  CONFGATE v6 — LoRA + Hard-Gated Skip Connections
+=======================================================
+  Trainable params : 2,297,878
+  Total params     : 1,102,346,262
+  LoRA rank        : 8
+  Grad accum       : 4 (effective batch=16)
+  Max steps        : 3000
+  LR               : 0.0002
+=======================================================
+
+  step    50/3000 | loss=4.9442 | ppl=140.4 | layers_run=13.0/24 | skip=40.9% | lr=2.00e-04 | 13s
+  step   100/3000 | loss=3.5805 | ppl=35.9 | layers_run=12.9/24 | skip=41.2% | lr=2.00e-04 | 24s
+  step   150/3000 | loss=3.0919 | ppl=22.0 | layers_run=12.9/24 | skip=41.3% | lr=2.00e-04 | 36s
+  step   200/3000 | loss=2.9556 | ppl=19.2 | layers_run=13.8/24 | skip=37.4% | lr=2.00e-04 | 47s
+  [Val] step=200 loss=2.6789 ppl=14.6 layers_run=14.6 skip=33.6%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_200.pt  (220 tensors)
+  step   250/3000 | loss=2.6425 | ppl=14.0 | layers_run=14.8/24 | skip=32.5% | lr=2.00e-04 | 62s
+  step   300/3000 | loss=2.3016 | ppl=10.0 | layers_run=16.5/24 | skip=25.0% | lr=2.00e-04 | 74s
+  step   350/3000 | loss=2.2814 | ppl=9.8 | layers_run=15.5/24 | skip=29.6% | lr=2.00e-04 | 85s
+  step   400/3000 | loss=2.2829 | ppl=9.8 | layers_run=16.2/24 | skip=26.5% | lr=1.99e-04 | 97s
+  [Val] step=400 loss=2.1896 ppl=8.9 layers_run=16.1 skip=26.8%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_400.pt  (220 tensors)
+  step   450/3000 | loss=2.2117 | ppl=9.1 | layers_run=17.4/24 | skip=21.0% | lr=1.99e-04 | 111s
+  step   500/3000 | loss=2.7424 | ppl=15.5 | layers_run=13.9/24 | skip=36.8% | lr=1.99e-04 | 123s
+  step   550/3000 | loss=1.9057 | ppl=6.7 | layers_run=19.1/24 | skip=13.0% | lr=1.99e-04 | 135s
+  step   600/3000 | loss=1.8294 | ppl=6.2 | layers_run=18.9/24 | skip=14.3% | lr=1.99e-04 | 146s
+  [Val] step=600 loss=1.8720 ppl=6.5 layers_run=18.1 skip=17.6%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_600.pt  (220 tensors)
+  step   650/3000 | loss=1.9015 | ppl=6.7 | layers_run=17.4/24 | skip=20.7% | lr=1.99e-04 | 161s
+  step   700/3000 | loss=1.7773 | ppl=5.9 | layers_run=18.5/24 | skip=16.0% | lr=1.98e-04 | 173s
+  step   750/3000 | loss=1.9412 | ppl=7.0 | layers_run=17.9/24 | skip=18.8% | lr=1.98e-04 | 184s
+  step   800/3000 | loss=1.7064 | ppl=5.5 | layers_run=18.5/24 | skip=15.8% | lr=1.98e-04 | 196s
+  [Val] step=800 loss=1.6257 ppl=5.1 layers_run=19.8 skip=10.0%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_800.pt  (220 tensors)
+  step   850/3000 | loss=1.8191 | ppl=6.2 | layers_run=18.4/24 | skip=16.4% | lr=1.98e-04 | 210s
+  step   900/3000 | loss=1.8323 | ppl=6.2 | layers_run=18.0/24 | skip=18.1% | lr=1.97e-04 | 222s
+  step   950/3000 | loss=1.6388 | ppl=5.1 | layers_run=18.8/24 | skip=14.7% | lr=1.97e-04 | 234s
+  step  1000/3000 | loss=1.8389 | ppl=6.3 | layers_run=18.3/24 | skip=16.9% | lr=1.97e-04 | 245s
+  [Val] step=1000 loss=1.6608 ppl=5.3 layers_run=19.3 skip=12.4%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_1000.pt  (220 tensors)
+  step  1050/3000 | loss=1.6649 | ppl=5.3 | layers_run=18.3/24 | skip=16.7% | lr=1.96e-04 | 260s
+  step  1100/3000 | loss=1.7303 | ppl=5.6 | layers_run=17.2/24 | skip=21.6% | lr=1.96e-04 | 272s
+  step  1150/3000 | loss=1.6591 | ppl=5.3 | layers_run=18.3/24 | skip=16.7% | lr=1.96e-04 | 283s
+  step  1200/3000 | loss=1.6432 | ppl=5.2 | layers_run=19.1/24 | skip=13.3% | lr=1.95e-04 | 295s
+  [Val] step=1200 loss=1.6899 ppl=5.4 layers_run=17.6 skip=20.2%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_1200.pt  (220 tensors)
+  step  1250/3000 | loss=1.7861 | ppl=6.0 | layers_run=16.2/24 | skip=26.5% | lr=1.95e-04 | 310s
+  step  1300/3000 | loss=1.5623 | ppl=4.8 | layers_run=19.1/24 | skip=13.2% | lr=1.94e-04 | 321s
+  step  1350/3000 | loss=1.6438 | ppl=5.2 | layers_run=17.6/24 | skip=20.1% | lr=1.94e-04 | 333s
+  step  1400/3000 | loss=2.0865 | ppl=8.1 | layers_run=17.1/24 | skip=22.2% | lr=1.93e-04 | 345s
+  [Val] step=1400 loss=1.7593 ppl=5.8 layers_run=19.9 skip=9.4%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_1400.pt  (220 tensors)
+  step  1450/3000 | loss=1.7340 | ppl=5.7 | layers_run=19.8/24 | skip=10.0% | lr=1.93e-04 | 360s
+  step  1500/3000 | loss=1.8583 | ppl=6.4 | layers_run=17.7/24 | skip=19.5% | lr=1.92e-04 | 371s
+  step  1550/3000 | loss=1.7210 | ppl=5.6 | layers_run=17.5/24 | skip=20.4% | lr=1.92e-04 | 383s
+  step  1600/3000 | loss=1.6359 | ppl=5.1 | layers_run=18.7/24 | skip=15.1% | lr=1.91e-04 | 395s
+  [Val] step=1600 loss=1.5632 ppl=4.8 layers_run=19.2 skip=12.9%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_1600.pt  (220 tensors)
+  step  1650/3000 | loss=1.6163 | ppl=5.0 | layers_run=17.7/24 | skip=19.4% | lr=1.91e-04 | 410s
+  step  1700/3000 | loss=1.7006 | ppl=5.5 | layers_run=17.4/24 | skip=20.8% | lr=1.90e-04 | 421s
+  step  1750/3000 | loss=1.5599 | ppl=4.8 | layers_run=18.9/24 | skip=14.1% | lr=1.90e-04 | 432s
+  step  1800/3000 | loss=1.6103 | ppl=5.0 | layers_run=17.1/24 | skip=22.1% | lr=1.89e-04 | 444s
+  [Val] step=1800 loss=1.7710 ppl=5.9 layers_run=16.2 skip=26.4%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_1800.pt  (220 tensors)
+  step  1850/3000 | loss=1.6555 | ppl=5.2 | layers_run=18.2/24 | skip=17.5% | lr=1.89e-04 | 459s
+  step  1900/3000 | loss=1.5821 | ppl=4.9 | layers_run=19.2/24 | skip=12.7% | lr=1.88e-04 | 471s
+  step  1950/3000 | loss=1.7466 | ppl=5.7 | layers_run=17.8/24 | skip=19.1% | lr=1.87e-04 | 482s
+  step  2000/3000 | loss=1.6043 | ppl=5.0 | layers_run=18.0/24 | skip=18.0% | lr=1.87e-04 | 494s
+  [Val] step=2000 loss=1.5852 ppl=4.9 layers_run=17.3 skip=21.5%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_2000.pt  (220 tensors)
+  step  2050/3000 | loss=1.6000 | ppl=5.0 | layers_run=17.8/24 | skip=19.1% | lr=1.86e-04 | 508s
+  step  2100/3000 | loss=1.5629 | ppl=4.8 | layers_run=17.7/24 | skip=19.6% | lr=1.85e-04 | 520s
+  step  2150/3000 | loss=1.5532 | ppl=4.7 | layers_run=17.4/24 | skip=21.0% | lr=1.85e-04 | 532s
+  step  2200/3000 | loss=1.5737 | ppl=4.8 | layers_run=18.2/24 | skip=17.2% | lr=1.84e-04 | 543s
+  [Val] step=2200 loss=1.5207 ppl=4.6 layers_run=18.1 skip=17.7%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_2200.pt  (220 tensors)
+  step  2250/3000 | loss=1.5612 | ppl=4.8 | layers_run=17.1/24 | skip=22.3% | lr=1.83e-04 | 558s
+  step  2300/3000 | loss=1.7220 | ppl=5.6 | layers_run=16.6/24 | skip=24.5% | lr=1.83e-04 | 570s
+  step  2350/3000 | loss=1.5640 | ppl=4.8 | layers_run=19.3/24 | skip=12.1% | lr=1.82e-04 | 582s
+  step  2400/3000 | loss=1.5863 | ppl=4.9 | layers_run=17.8/24 | skip=19.2% | lr=1.81e-04 | 593s
+  [Val] step=2400 loss=1.6064 ppl=5.0 layers_run=18.4 skip=16.5%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_2400.pt  (220 tensors)
+  step  2450/3000 | loss=1.5665 | ppl=4.8 | layers_run=18.2/24 | skip=17.3% | lr=1.80e-04 | 608s
+  step  2500/3000 | loss=1.6377 | ppl=5.1 | layers_run=17.3/24 | skip=21.2% | lr=1.79e-04 | 620s
+  step  2550/3000 | loss=1.6833 | ppl=5.4 | layers_run=17.5/24 | skip=20.4% | lr=1.79e-04 | 632s
+  step  2600/3000 | loss=1.5131 | ppl=4.5 | layers_run=18.4/24 | skip=16.3% | lr=1.78e-04 | 644s
+  [Val] step=2600 loss=1.4917 ppl=4.4 layers_run=18.0 skip=18.3%
+  ✓ Adapters saved → ./checkpoints_llama/best_adapters.pt  (220 tensors)
+  ✓ Adapters saved → ./checkpoints_llama/adapters_2600.pt  (220 tensors)
+  step  2650/3000 | loss=1.5784 | ppl=4.8 | layers_run=16.8/24 | skip=23.7% | lr=1.77e-04 | 659s
+  step  2700/3000 | loss=1.5218 | ppl=4.6 | layers_run=18.2/24 | skip=17.4% | lr=1.76e-04 | 671s
+  step  2750/3000 | loss=1.5724 | ppl=4.8 | layers_run=16.6/24 | skip=24.6% | lr=1.75e-04 | 682s
+  step  2800/3000 | loss=1.5182 | ppl=4.6 | layers_run=17.5/24 | skip=20.3% | lr=1.74e-04 | 694s
+  [Val] step=2800 loss=1.5513 ppl=4.7 layers_run=17.6 skip=20.0%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_2800.pt  (220 tensors)
+  step  2850/3000 | loss=1.5092 | ppl=4.5 | layers_run=18.1/24 | skip=17.7% | lr=1.74e-04 | 709s
+  step  2900/3000 | loss=1.6145 | ppl=5.0 | layers_run=16.8/24 | skip=23.7% | lr=1.73e-04 | 721s
+  step  2950/3000 | loss=1.5391 | ppl=4.7 | layers_run=17.7/24 | skip=19.7% | lr=1.72e-04 | 732s
+  step  3000/3000 | loss=1.5343 | ppl=4.6 | layers_run=18.6/24 | skip=15.4% | lr=1.71e-04 | 744s
+  [Val] step=3000 loss=1.5977 ppl=4.9 layers_run=17.8 skip=19.2%
+  ✓ Adapters saved → ./checkpoints_llama/adapters_3000.pt  (220 tensors)
+
+  Training complete. Best val loss: 1.4917
+  Total time: 747s
+
+  Final gate values (lower = more often skipped):
+  Layer  0: 0.7137  ██████████████
+  Layer  1: 0.7149  ██████████████
+  Layer  2: 0.7227  ██████████████
+  Layer  3: 0.7215  ██████████████
+  Layer  4: 0.7240  ██████████████
+  Layer  5: 0.7254  ██████████████
+  Layer  6: 0.7282  ██████████████
+  Layer  7: 0.2737  █████
+  Layer  8: 0.2748  █████
+  Layer  9: 0.2742  █████
+  Layer 10: 0.2749  █████
+  Layer 11: 0.2742  █████
+  Layer 12: 0.2743  █████
+  Layer 13: 0.2738  █████
+  Layer 14: 0.2736  █████
+  Layer 15: 0.2737  █████
+  Layer 16: 0.7248  ██████████████
+  Layer 17: 0.7260  ██████████████
+  Layer 18: 0.7262  ██████████████
+  Layer 19: 0.7265  ██████████████
+  Layer 20: 0.7270  ██████████████
+  Layer 21: 0.7271  ██████████████
+  Logs → ./checkpoints_llama/
+  Loading 'TinyLlama/TinyLlama-1.1B-Chat-v1.0'...
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:   0%|          | 1/201 [00:00<02:10,  1.54it/s]Loading weights:   1%|          | 2/201 [00:01<01:49,  1.83it/s]Loading weights:   3%|▎         | 7/201 [00:01<00:23,  8.23it/s]Loading weights:   6%|▋         | 13/201 [00:01<00:13, 13.62it/s]Loading weights:   8%|▊         | 16/201 [00:01<00:13, 13.86it/s]Loading weights:  10%|█         | 21/201 [00:01<00:12, 14.98it/s]Loading weights:  12%|█▏        | 24/201 [00:02<00:10, 16.81it/s]Loading weights:  15%|█▌        | 31/201 [00:02<00:08, 20.49it/s]Loading weights:  17%|█▋        | 34/201 [00:02<00:07, 21.08it/s]Loading weights:  19%|█▉        | 39/201 [00:02<00:07, 21.80it/s]Loading weights:  21%|██        | 42/201 [00:02<00:09, 17.63it/s]Loading weights:  23%|██▎       | 47/201 [00:03<00:06, 22.77it/s]Loading weights:  25%|██▍       | 50/201 [00:03<00:07, 20.70it/s]Loading weights:  27%|██▋       | 55/201 [00:03<00:06, 22.97it/s]Loading weights:  29%|██▉       | 58/201 [00:03<00:06, 22.00it/s]Loading weights:  30%|███       | 61/201 [00:03<00:07, 19.10it/s]Loading weights:  32%|███▏      | 64/201 [00:03<00:06, 20.59it/s]Loading weights:  33%|███▎      | 67/201 [00:04<00:06, 19.93it/s]Loading weights:  35%|███▍      | 70/201 [00:04<00:10, 13.05it/s]Loading weights:  36%|███▋      | 73/201 [00:04<00:09, 13.69it/s]Loading weights:  38%|███▊      | 76/201 [00:04<00:09, 12.80it/s]Loading weights:  39%|███▉      | 78/201 [00:05<00:14,  8.50it/s]Loading weights:  41%|████      | 82/201 [00:05<00:09, 12.00it/s]Loading weights:  42%|████▏     | 85/201 [00:05<00:08, 13.00it/s]Loading weights:  43%|████▎     | 87/201 [00:05<00:08, 12.88it/s]Loading weights:  47%|████▋     | 95/201 [00:06<00:04, 22.37it/s]Loading weights:  50%|████▉     | 100/201 [00:06<00:03, 27.04it/s]Loading weights:  52%|█████▏    | 104/201 [00:06<00:03, 24.34it/s]Loading weights:  53%|█████▎    | 107/201 [00:06<00:03, 24.17it/s]Loading weights:  55%|█████▍    | 110/201 [00:06<00:03, 24.48it/s]Loading weights:  56%|█████▌    | 113/201 [00:07<00:06, 14.39it/s]Loading weights:  59%|█████▊    | 118/201 [00:07<00:04, 19.50it/s]Loading weights:  60%|██████    | 121/201 [00:07<00:03, 21.12it/s]Loading weights:  63%|██████▎   | 127/201 [00:07<00:02, 27.15it/s]Loading weights:  65%|██████▌   | 131/201 [00:07<00:02, 25.74it/s]Loading weights:  67%|██████▋   | 135/201 [00:07<00:02, 27.37it/s]Loading weights:  69%|██████▉   | 139/201 [00:07<00:02, 23.01it/s]Loading weights:  71%|███████   | 142/201 [00:08<00:02, 23.21it/s]Loading weights:  72%|███████▏  | 145/201 [00:08<00:02, 22.82it/s]Loading weights:  74%|███████▎  | 148/201 [00:08<00:02, 20.82it/s]Loading weights:  75%|███████▌  | 151/201 [00:08<00:02, 21.64it/s]Loading weights:  78%|███████▊  | 156/201 [00:08<00:02, 19.48it/s]Loading weights:  79%|███████▉  | 159/201 [00:08<00:02, 20.35it/s]Loading weights:  82%|████████▏ | 164/201 [00:09<00:01, 26.19it/s]Loading weights:  84%|████████▎ | 168/201 [00:09<00:02, 13.63it/s]Loading weights:  87%|████████▋ | 174/201 [00:09<00:01, 15.96it/s]Loading weights:  88%|████████▊ | 177/201 [00:10<00:01, 15.48it/s]Loading weights:  90%|█████████ | 181/201 [00:10<00:01, 16.93it/s]Loading weights:  92%|█████████▏| 184/201 [00:10<00:00, 18.06it/s]Loading weights:  93%|█████████▎| 187/201 [00:10<00:00, 15.48it/s]Loading weights:  95%|█████████▍| 190/201 [00:10<00:00, 15.97it/s]Loading weights: 100%|██████████| 201/201 [00:10<00:00, 18.28it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,100,048,384 backbone parameters
+  ✓ LoRA applied to 88 projections — 2,252,800 trainable params
+  ✓ RouterCollection: 45,078 params (22 × Linear(2048,1))  [middle band: 7-16]
+  ✓ Adapters loaded ← ./checkpoints_llama/best_adapters.pt
+
+═══════════════════════════════════════════════════════
+  CONFGATE v6 DEMO (TinyLlama-1.1B-Chat-v1.0)
+  LoRA + Hard-Gated Skip Connections
+═══════════════════════════════════════════════════════
+
+[TOOL CALL] "<tool_call> search_database(table='AUFK', filter='AUFNR=100023')"
+  Layers run : 21/22  (skip 4.5%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'The'           p=0.3340
+    'Search'        p=0.1089
+    'If'            p=0.0483
+    'To'            p=0.0376
+    'This'          p=0.0354
+
+[TOOL CALL] '<tool_call> get_work_order_status(id=78234, priority=True)'
+  Layers run : 21/22  (skip 4.5%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'The'           p=0.3359
+    'P'             p=0.1484
+    'This'          p=0.0583
+    '{"'            p=0.0483
+    'To'            p=0.0312
+
+[PLANNING] 'Given the current backlog of 450 open work orders across 3 plants'
+  Layers run : 20/22  (skip 9.1%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'First'         p=0.2734
+    'The'           p=0.1992
+    '1'             p=0.0608
+    'Start'         p=0.0571
+    'Ass'           p=0.0287
+
+[PLANNING] 'Analyze the root cause of recurring pump failures in Plant B and '
+  Layers run : 21/22  (skip 4.5%)
+  Gate values: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+  Top-5 next tokens:
+    'Pl'            p=0.2871
+    'The'           p=0.1855
+    'First'         p=0.0566
+    '1'             p=0.0366
+    'In'            p=0.0366
+
+═══════════════════════════════════════════════════════
+  GATE VALUES (lower = layer more often skipped)
+  Layer  0: 0.7170  ██████████████
+  Layer  1: 0.7168  ██████████████
+  Layer  2: 0.7237  ██████████████
+  Layer  3: 0.7235  ██████████████
+  Layer  4: 0.7256  ██████████████
+  Layer  5: 0.7267  ██████████████
+  Layer  6: 0.7290  ██████████████
+  Layer  7: 0.2734  █████
+  Layer  8: 0.2745  █████
+  Layer  9: 0.2739  █████
+  Layer 10: 0.2745  █████
+  Layer 11: 0.2739  █████
+  Layer 12: 0.2740  █████
+  Layer 13: 0.2736  █████
+  Layer 14: 0.2733  █████
+  Layer 15: 0.2735  █████
+  Layer 16: 0.7251  ██████████████
+  Layer 17: 0.7262  ██████████████
+  Layer 18: 0.7267  ██████████████
+  Layer 19: 0.7270  ██████████████
+  Layer 20: 0.7275  ██████████████
+  Layer 21: 0.7275  ██████████████

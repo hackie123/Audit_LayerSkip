@@ -1,0 +1,21 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=0.5b] QWEN_SPEC set to Qwen/Qwen2.5-0.5B-Instruct (24 layers, hidden=896)
+  Loading 'Qwen/Qwen2.5-0.5B-Instruct'...
+Loading weights:   0%|          | 0/290 [00:00<?, ?it/s]Loading weights:   0%|          | 1/290 [00:00<02:48,  1.71it/s]Loading weights:   9%|▉         | 27/290 [00:00<00:05, 47.62it/s]Loading weights:  13%|█▎        | 38/290 [00:00<00:05, 48.52it/s]Loading weights:  16%|█▌        | 47/290 [00:01<00:04, 55.85it/s]Loading weights:  19%|█▉        | 56/290 [00:01<00:03, 60.57it/s]Loading weights:  22%|██▏       | 65/290 [00:01<00:03, 63.77it/s]Loading weights:  27%|██▋       | 77/290 [00:01<00:02, 71.13it/s]Loading weights:  31%|███       | 89/290 [00:01<00:02, 78.80it/s]Loading weights:  34%|███▍      | 99/290 [00:01<00:02, 82.14it/s]Loading weights:  38%|███▊      | 110/290 [00:01<00:02, 85.45it/s]Loading weights:  42%|████▏     | 122/290 [00:01<00:02, 83.04it/s]Loading weights:  45%|████▌     | 131/290 [00:02<00:02, 67.81it/s]Loading weights:  48%|████▊     | 139/290 [00:02<00:02, 56.82it/s]Loading weights:  51%|█████     | 148/290 [00:02<00:02, 59.76it/s]Loading weights:  55%|█████▍    | 159/290 [00:02<00:01, 70.23it/s]Loading weights:  58%|█████▊    | 167/290 [00:02<00:01, 71.97it/s]Loading weights:  62%|██████▏   | 181/290 [00:02<00:01, 88.36it/s]Loading weights:  66%|██████▌   | 191/290 [00:02<00:01, 79.40it/s]Loading weights:  69%|██████▉   | 200/290 [00:03<00:01, 78.00it/s]Loading weights:  72%|███████▏  | 209/290 [00:03<00:01, 72.85it/s]Loading weights:  76%|███████▌  | 221/290 [00:03<00:00, 82.54it/s]Loading weights:  80%|████████  | 232/290 [00:03<00:00, 81.19it/s]Loading weights:  83%|████████▎ | 241/290 [00:03<00:00, 78.43it/s]Loading weights:  86%|████████▌ | 250/290 [00:03<00:00, 68.47it/s]Loading weights:  89%|████████▉ | 258/290 [00:03<00:00, 69.11it/s]Loading weights:  92%|█████████▏| 267/290 [00:03<00:00, 74.07it/s]Loading weights:  97%|█████████▋| 280/290 [00:04<00:00, 83.47it/s]Loading weights: 100%|██████████| 290/290 [00:04<00:00, 70.09it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 494,032,768 backbone parameters
+  ✓ LoRA applied to 96 projections — 1,081,344 trainable params
+  ✓ LayerDrop: train-time rate=0.2, inference-time fixed drop set (6/24 layers): [1, 4, 7, 10, 13, 16]
+  [10/100] routed=398.7ms  baseline=2387.5ms  identical_so_far=0/10
+  [20/100] routed=939.2ms  baseline=2745.8ms  identical_so_far=0/20
+  [30/100] routed=3531.0ms  baseline=1200.6ms  identical_so_far=0/30
+  [40/100] routed=4568.8ms  baseline=2862.1ms  identical_so_far=0/40
+  [50/100] routed=1261.5ms  baseline=1386.7ms  identical_so_far=0/50
+  [60/100] routed=741.5ms  baseline=1736.2ms  identical_so_far=0/60
+  [70/100] routed=1081.6ms  baseline=2416.3ms  identical_so_far=0/70
+  [80/100] routed=820.1ms  baseline=2645.3ms  identical_so_far=0/80
+  [90/100] routed=5098.5ms  baseline=4938.0ms  identical_so_far=0/90
+  [100/100] routed=591.2ms  baseline=1337.7ms  identical_so_far=0/100
+
+Saved 100 query cost records -> results/layerdrop_timed_gsm8k_05b_seed42/layerdrop_query_costs.json
+Identical routed/baseline outputs: 0/100 (expected some overlap on short/easy prompts)

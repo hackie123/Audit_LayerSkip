@@ -1,0 +1,954 @@
+/opt/conda/envs/conflayer/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Output to test/gsm8k/gsm8k_100/model_answer/llama-2-70b/llama-2-70b-vanilla-float16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512.jsonl
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:06<01:33,  6.70s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:13<01:29,  6.89s/it]Loading checkpoint shards:  20%|██        | 3/15 [00:21<01:24,  7.07s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [00:28<01:17,  7.09s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [00:35<01:13,  7.35s/it]Loading checkpoint shards:  40%|████      | 6/15 [00:41<01:00,  6.77s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [00:47<00:51,  6.46s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [00:54<00:46,  6.62s/it]Loading checkpoint shards:  60%|██████    | 9/15 [01:01<00:40,  6.75s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [01:08<00:34,  6.90s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [01:15<00:27,  6.96s/it]Loading checkpoint shards:  80%|████████  | 12/15 [01:24<00:22,  7.64s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [01:31<00:14,  7.45s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [01:38<00:07,  7.32s/it]Loading checkpoint shards: 100%|██████████| 15/15 [01:39<00:00,  5.26s/it]Loading checkpoint shards: 100%|██████████| 15/15 [01:39<00:00,  6.63s/it]
+/opt/conda/envs/conflayer/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Check model training state: False
+CUDA VISIBLE DEVICES: 0
+  0%|          | 0/100 [00:00<?, ?it/s]/opt/conda/envs/conflayer/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:392: UserWarning: `do_sample` is set to `False`. However, `temperature` is set to `0.0` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `temperature`.
+  warnings.warn(
+/opt/conda/envs/conflayer/lib/python3.10/site-packages/transformers/generation/configuration_utils.py:397: UserWarning: `do_sample` is set to `False`. However, `top_p` is set to `0.85` -- this flag is only used in sample-based generation modes. You should set `do_sample=True` or unset `top_p`.
+  warnings.warn(
+  1%|          | 1/100 [00:29<48:00, 29.09s/it]  2%|▏         | 2/100 [00:56<45:30, 27.87s/it]  3%|▎         | 3/100 [01:23<44:30, 27.54s/it]  4%|▍         | 4/100 [01:50<43:44, 27.33s/it]  5%|▌         | 5/100 [02:17<43:05, 27.21s/it]  6%|▌         | 6/100 [02:44<42:28, 27.11s/it]  7%|▋         | 7/100 [03:11<42:02, 27.12s/it]  8%|▊         | 8/100 [03:38<41:33, 27.10s/it]  9%|▉         | 9/100 [04:05<41:02, 27.07s/it] 10%|█         | 10/100 [04:32<40:35, 27.06s/it] 11%|█         | 11/100 [04:59<40:08, 27.06s/it] 12%|█▏        | 12/100 [05:26<39:39, 27.04s/it] 13%|█▎        | 13/100 [05:53<39:12, 27.04s/it] 14%|█▍        | 14/100 [06:20<38:49, 27.08s/it] 15%|█▌        | 15/100 [06:47<38:19, 27.06s/it] 16%|█▌        | 16/100 [07:14<37:50, 27.03s/it] 17%|█▋        | 17/100 [07:41<37:23, 27.03s/it] 18%|█▊        | 18/100 [08:08<36:54, 27.01s/it] 19%|█▉        | 19/100 [08:35<36:26, 26.99s/it] 20%|██        | 20/100 [09:02<36:03, 27.04s/it] 21%|██        | 21/100 [09:29<35:36, 27.05s/it] 22%|██▏       | 22/100 [09:56<35:09, 27.04s/it] 23%|██▎       | 23/100 [10:23<34:42, 27.04s/it] 24%|██▍       | 24/100 [10:50<34:14, 27.03s/it] 25%|██▌       | 25/100 [11:17<33:46, 27.02s/it] 26%|██▌       | 26/100 [11:44<33:20, 27.03s/it] 27%|██▋       | 27/100 [12:11<32:51, 27.01s/it] 28%|██▊       | 28/100 [12:39<32:27, 27.05s/it] 29%|██▉       | 29/100 [13:06<32:02, 27.08s/it] 30%|███       | 30/100 [13:33<31:33, 27.05s/it] 31%|███       | 31/100 [14:00<31:06, 27.05s/it] 32%|███▏      | 32/100 [14:27<30:37, 27.03s/it] 33%|███▎      | 33/100 [14:54<30:09, 27.01s/it] 34%|███▍      | 34/100 [15:21<29:44, 27.04s/it] 35%|███▌      | 35/100 [15:48<29:17, 27.03s/it] 36%|███▌      | 36/100 [16:15<28:48, 27.01s/it] 37%|███▋      | 37/100 [16:42<28:21, 27.01s/it] 38%|███▊      | 38/100 [17:09<27:54, 27.00s/it] 39%|███▉      | 39/100 [17:36<27:26, 27.00s/it] 40%|████      | 40/100 [18:03<27:01, 27.02s/it] 41%|████      | 41/100 [18:30<26:33, 27.01s/it] 42%|████▏     | 42/100 [18:57<26:08, 27.04s/it] 43%|████▎     | 43/100 [19:24<25:40, 27.02s/it] 44%|████▍     | 44/100 [19:51<25:13, 27.02s/it] 45%|████▌     | 45/100 [20:18<24:46, 27.04s/it] 46%|████▌     | 46/100 [20:45<24:18, 27.02s/it] 47%|████▋     | 47/100 [21:12<23:51, 27.02s/it] 48%|████▊     | 48/100 [21:39<23:24, 27.01s/it] 49%|████▉     | 49/100 [22:06<23:01, 27.09s/it] 50%|█████     | 50/100 [22:33<22:33, 27.07s/it] 51%|█████     | 51/100 [23:00<22:06, 27.06s/it] 52%|█████▏    | 52/100 [23:27<21:38, 27.05s/it] 53%|█████▎    | 53/100 [23:54<21:10, 27.04s/it] 54%|█████▍    | 54/100 [24:21<20:43, 27.02s/it] 55%|█████▌    | 55/100 [24:48<20:14, 26.98s/it] 56%|█████▌    | 56/100 [25:15<19:48, 27.01s/it] 57%|█████▋    | 57/100 [25:42<19:20, 26.99s/it] 58%|█████▊    | 58/100 [26:09<18:53, 27.00s/it] 59%|█████▉    | 59/100 [26:36<18:26, 27.00s/it] 60%|██████    | 60/100 [27:03<17:59, 26.99s/it] 61%|██████    | 61/100 [27:30<17:33, 27.00s/it] 62%|██████▏   | 62/100 [27:57<17:05, 26.99s/it] 63%|██████▎   | 63/100 [28:24<16:40, 27.03s/it] 64%|██████▍   | 64/100 [28:51<16:12, 27.03s/it] 65%|██████▌   | 65/100 [29:18<15:45, 27.01s/it] 66%|██████▌   | 66/100 [29:46<15:20, 27.07s/it] 67%|██████▋   | 67/100 [30:12<14:52, 27.04s/it] 68%|██████▊   | 68/100 [30:39<14:24, 27.02s/it] 69%|██████▉   | 69/100 [31:06<13:57, 27.01s/it] 70%|███████   | 70/100 [31:34<13:31, 27.04s/it] 71%|███████   | 71/100 [32:01<13:04, 27.05s/it] 72%|███████▏  | 72/100 [32:28<12:36, 27.00s/it] 73%|███████▎  | 73/100 [32:55<12:09, 27.00s/it] 74%|███████▍  | 74/100 [33:21<11:41, 26.98s/it] 75%|███████▌  | 75/100 [33:48<11:14, 27.00s/it] 76%|███████▌  | 76/100 [34:15<10:47, 26.99s/it] 77%|███████▋  | 77/100 [34:43<10:22, 27.06s/it] 78%|███████▊  | 78/100 [35:10<09:54, 27.04s/it] 79%|███████▉  | 79/100 [35:37<09:27, 27.02s/it] 80%|████████  | 80/100 [36:04<09:00, 27.02s/it] 81%|████████  | 81/100 [36:31<08:33, 27.05s/it] 82%|████████▏ | 82/100 [36:58<08:06, 27.05s/it] 83%|████████▎ | 83/100 [37:25<07:39, 27.03s/it] 84%|████████▍ | 84/100 [37:52<07:12, 27.02s/it] 85%|████████▌ | 85/100 [38:19<06:45, 27.03s/it] 86%|████████▌ | 86/100 [38:46<06:18, 27.03s/it] 87%|████████▋ | 87/100 [39:13<05:51, 27.04s/it] 88%|████████▊ | 88/100 [39:40<05:24, 27.04s/it] 89%|████████▉ | 89/100 [40:07<04:57, 27.05s/it] 90%|█████████ | 90/100 [40:34<04:30, 27.09s/it] 91%|█████████ | 91/100 [41:01<04:04, 27.12s/it] 92%|█████████▏| 92/100 [41:28<03:36, 27.06s/it] 93%|█████████▎| 93/100 [41:55<03:09, 27.05s/it] 94%|█████████▍| 94/100 [42:22<02:42, 27.02s/it] 95%|█████████▌| 95/100 [42:49<02:15, 27.03s/it] 96%|█████████▌| 96/100 [43:16<01:48, 27.04s/it] 97%|█████████▋| 97/100 [43:43<01:21, 27.02s/it] 98%|█████████▊| 98/100 [44:10<00:54, 27.01s/it] 99%|█████████▉| 99/100 [44:37<00:27, 27.01s/it]100%|██████████| 100/100 [45:05<00:00, 27.05s/it]100%|██████████| 100/100 [45:05<00:00, 27.05s/it]
+/opt/conda/envs/conflayer/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Instantiating LlamaAttention without passing a `layer_idx` is not recommended and will lead to errors during the forward call if caching is used. Please make sure to provide a `layer_idx` when creating this class.
+(Re-)Loading modeling...
+(Re-)Loading modeling...
+Output to outputs/gsm8k/gsm8k_100/model_answer/llama-2-70b/llama-2-70b-swift-float16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512-opt_interval-1-bayes_interval-25-max_opt-1000-max_tolerance-300-max_score-0.95-context_window-32-skip_ratio-0.5.jsonl
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:04<01:00,  4.34s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:08<00:55,  4.28s/it]Loading checkpoint shards:  20%|██        | 3/15 [00:12<00:51,  4.27s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [00:17<00:47,  4.28s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [00:21<00:43,  4.39s/it]Loading checkpoint shards:  40%|████      | 6/15 [00:27<00:42,  4.72s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [00:32<00:40,  5.05s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [00:37<00:33,  4.78s/it]Loading checkpoint shards:  60%|██████    | 9/15 [00:41<00:27,  4.56s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [00:45<00:22,  4.43s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [00:49<00:17,  4.47s/it]Loading checkpoint shards:  80%|████████  | 12/15 [00:53<00:12,  4.32s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [00:57<00:08,  4.22s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [01:01<00:04,  4.12s/it]Loading checkpoint shards: 100%|██████████| 15/15 [01:01<00:00,  2.95s/it]Loading checkpoint shards: 100%|██████████| 15/15 [01:01<00:00,  4.13s/it]
+Check model training state: False
+CUDA VISIBLE DEVICES: 0
+  0%|          | 0/100 [00:00<?, ?it/s]opt_iter 0, matchness 0.1250
+==============================matchness changed from 0.0000 to 0.1250==============================
+opt_iter 1, matchness 0.3750
+==============================matchness changed from 0.1250 to 0.3750==============================
+opt_iter 2, matchness 0.1875
+opt_iter 3, matchness 0.2812
+opt_iter 4, matchness 0.0938
+opt_iter 5, matchness 0.1875
+opt_iter 6, matchness 0.2500
+opt_iter 7, matchness 0.2500
+opt_iter 8, matchness 0.1250
+opt_iter 9, matchness 0.1562
+opt_iter 10, matchness 0.2812
+opt_iter 11, matchness 0.2812
+opt_iter 12, matchness 0.0938
+opt_iter 13, matchness 0.2188
+opt_iter 14, matchness 0.2500
+opt_iter 15, matchness 0.2500
+opt_iter 16, matchness 0.2188
+opt_iter 17, matchness 0.3750
+opt_iter 18, matchness 0.2812
+opt_iter 19, matchness 0.1250
+opt_iter 20, matchness 0.0938
+opt_iter 21, matchness 0.1875
+opt_iter 22, matchness 0.5938
+==============================matchness changed from 0.3750 to 0.5938==============================
+opt_iter 23, matchness 0.1562
+******************************Bayes Search!******************************
+opt_iter 24, matchness 0.5938
+opt_iter 25, matchness 0.4062
+opt_iter 26, matchness 0.2188
+opt_iter 27, matchness 0.2812
+opt_iter 28, matchness 0.2500
+opt_iter 29, matchness 0.2188
+opt_iter 30, matchness 0.1250
+opt_iter 31, matchness 0.2812
+opt_iter 32, matchness 0.3750
+opt_iter 33, matchness 0.2812
+opt_iter 34, matchness 0.3125
+opt_iter 35, matchness 0.5000
+opt_iter 36, matchness 0.3125
+opt_iter 37, matchness 0.1562
+opt_iter 38, matchness 0.1875
+opt_iter 39, matchness 0.1250
+opt_iter 40, matchness 0.2188
+opt_iter 41, matchness 0.1562
+opt_iter 42, matchness 0.1250
+opt_iter 43, matchness 0.2188
+opt_iter 44, matchness 0.4062
+opt_iter 45, matchness 0.2188
+opt_iter 46, matchness 0.1875
+opt_iter 47, matchness 0.2812
+opt_iter 48, matchness 0.2188
+******************************Bayes Search!******************************
+opt_iter 49, matchness 0.5625
+opt_iter 50, matchness 0.1875
+opt_iter 51, matchness 0.1250
+opt_iter 52, matchness 0.2500
+opt_iter 53, matchness 0.4062
+opt_iter 54, matchness 0.4688
+opt_iter 55, matchness 0.1562
+opt_iter 56, matchness 0.0938
+opt_iter 57, matchness 0.2812
+opt_iter 58, matchness 0.2500
+opt_iter 59, matchness 0.1875
+opt_iter 60, matchness 0.0625
+opt_iter 61, matchness 0.2500
+opt_iter 62, matchness 0.3750
+opt_iter 63, matchness 0.5000
+opt_iter 64, matchness 0.4375
+opt_iter 65, matchness 0.1875
+opt_iter 66, matchness 0.2188
+opt_iter 67, matchness 0.1562
+opt_iter 68, matchness 0.1875
+opt_iter 69, matchness 0.2500
+opt_iter 70, matchness 0.0312
+opt_iter 71, matchness 0.1562
+opt_iter 72, matchness 0.1875
+opt_iter 73, matchness 0.3125
+******************************Bayes Search!******************************
+opt_iter 74, matchness 0.4688
+opt_iter 75, matchness 0.2188
+opt_iter 76, matchness 0.2500
+opt_iter 77, matchness 0.3125
+opt_iter 78, matchness 0.1562
+opt_iter 79, matchness 0.2188
+opt_iter 80, matchness 0.1562
+opt_iter 81, matchness 0.4062
+opt_iter 82, matchness 0.2500
+opt_iter 83, matchness 0.3438
+opt_iter 84, matchness 0.0938
+opt_iter 85, matchness 0.1562
+opt_iter 86, matchness 0.4688
+opt_iter 87, matchness 0.3438
+opt_iter 88, matchness 0.2500
+opt_iter 89, matchness 0.5312
+opt_iter 90, matchness 0.1875
+opt_iter 91, matchness 0.3438
+opt_iter 92, matchness 0.2812
+opt_iter 93, matchness 0.2188
+opt_iter 94, matchness 0.3438
+opt_iter 95, matchness 0.2812
+opt_iter 96, matchness 0.2188
+opt_iter 97, matchness 0.0000
+opt_iter 98, matchness 0.2188
+******************************Bayes Search!******************************
+opt_iter 99, matchness 0.4688
+opt_iter 100, matchness 0.0312
+opt_iter 101, matchness 0.1562
+opt_iter 102, matchness 0.2188
+opt_iter 103, matchness 0.2812
+opt_iter 104, matchness 0.1562
+opt_iter 105, matchness 0.2500
+opt_iter 106, matchness 0.2188
+opt_iter 107, matchness 0.2812
+opt_iter 108, matchness 0.1250
+opt_iter 109, matchness 0.3750
+opt_iter 110, matchness 0.1250
+opt_iter 111, matchness 0.3125
+opt_iter 112, matchness 0.0938
+opt_iter 113, matchness 0.1875
+opt_iter 114, matchness 0.2812
+opt_iter 115, matchness 0.0938
+opt_iter 116, matchness 0.2500
+opt_iter 117, matchness 0.2812
+opt_iter 118, matchness 0.2500
+opt_iter 119, matchness 0.1250
+opt_iter 120, matchness 0.0625
+opt_iter 121, matchness 0.2812
+opt_iter 122, matchness 0.4062
+opt_iter 123, matchness 0.5000
+******************************Bayes Search!******************************
+opt_iter 124, matchness 0.7812
+==============================matchness changed from 0.5938 to 0.7812==============================
+opt_iter 125, matchness 0.3125
+opt_iter 126, matchness 0.2500
+opt_iter 127, matchness 0.3438
+opt_iter 128, matchness 0.2188
+opt_iter 129, matchness 0.0625
+opt_iter 130, matchness 0.2812
+opt_iter 131, matchness 0.2500
+opt_iter 132, matchness 0.4062
+opt_iter 133, matchness 0.2812
+opt_iter 134, matchness 0.1875
+opt_iter 135, matchness 0.3125
+opt_iter 136, matchness 0.2812
+opt_iter 137, matchness 0.2500
+opt_iter 138, matchness 0.1875
+opt_iter 139, matchness 0.1875
+opt_iter 140, matchness 0.2812
+opt_iter 141, matchness 0.4062
+opt_iter 142, matchness 0.3125
+opt_iter 143, matchness 0.2500
+opt_iter 144, matchness 0.2188
+opt_iter 145, matchness 0.0938
+opt_iter 146, matchness 0.0938
+opt_iter 147, matchness 0.2188
+opt_iter 148, matchness 0.3438
+******************************Bayes Search!******************************
+opt_iter 149, matchness 0.7188
+opt_iter 150, matchness 0.5000
+opt_iter 151, matchness 0.0312
+opt_iter 152, matchness 0.1875
+token acceptance rate: 0.9745042492917847
+  1%|          | 1/100 [00:45<1:15:18, 45.64s/it]opt_iter 153, matchness 0.1250
+opt_iter 154, matchness 0.0312
+opt_iter 155, matchness 0.0625
+opt_iter 156, matchness 0.1250
+opt_iter 157, matchness 0.3438
+opt_iter 158, matchness 0.0938
+opt_iter 159, matchness 0.1250
+opt_iter 160, matchness 0.3750
+opt_iter 161, matchness 0.1562
+opt_iter 162, matchness 0.0938
+opt_iter 163, matchness 0.0625
+opt_iter 164, matchness 0.2500
+opt_iter 165, matchness 0.0625
+opt_iter 166, matchness 0.3750
+opt_iter 167, matchness 0.1875
+opt_iter 168, matchness 0.0938
+opt_iter 169, matchness 0.1250
+opt_iter 170, matchness 0.1875
+opt_iter 171, matchness 0.0938
+opt_iter 172, matchness 0.1250
+opt_iter 173, matchness 0.1562
+******************************Bayes Search!******************************
+opt_iter 174, matchness 0.7812
+opt_iter 175, matchness 0.3125
+opt_iter 176, matchness 0.1250
+opt_iter 177, matchness 0.1250
+opt_iter 178, matchness 0.1562
+opt_iter 179, matchness 0.1250
+opt_iter 180, matchness 0.1250
+opt_iter 181, matchness 0.0938
+opt_iter 182, matchness 0.2500
+opt_iter 183, matchness 0.0938
+opt_iter 184, matchness 0.2188
+opt_iter 185, matchness 0.3750
+opt_iter 186, matchness 0.2188
+opt_iter 187, matchness 0.4062
+opt_iter 188, matchness 0.2500
+opt_iter 189, matchness 0.3125
+opt_iter 190, matchness 0.3438
+opt_iter 191, matchness 0.4375
+opt_iter 192, matchness 0.4062
+opt_iter 193, matchness 0.1562
+opt_iter 194, matchness 0.1250
+opt_iter 195, matchness 0.3125
+opt_iter 196, matchness 0.0938
+opt_iter 197, matchness 0.1875
+opt_iter 198, matchness 0.4062
+******************************Bayes Search!******************************
+opt_iter 199, matchness 0.6875
+opt_iter 200, matchness 0.3750
+opt_iter 201, matchness 0.0000
+opt_iter 202, matchness 0.0625
+opt_iter 203, matchness 0.0625
+opt_iter 204, matchness 0.4375
+opt_iter 205, matchness 0.2500
+opt_iter 206, matchness 0.1250
+opt_iter 207, matchness 0.4062
+opt_iter 208, matchness 0.2812
+opt_iter 209, matchness 0.2500
+opt_iter 210, matchness 0.3750
+opt_iter 211, matchness 0.2188
+opt_iter 212, matchness 0.3750
+opt_iter 213, matchness 0.1562
+opt_iter 214, matchness 0.0938
+opt_iter 215, matchness 0.1562
+opt_iter 216, matchness 0.2188
+opt_iter 217, matchness 0.2812
+opt_iter 218, matchness 0.1250
+opt_iter 219, matchness 0.0000
+opt_iter 220, matchness 0.3125
+opt_iter 221, matchness 0.2500
+opt_iter 222, matchness 0.1250
+opt_iter 223, matchness 0.1562
+******************************Bayes Search!******************************
+opt_iter 224, matchness 0.6562
+opt_iter 225, matchness 0.2500
+opt_iter 226, matchness 0.2188
+opt_iter 227, matchness 0.1875
+opt_iter 228, matchness 0.0938
+opt_iter 229, matchness 0.2188
+opt_iter 230, matchness 0.2812
+opt_iter 231, matchness 0.1875
+opt_iter 232, matchness 0.2500
+opt_iter 233, matchness 0.2500
+opt_iter 234, matchness 0.0625
+opt_iter 235, matchness 0.2188
+opt_iter 236, matchness 0.2812
+opt_iter 237, matchness 0.1875
+opt_iter 238, matchness 0.3750
+opt_iter 239, matchness 0.5000
+opt_iter 240, matchness 0.1250
+opt_iter 241, matchness 0.4375
+opt_iter 242, matchness 0.2500
+opt_iter 243, matchness 0.0625
+opt_iter 244, matchness 0.4062
+opt_iter 245, matchness 0.2188
+opt_iter 246, matchness 0.1250
+opt_iter 247, matchness 0.2188
+opt_iter 248, matchness 0.1562
+******************************Bayes Search!******************************
+opt_iter 249, matchness 0.5938
+token acceptance rate: 0.995049504950495
+  2%|▏         | 2/100 [01:24<1:07:43, 41.47s/it]opt_iter 250, matchness 0.2188
+opt_iter 251, matchness 0.1562
+opt_iter 252, matchness 0.2500
+opt_iter 253, matchness 0.3750
+opt_iter 254, matchness 0.2188
+opt_iter 255, matchness 0.1562
+opt_iter 256, matchness 0.4375
+opt_iter 257, matchness 0.2188
+opt_iter 258, matchness 0.1250
+opt_iter 259, matchness 0.0938
+opt_iter 260, matchness 0.1250
+opt_iter 261, matchness 0.2500
+opt_iter 262, matchness 0.3125
+opt_iter 263, matchness 0.3438
+opt_iter 264, matchness 0.1250
+opt_iter 265, matchness 0.0000
+opt_iter 266, matchness 0.0625
+opt_iter 267, matchness 0.1875
+opt_iter 268, matchness 0.0938
+opt_iter 269, matchness 0.1562
+opt_iter 270, matchness 0.3750
+opt_iter 271, matchness 0.0625
+opt_iter 272, matchness 0.1875
+opt_iter 273, matchness 0.3125
+******************************Bayes Search!******************************
+opt_iter 274, matchness 0.7188
+opt_iter 275, matchness 0.2188
+opt_iter 276, matchness 0.1250
+opt_iter 277, matchness 0.0938
+opt_iter 278, matchness 0.1875
+opt_iter 279, matchness 0.1250
+opt_iter 280, matchness 0.2500
+opt_iter 281, matchness 0.1562
+opt_iter 282, matchness 0.0625
+opt_iter 283, matchness 0.2188
+opt_iter 284, matchness 0.3125
+opt_iter 285, matchness 0.1250
+opt_iter 286, matchness 0.0938
+opt_iter 287, matchness 0.1562
+opt_iter 288, matchness 0.1562
+opt_iter 289, matchness 0.3750
+opt_iter 290, matchness 0.0312
+opt_iter 291, matchness 0.2188
+opt_iter 292, matchness 0.0625
+opt_iter 293, matchness 0.2188
+opt_iter 294, matchness 0.0312
+opt_iter 295, matchness 0.1562
+opt_iter 296, matchness 0.1250
+opt_iter 297, matchness 0.1250
+opt_iter 298, matchness 0.0938
+******************************Bayes Search!******************************
+opt_iter 299, matchness 0.5625
+opt_iter 300, matchness 0.3125
+opt_iter 301, matchness 0.2188
+opt_iter 302, matchness 0.1250
+opt_iter 303, matchness 0.2812
+opt_iter 304, matchness 0.1250
+opt_iter 305, matchness 0.0938
+opt_iter 306, matchness 0.3438
+opt_iter 307, matchness 0.1562
+opt_iter 308, matchness 0.2812
+opt_iter 309, matchness 0.2500
+opt_iter 310, matchness 0.0938
+opt_iter 311, matchness 0.2500
+opt_iter 312, matchness 0.2188
+opt_iter 313, matchness 0.2188
+opt_iter 314, matchness 0.2188
+opt_iter 315, matchness 0.2188
+opt_iter 316, matchness 0.3125
+opt_iter 317, matchness 0.0312
+opt_iter 318, matchness 0.0625
+opt_iter 319, matchness 0.2188
+opt_iter 320, matchness 0.2500
+opt_iter 321, matchness 0.1875
+opt_iter 322, matchness 0.0938
+opt_iter 323, matchness 0.1875
+******************************Bayes Search!******************************
+opt_iter 324, matchness 0.5312
+opt_iter 325, matchness 0.2188
+token acceptance rate: 0.988399071925754
+  3%|▎         | 3/100 [02:01<1:04:05, 39.64s/it]opt_iter 326, matchness 0.4062
+opt_iter 327, matchness 0.4062
+opt_iter 328, matchness 0.5000
+opt_iter 329, matchness 0.3125
+opt_iter 330, matchness 0.4688
+opt_iter 331, matchness 0.2188
+opt_iter 332, matchness 0.5938
+opt_iter 333, matchness 0.5312
+opt_iter 334, matchness 0.3438
+opt_iter 335, matchness 0.0938
+opt_iter 336, matchness 0.3750
+opt_iter 337, matchness 0.3438
+opt_iter 338, matchness 0.1562
+opt_iter 339, matchness 0.3750
+opt_iter 340, matchness 0.2188
+opt_iter 341, matchness 0.1875
+opt_iter 342, matchness 0.1562
+opt_iter 343, matchness 0.2188
+opt_iter 344, matchness 0.1875
+opt_iter 345, matchness 0.5312
+opt_iter 346, matchness 0.3438
+opt_iter 347, matchness 0.2188
+opt_iter 348, matchness 0.5312
+******************************Bayes Search!******************************
+opt_iter 349, matchness 0.8750
+==============================matchness changed from 0.7812 to 0.8750==============================
+opt_iter 350, matchness 0.4062
+opt_iter 351, matchness 0.3125
+opt_iter 352, matchness 0.3438
+opt_iter 353, matchness 0.5625
+opt_iter 354, matchness 0.4375
+opt_iter 355, matchness 0.2812
+opt_iter 356, matchness 0.4062
+opt_iter 357, matchness 0.3438
+opt_iter 358, matchness 0.1562
+opt_iter 359, matchness 0.4062
+opt_iter 360, matchness 0.1562
+opt_iter 361, matchness 0.5000
+opt_iter 362, matchness 0.2188
+opt_iter 363, matchness 0.4375
+opt_iter 364, matchness 0.3750
+opt_iter 365, matchness 0.5000
+opt_iter 366, matchness 0.4688
+opt_iter 367, matchness 0.3438
+opt_iter 368, matchness 0.5312
+opt_iter 369, matchness 0.3438
+opt_iter 370, matchness 0.5000
+opt_iter 371, matchness 0.5938
+opt_iter 372, matchness 0.4688
+opt_iter 373, matchness 0.1250
+******************************Bayes Search!******************************
+opt_iter 374, matchness 0.8750
+opt_iter 375, matchness 0.2812
+opt_iter 376, matchness 0.5312
+opt_iter 377, matchness 0.3438
+opt_iter 378, matchness 0.4688
+opt_iter 379, matchness 0.4375
+opt_iter 380, matchness 0.5000
+opt_iter 381, matchness 0.5625
+opt_iter 382, matchness 0.2812
+opt_iter 383, matchness 0.2812
+opt_iter 384, matchness 0.3750
+opt_iter 385, matchness 0.3750
+opt_iter 386, matchness 0.3438
+opt_iter 387, matchness 0.2500
+opt_iter 388, matchness 0.4062
+opt_iter 389, matchness 0.5938
+opt_iter 390, matchness 0.4375
+opt_iter 391, matchness 0.3438
+opt_iter 392, matchness 0.5625
+opt_iter 393, matchness 0.3438
+opt_iter 394, matchness 0.3438
+opt_iter 395, matchness 0.1562
+opt_iter 396, matchness 0.1875
+opt_iter 397, matchness 0.1250
+opt_iter 398, matchness 0.2188
+******************************Bayes Search!******************************
+opt_iter 399, matchness 0.8750
+opt_iter 400, matchness 0.3125
+opt_iter 401, matchness 0.1875
+opt_iter 402, matchness 0.2812
+opt_iter 403, matchness 0.3750
+opt_iter 404, matchness 0.2812
+opt_iter 405, matchness 0.1562
+opt_iter 406, matchness 0.3750
+opt_iter 407, matchness 0.4062
+opt_iter 408, matchness 0.2812
+opt_iter 409, matchness 0.4062
+opt_iter 410, matchness 0.1875
+opt_iter 411, matchness 0.0312
+opt_iter 412, matchness 0.0938
+opt_iter 413, matchness 0.4062
+opt_iter 414, matchness 0.2500
+opt_iter 415, matchness 0.2500
+opt_iter 416, matchness 0.3750
+opt_iter 417, matchness 0.1562
+opt_iter 418, matchness 0.5000
+opt_iter 419, matchness 0.3438
+opt_iter 420, matchness 0.4062
+opt_iter 421, matchness 0.2812
+opt_iter 422, matchness 0.2812
+opt_iter 423, matchness 0.2500
+******************************Bayes Search!******************************
+opt_iter 424, matchness 0.8750
+opt_iter 425, matchness 0.4688
+opt_iter 426, matchness 0.5312
+opt_iter 427, matchness 0.5312
+opt_iter 428, matchness 0.5625
+opt_iter 429, matchness 0.3438
+opt_iter 430, matchness 0.1250
+opt_iter 431, matchness 0.2500
+opt_iter 432, matchness 0.2500
+opt_iter 433, matchness 0.3125
+opt_iter 434, matchness 0.4375
+opt_iter 435, matchness 0.3125
+opt_iter 436, matchness 0.4062
+opt_iter 437, matchness 0.5625
+opt_iter 438, matchness 0.3438
+opt_iter 439, matchness 0.3438
+opt_iter 440, matchness 0.3750
+opt_iter 441, matchness 0.4062
+opt_iter 442, matchness 0.5000
+opt_iter 443, matchness 0.4375
+opt_iter 444, matchness 0.4688
+opt_iter 445, matchness 0.6250
+opt_iter 446, matchness 0.5312
+opt_iter 447, matchness 0.5312
+opt_iter 448, matchness 0.2812
+******************************Bayes Search!******************************
+opt_iter 449, matchness 0.8125
+opt_iter 450, matchness 0.3125
+token acceptance rate: 0.9947368421052631
+  4%|▍         | 4/100 [03:04<1:18:02, 48.78s/it]opt_iter 451, matchness 0.3750
+opt_iter 452, matchness 0.2500
+opt_iter 453, matchness 0.5000
+opt_iter 454, matchness 0.2500
+opt_iter 455, matchness 0.2188
+opt_iter 456, matchness 0.4375
+opt_iter 457, matchness 0.2500
+opt_iter 458, matchness 0.3438
+opt_iter 459, matchness 0.0938
+opt_iter 460, matchness 0.1250
+opt_iter 461, matchness 0.4062
+opt_iter 462, matchness 0.5312
+opt_iter 463, matchness 0.1875
+opt_iter 464, matchness 0.0312
+opt_iter 465, matchness 0.2812
+opt_iter 466, matchness 0.3438
+opt_iter 467, matchness 0.4062
+opt_iter 468, matchness 0.4688
+opt_iter 469, matchness 0.5312
+opt_iter 470, matchness 0.2500
+opt_iter 471, matchness 0.3438
+opt_iter 472, matchness 0.3125
+opt_iter 473, matchness 0.5000
+******************************Bayes Search!******************************
+opt_iter 474, matchness 0.7812
+opt_iter 475, matchness 0.5938
+opt_iter 476, matchness 0.4688
+opt_iter 477, matchness 0.3750
+opt_iter 478, matchness 0.3750
+opt_iter 479, matchness 0.2500
+opt_iter 480, matchness 0.5000
+opt_iter 481, matchness 0.2812
+opt_iter 482, matchness 0.4688
+opt_iter 483, matchness 0.7188
+opt_iter 484, matchness 0.4375
+opt_iter 485, matchness 0.3125
+opt_iter 486, matchness 0.2500
+opt_iter 487, matchness 0.2812
+opt_iter 488, matchness 0.5312
+opt_iter 489, matchness 0.3125
+opt_iter 490, matchness 0.5625
+opt_iter 491, matchness 0.4688
+opt_iter 492, matchness 0.4375
+opt_iter 493, matchness 0.4375
+opt_iter 494, matchness 0.4688
+opt_iter 495, matchness 0.2188
+opt_iter 496, matchness 0.6250
+opt_iter 497, matchness 0.3438
+opt_iter 498, matchness 0.4688
+******************************Bayes Search!******************************
+opt_iter 499, matchness 0.7500
+opt_iter 500, matchness 0.2500
+opt_iter 501, matchness 0.4375
+opt_iter 502, matchness 0.3125
+opt_iter 503, matchness 0.2812
+opt_iter 504, matchness 0.4375
+opt_iter 505, matchness 0.5000
+opt_iter 506, matchness 0.1250
+opt_iter 507, matchness 0.5938
+opt_iter 508, matchness 0.4375
+opt_iter 509, matchness 0.1562
+opt_iter 510, matchness 0.3438
+opt_iter 511, matchness 0.1250
+opt_iter 512, matchness 0.1562
+opt_iter 513, matchness 0.2500
+opt_iter 514, matchness 0.4062
+opt_iter 515, matchness 0.3438
+opt_iter 516, matchness 0.2188
+opt_iter 517, matchness 0.4375
+opt_iter 518, matchness 0.2188
+opt_iter 519, matchness 0.1875
+opt_iter 520, matchness 0.4062
+opt_iter 521, matchness 0.1875
+opt_iter 522, matchness 0.0312
+opt_iter 523, matchness 0.3125
+******************************Bayes Search!******************************
+opt_iter 524, matchness 0.7812
+opt_iter 525, matchness 0.3438
+opt_iter 526, matchness 0.2188
+opt_iter 527, matchness 0.1562
+opt_iter 528, matchness 0.2500
+opt_iter 529, matchness 0.5938
+opt_iter 530, matchness 0.4062
+opt_iter 531, matchness 0.5625
+opt_iter 532, matchness 0.0625
+opt_iter 533, matchness 0.0938
+opt_iter 534, matchness 0.3438
+opt_iter 535, matchness 0.2812
+opt_iter 536, matchness 0.2812
+opt_iter 537, matchness 0.1875
+opt_iter 538, matchness 0.4688
+opt_iter 539, matchness 0.3438
+opt_iter 540, matchness 0.4062
+opt_iter 541, matchness 0.4375
+opt_iter 542, matchness 0.4688
+opt_iter 543, matchness 0.4375
+opt_iter 544, matchness 0.6250
+opt_iter 545, matchness 0.2500
+opt_iter 546, matchness 0.5625
+opt_iter 547, matchness 0.5938
+opt_iter 548, matchness 0.1250
+******************************Bayes Search!******************************
+opt_iter 549, matchness 0.7500
+opt_iter 550, matchness 0.3750
+opt_iter 551, matchness 0.2188
+opt_iter 552, matchness 0.5312
+opt_iter 553, matchness 0.3750
+opt_iter 554, matchness 0.2188
+opt_iter 555, matchness 0.3438
+opt_iter 556, matchness 0.3750
+opt_iter 557, matchness 0.3438
+opt_iter 558, matchness 0.2500
+opt_iter 559, matchness 0.3438
+token acceptance rate: 0.98989898989899
+  5%|▌         | 5/100 [04:05<1:24:25, 53.32s/it]opt_iter 560, matchness 0.2812
+opt_iter 561, matchness 0.1250
+opt_iter 562, matchness 0.1250
+opt_iter 563, matchness 0.1875
+opt_iter 564, matchness 0.0625
+opt_iter 565, matchness 0.1875
+opt_iter 566, matchness 0.0000
+opt_iter 567, matchness 0.1250
+opt_iter 568, matchness 0.1875
+opt_iter 569, matchness 0.2500
+opt_iter 570, matchness 0.0000
+opt_iter 571, matchness 0.0625
+opt_iter 572, matchness 0.0938
+opt_iter 573, matchness 0.2812
+******************************Bayes Search!******************************
+opt_iter 574, matchness 0.4062
+opt_iter 575, matchness 0.0625
+opt_iter 576, matchness 0.1250
+opt_iter 577, matchness 0.1250
+opt_iter 578, matchness 0.0625
+opt_iter 579, matchness 0.2500
+opt_iter 580, matchness 0.2500
+opt_iter 581, matchness 0.0938
+opt_iter 582, matchness 0.0000
+opt_iter 583, matchness 0.0938
+opt_iter 584, matchness 0.0312
+opt_iter 585, matchness 0.0938
+opt_iter 586, matchness 0.1562
+opt_iter 587, matchness 0.1250
+opt_iter 588, matchness 0.0625
+opt_iter 589, matchness 0.0000
+opt_iter 590, matchness 0.0312
+opt_iter 591, matchness 0.1250
+opt_iter 592, matchness 0.1875
+opt_iter 593, matchness 0.3125
+opt_iter 594, matchness 0.0625
+opt_iter 595, matchness 0.1250
+opt_iter 596, matchness 0.1875
+opt_iter 597, matchness 0.4375
+opt_iter 598, matchness 0.0938
+******************************Bayes Search!******************************
+opt_iter 599, matchness 0.5312
+opt_iter 600, matchness 0.2500
+opt_iter 601, matchness 0.1562
+opt_iter 602, matchness 0.1562
+opt_iter 603, matchness 0.0000
+opt_iter 604, matchness 0.1562
+opt_iter 605, matchness 0.3125
+opt_iter 606, matchness 0.1875
+opt_iter 607, matchness 0.1875
+opt_iter 608, matchness 0.0312
+opt_iter 609, matchness 0.1875
+opt_iter 610, matchness 0.2188
+opt_iter 611, matchness 0.2188
+opt_iter 612, matchness 0.1250
+opt_iter 613, matchness 0.0938
+opt_iter 614, matchness 0.0625
+opt_iter 615, matchness 0.1250
+opt_iter 616, matchness 0.2188
+opt_iter 617, matchness 0.2188
+opt_iter 618, matchness 0.4062
+opt_iter 619, matchness 0.2188
+opt_iter 620, matchness 0.1875
+opt_iter 621, matchness 0.0938
+opt_iter 622, matchness 0.0625
+opt_iter 623, matchness 0.1250
+******************************Bayes Search!******************************
+opt_iter 624, matchness 0.5000
+opt_iter 625, matchness 0.0625
+opt_iter 626, matchness 0.1250
+opt_iter 627, matchness 0.2812
+opt_iter 628, matchness 0.2500
+opt_iter 629, matchness 0.1562
+opt_iter 630, matchness 0.2188
+opt_iter 631, matchness 0.0938
+opt_iter 632, matchness 0.1250
+opt_iter 633, matchness 0.3438
+opt_iter 634, matchness 0.0938
+opt_iter 635, matchness 0.1250
+opt_iter 636, matchness 0.3125
+opt_iter 637, matchness 0.0938
+opt_iter 638, matchness 0.0312
+opt_iter 639, matchness 0.4375
+opt_iter 640, matchness 0.1875
+opt_iter 641, matchness 0.1875
+opt_iter 642, matchness 0.1875
+opt_iter 643, matchness 0.0625
+opt_iter 644, matchness 0.2188
+opt_iter 645, matchness 0.2812
+opt_iter 646, matchness 0.0312
+opt_iter 647, matchness 0.2188
+opt_iter 648, matchness 0.2500
+******************************Bayes Search!******************************
+opt_iter 649, matchness 0.5938
+opt_iter 650, matchness 0.2188
+==============================Optimization Stopped because the optimization iter reaches the max tolerance!==============================
+token acceptance rate: 0.981029810298103
+  6%|▌         | 6/100 [05:14<1:31:58, 58.71s/it]token acceptance rate: 0.9895287958115183
+  7%|▋         | 7/100 [05:33<1:10:45, 45.65s/it]token acceptance rate: 0.982367758186398
+  8%|▊         | 8/100 [05:52<56:44, 37.01s/it]  token acceptance rate: 0.9211822660098522
+  9%|▉         | 9/100 [06:11<47:52, 31.56s/it]token acceptance rate: 0.959493670886076
+ 10%|█         | 10/100 [06:30<41:30, 27.67s/it]token acceptance rate: 0.9946808510638298
+ 11%|█         | 11/100 [06:49<36:59, 24.94s/it]token acceptance rate: 0.9925925925925926
+ 12%|█▏        | 12/100 [07:07<33:29, 22.83s/it]token acceptance rate: 0.9872448979591837
+ 13%|█▎        | 13/100 [07:26<31:12, 21.53s/it]token acceptance rate: 0.9925187032418953
+ 14%|█▍        | 14/100 [07:44<29:26, 20.54s/it]token acceptance rate: 0.9722921914357683
+ 15%|█▌        | 15/100 [08:02<28:17, 19.97s/it]token acceptance rate: 0.984251968503937
+ 16%|█▌        | 16/100 [08:21<27:25, 19.59s/it]token acceptance rate: 0.9818652849740933
+ 17%|█▋        | 17/100 [08:40<26:44, 19.33s/it]token acceptance rate: 0.9448621553884712
+ 18%|█▊        | 18/100 [08:59<26:21, 19.28s/it]token acceptance rate: 1.0
+ 19%|█▉        | 19/100 [09:17<25:34, 18.95s/it]token acceptance rate: 0.9850746268656716
+ 20%|██        | 20/100 [09:36<25:00, 18.75s/it]token acceptance rate: 0.9803921568627451
+ 21%|██        | 21/100 [09:54<24:31, 18.63s/it]token acceptance rate: 0.9973045822102425
+ 22%|██▏       | 22/100 [10:13<24:17, 18.69s/it]token acceptance rate: 0.9924812030075187
+ 23%|██▎       | 23/100 [10:31<23:46, 18.53s/it]token acceptance rate: 0.9872448979591837
+ 24%|██▍       | 24/100 [10:49<23:29, 18.54s/it]token acceptance rate: 0.970074812967581
+ 25%|██▌       | 25/100 [11:08<23:12, 18.56s/it]token acceptance rate: 0.9683377308707124
+ 26%|██▌       | 26/100 [11:27<23:07, 18.75s/it]token acceptance rate: 0.9776119402985075
+ 27%|██▋       | 27/100 [11:46<22:40, 18.64s/it]token acceptance rate: 0.9863387978142076
+ 28%|██▊       | 28/100 [12:05<22:33, 18.80s/it]token acceptance rate: 0.9845758354755784
+ 29%|██▉       | 29/100 [12:23<22:10, 18.75s/it]token acceptance rate: 0.937799043062201
+ 30%|███       | 30/100 [12:42<21:55, 18.79s/it]token acceptance rate: 0.9870801033591732
+ 31%|███       | 31/100 [13:01<21:31, 18.72s/it]token acceptance rate: 0.9976525821596244
+ 32%|███▏      | 32/100 [13:18<20:44, 18.31s/it]token acceptance rate: 0.9872448979591837
+ 33%|███▎      | 33/100 [13:37<20:28, 18.34s/it]token acceptance rate: 0.9753086419753086
+ 34%|███▍      | 34/100 [13:55<20:10, 18.34s/it]token acceptance rate: 0.9877750611246944
+ 35%|███▌      | 35/100 [14:13<19:47, 18.26s/it]token acceptance rate: 0.9124087591240876
+ 36%|███▌      | 36/100 [14:33<19:54, 18.67s/it]token acceptance rate: 0.9827586206896551
+ 37%|███▋      | 37/100 [14:51<19:27, 18.54s/it]token acceptance rate: 0.9292682926829269
+ 38%|███▊      | 38/100 [15:10<19:23, 18.77s/it]token acceptance rate: 0.9898477157360406
+ 39%|███▉      | 39/100 [15:29<18:56, 18.64s/it]token acceptance rate: 0.9255583126550868
+ 40%|████      | 40/100 [15:48<18:55, 18.92s/it]token acceptance rate: 0.9927884615384616
+ 41%|████      | 41/100 [16:06<18:15, 18.57s/it]token acceptance rate: 0.9921465968586387
+ 42%|████▏     | 42/100 [16:24<17:58, 18.59s/it]token acceptance rate: 0.981029810298103
+ 43%|████▎     | 43/100 [16:44<17:49, 18.76s/it]token acceptance rate: 0.9873417721518988
+ 44%|████▍     | 44/100 [17:02<17:23, 18.63s/it]token acceptance rate: 0.9776119402985075
+ 45%|████▌     | 45/100 [17:20<17:01, 18.57s/it]token acceptance rate: 0.9796954314720813
+ 46%|████▌     | 46/100 [17:39<16:43, 18.58s/it]token acceptance rate: 0.9800498753117207
+ 47%|████▋     | 47/100 [17:57<16:22, 18.53s/it]token acceptance rate: 0.9918478260869565
+ 48%|████▊     | 48/100 [18:16<16:10, 18.65s/it]token acceptance rate: 0.9747474747474747
+ 49%|████▉     | 49/100 [18:35<15:53, 18.69s/it]token acceptance rate: 0.9974025974025974
+ 50%|█████     | 50/100 [18:54<15:29, 18.59s/it]token acceptance rate: 0.9901719901719902
+ 51%|█████     | 51/100 [19:12<15:02, 18.42s/it]token acceptance rate: 0.9866666666666667
+ 52%|█████▏    | 52/100 [19:30<14:50, 18.56s/it]token acceptance rate: 0.9887323943661972
+ 53%|█████▎    | 53/100 [19:50<14:43, 18.79s/it]token acceptance rate: 0.9825
+ 54%|█████▍    | 54/100 [20:08<14:18, 18.66s/it]token acceptance rate: 0.9948717948717949
+ 55%|█████▌    | 55/100 [20:26<13:54, 18.55s/it]token acceptance rate: 0.9740932642487047
+ 56%|█████▌    | 56/100 [20:45<13:42, 18.69s/it]token acceptance rate: 0.9848866498740554
+ 57%|█████▋    | 57/100 [21:04<13:19, 18.60s/it]token acceptance rate: 0.9796954314720813
+ 58%|█████▊    | 58/100 [21:22<13:00, 18.58s/it]token acceptance rate: 0.9842931937172775
+ 59%|█████▉    | 59/100 [21:41<12:43, 18.61s/it]token acceptance rate: 1.0
+ 60%|██████    | 60/100 [21:59<12:21, 18.53s/it]token acceptance rate: 0.9794871794871794
+ 61%|██████    | 61/100 [22:18<12:04, 18.57s/it]token acceptance rate: 0.9629629629629629
+ 62%|██████▏   | 62/100 [22:37<11:54, 18.81s/it]token acceptance rate: 0.9817708333333334
+ 63%|██████▎   | 63/100 [22:56<11:35, 18.79s/it]token acceptance rate: 0.9514563106796117
+ 64%|██████▍   | 64/100 [23:15<11:15, 18.77s/it]token acceptance rate: 0.9845360824742269
+ 65%|██████▌   | 65/100 [23:33<10:54, 18.71s/it]token acceptance rate: 0.9948849104859335
+ 66%|██████▌   | 66/100 [23:52<10:32, 18.62s/it]token acceptance rate: 0.9797979797979798
+ 67%|██████▋   | 67/100 [24:10<10:13, 18.59s/it]token acceptance rate: 0.9301204819277108
+ 68%|██████▊   | 68/100 [24:30<10:00, 18.76s/it]token acceptance rate: 0.974025974025974
+ 69%|██████▉   | 69/100 [24:48<09:43, 18.82s/it]token acceptance rate: 0.9847715736040609
+ 70%|███████   | 70/100 [25:07<09:21, 18.71s/it]token acceptance rate: 0.9721518987341772
+ 71%|███████   | 71/100 [25:26<09:02, 18.71s/it]token acceptance rate: 0.9820971867007673
+ 72%|███████▏  | 72/100 [25:44<08:42, 18.67s/it]token acceptance rate: 1.0
+ 73%|███████▎  | 73/100 [26:02<08:12, 18.25s/it]token acceptance rate: 0.9872448979591837
+ 74%|███████▍  | 74/100 [26:20<07:56, 18.31s/it]token acceptance rate: 0.9849624060150376
+ 75%|███████▌  | 75/100 [26:38<07:38, 18.33s/it]token acceptance rate: 0.9814323607427056
+ 76%|███████▌  | 76/100 [26:57<07:25, 18.54s/it]token acceptance rate: 1.0
+ 77%|███████▋  | 77/100 [27:14<06:51, 17.88s/it]token acceptance rate: 0.9949109414758269
+ 78%|███████▊  | 78/100 [27:32<06:35, 18.00s/it]token acceptance rate: 0.9900497512437811
+ 79%|███████▉  | 79/100 [27:50<06:19, 18.07s/it]token acceptance rate: 0.9598997493734336
+ 80%|████████  | 80/100 [28:09<06:05, 18.29s/it]token acceptance rate: 0.9864130434782609
+ 81%|████████  | 81/100 [28:28<05:52, 18.55s/it]token acceptance rate: 0.9916666666666667
+ 82%|████████▏ | 82/100 [28:47<05:37, 18.74s/it]token acceptance rate: 0.9867021276595744
+ 83%|████████▎ | 83/100 [29:06<05:19, 18.79s/it]token acceptance rate: 0.9147869674185464
+ 84%|████████▍ | 84/100 [29:26<05:05, 19.11s/it]token acceptance rate: 0.9883177570093458
+ 85%|████████▌ | 85/100 [29:44<04:39, 18.64s/it]token acceptance rate: 0.9924433249370277
+ 86%|████████▌ | 86/100 [30:02<04:19, 18.53s/it]token acceptance rate: 0.9844559585492227
+ 87%|████████▋ | 87/100 [30:21<04:01, 18.58s/it]token acceptance rate: 0.9877450980392157
+ 88%|████████▊ | 88/100 [30:39<03:41, 18.45s/it]token acceptance rate: 0.982051282051282
+ 89%|████████▉ | 89/100 [30:58<03:23, 18.53s/it]token acceptance rate: 0.9867724867724867
+ 90%|█████████ | 90/100 [31:16<03:06, 18.64s/it]token acceptance rate: 0.9835616438356164
+ 91%|█████████ | 91/100 [31:36<02:49, 18.81s/it]token acceptance rate: 0.9840425531914894
+ 92%|█████████▏| 92/100 [31:55<02:30, 18.84s/it]token acceptance rate: 0.9872122762148338
+ 93%|█████████▎| 93/100 [32:13<02:11, 18.75s/it]token acceptance rate: 1.0
+ 94%|█████████▍| 94/100 [32:32<01:52, 18.74s/it]token acceptance rate: 0.9872773536895675
+ 95%|█████████▌| 95/100 [32:50<01:33, 18.69s/it]token acceptance rate: 0.9869791666666666
+ 96%|█████████▌| 96/100 [33:09<01:14, 18.70s/it]token acceptance rate: 0.9757869249394673
+ 97%|█████████▋| 97/100 [33:27<00:55, 18.58s/it]token acceptance rate: 0.988950276243094
+ 98%|█████████▊| 98/100 [33:47<00:37, 18.76s/it]token acceptance rate: 1.0
+ 99%|█████████▉| 99/100 [34:05<00:18, 18.55s/it]token acceptance rate: 0.979328165374677
+100%|██████████| 100/100 [34:23<00:00, 18.61s/it]100%|██████████| 100/100 [34:23<00:00, 20.64s/it]
+#Mean accepted tokens: 3.997277323998444
+Token acceptance rate: 0.9802574670533761
+/opt/conda/envs/conflayer/lib/python3.10/site-packages/huggingface_hub/file_download.py:945: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Instantiating LlamaAttention without passing a `layer_idx` is not recommended and will lead to errors during the forward call if caching is used. Please make sure to provide a `layer_idx` when creating this class.
+(Re-)Loading modeling...
+(Re-)Loading modeling...
+Output to outputs/gsm8k/gsm8k_100/model_answer/llama-2-70b/llama-2-70b-dynamic-float16-temp-0.0-top-p-0.85-seed-2024-max_new_tokens-512-opt_interval-1-bayes_interval-30-max_opt-500-max_tolerance-300-max_score-0.97-context_window-1-skip_ratio-0.45.jsonl
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:04<00:56,  4.01s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:08<00:53,  4.09s/it]Loading checkpoint shards:  20%|██        | 3/15 [00:12<00:48,  4.08s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [00:16<00:44,  4.07s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [00:20<00:40,  4.09s/it]Loading checkpoint shards:  40%|████      | 6/15 [00:24<00:36,  4.06s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [00:28<00:32,  4.06s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [00:32<00:28,  4.06s/it]Loading checkpoint shards:  60%|██████    | 9/15 [00:36<00:24,  4.04s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [00:40<00:20,  4.03s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [00:44<00:16,  4.07s/it]Loading checkpoint shards:  80%|████████  | 12/15 [00:48<00:12,  4.05s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [00:53<00:08,  4.27s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [00:57<00:04,  4.17s/it]Loading checkpoint shards: 100%|██████████| 15/15 [00:57<00:00,  2.99s/it]Loading checkpoint shards: 100%|██████████| 15/15 [00:57<00:00,  3.85s/it]
+Check model training state: False
+CUDA VISIBLE DEVICES: 0
+  0%|          | 0/100 [00:00<?, ?it/s]opt_iter 0
+opt_iter 1
+opt_iter 2
+opt_iter 3
+opt_iter 4
+opt_iter 5
+opt_iter 6
+opt_iter 7
+opt_iter 8
+opt_iter 9
+opt_iter 10
+opt_iter 11
+opt_iter 12
+opt_iter 13
+opt_iter 14
+opt_iter 15
+opt_iter 16
+opt_iter 17
+opt_iter 18
+opt_iter 19
+opt_iter 20
+opt_iter 21
+opt_iter 22
+opt_iter 23
+opt_iter 24
+opt_iter 25
+opt_iter 26
+opt_iter 27
+opt_iter 28
+opt_iter 29
+
+==============================Optimization Stopped because the score reaches the expected number!==============================
+
+Optimal Nbr of Layers Skipped: 39
+token acceptance rate: 0.922077922077922
+  1%|          | 1/100 [00:26<43:40, 26.47s/it]token acceptance rate: 0.8203991130820399
+  2%|▏         | 2/100 [00:47<37:49, 23.16s/it]token acceptance rate: 0.8666666666666667
+  3%|▎         | 3/100 [01:07<35:34, 22.01s/it]token acceptance rate: 0.9399477806788512
+  4%|▍         | 4/100 [01:27<33:39, 21.03s/it]token acceptance rate: 0.9185750636132316
+  5%|▌         | 5/100 [01:47<32:32, 20.55s/it]token acceptance rate: 0.8983957219251337
+  6%|▌         | 6/100 [02:07<32:12, 20.56s/it]token acceptance rate: 0.8042452830188679
+  7%|▋         | 7/100 [02:29<32:27, 20.94s/it]token acceptance rate: 0.8994974874371859
+  8%|▊         | 8/100 [02:49<31:39, 20.64s/it]token acceptance rate: 0.8927680798004988
+  9%|▉         | 9/100 [03:09<31:03, 20.48s/it]token acceptance rate: 0.9238845144356955
+ 10%|█         | 10/100 [03:29<30:26, 20.30s/it]token acceptance rate: 0.9166666666666666
+ 11%|█         | 11/100 [03:49<30:06, 20.30s/it]token acceptance rate: 0.9017199017199017
+ 12%|█▏        | 12/100 [04:09<29:32, 20.14s/it]token acceptance rate: 0.8957816377171216
+ 13%|█▎        | 13/100 [04:29<29:09, 20.10s/it]token acceptance rate: 0.9102564102564102
+ 14%|█▍        | 14/100 [04:49<28:47, 20.09s/it]token acceptance rate: 0.9054726368159204
+ 15%|█▌        | 15/100 [05:09<28:20, 20.01s/it]token acceptance rate: 0.899749373433584
+ 16%|█▌        | 16/100 [05:29<28:00, 20.00s/it]token acceptance rate: 0.8915343915343915
+ 17%|█▋        | 17/100 [05:50<27:56, 20.19s/it]token acceptance rate: 0.8243243243243243
+ 18%|█▊        | 18/100 [06:10<27:52, 20.39s/it]token acceptance rate: 0.828978622327791
+ 19%|█▉        | 19/100 [06:32<27:50, 20.63s/it]token acceptance rate: 0.8040540540540541
+ 20%|██        | 20/100 [06:53<27:50, 20.88s/it]token acceptance rate: 0.866504854368932
+ 21%|██        | 21/100 [07:14<27:20, 20.77s/it]token acceptance rate: 0.8603491271820449
+ 22%|██▏       | 22/100 [07:34<27:02, 20.80s/it]token acceptance rate: 0.8920308483290489
+ 23%|██▎       | 23/100 [07:55<26:34, 20.71s/it]token acceptance rate: 0.9104859335038363
+ 24%|██▍       | 24/100 [08:15<25:57, 20.50s/it]token acceptance rate: 0.890818858560794
+ 25%|██▌       | 25/100 [08:35<25:29, 20.39s/it]token acceptance rate: 0.8009478672985783
+ 26%|██▌       | 26/100 [08:57<25:41, 20.83s/it]token acceptance rate: 0.9664948453608248
+ 27%|██▋       | 27/100 [09:16<24:35, 20.22s/it]token acceptance rate: 0.9146666666666666
+ 28%|██▊       | 28/100 [09:36<24:15, 20.21s/it]token acceptance rate: 0.8967254408060453
+ 29%|██▉       | 29/100 [09:56<23:56, 20.23s/it]token acceptance rate: 0.9682539682539683
+ 30%|███       | 30/100 [10:15<23:11, 19.88s/it]token acceptance rate: 0.8664987405541562
+ 31%|███       | 31/100 [10:36<23:10, 20.15s/it]token acceptance rate: 0.8436018957345972
+ 32%|███▏      | 32/100 [10:57<23:03, 20.35s/it]token acceptance rate: 0.8837772397094431
+ 33%|███▎      | 33/100 [11:17<22:36, 20.25s/it]token acceptance rate: 0.8110599078341014
+ 34%|███▍      | 34/100 [11:38<22:40, 20.62s/it]token acceptance rate: 0.9637883008356546
+ 35%|███▌      | 35/100 [11:58<21:59, 20.31s/it]token acceptance rate: 0.9116883116883117
+ 36%|███▌      | 36/100 [12:18<21:34, 20.23s/it]token acceptance rate: 0.924433249370277
+ 37%|███▋      | 37/100 [12:38<21:01, 20.02s/it]token acceptance rate: 0.8380281690140845
+ 38%|███▊      | 38/100 [12:58<20:56, 20.26s/it]token acceptance rate: 0.9116161616161617
+ 39%|███▉      | 39/100 [13:18<20:27, 20.12s/it]token acceptance rate: 0.8266033254156769
+ 40%|████      | 40/100 [13:40<20:29, 20.48s/it]token acceptance rate: 0.889168765743073
+ 41%|████      | 41/100 [14:00<20:04, 20.42s/it]token acceptance rate: 0.874384236453202
+ 42%|████▏     | 42/100 [14:20<19:45, 20.43s/it]token acceptance rate: 0.8740740740740741
+ 43%|████▎     | 43/100 [14:41<19:25, 20.45s/it]token acceptance rate: 0.9459459459459459
+ 44%|████▍     | 44/100 [15:00<18:51, 20.21s/it]token acceptance rate: 0.96
+ 45%|████▌     | 45/100 [15:20<18:16, 19.94s/it]token acceptance rate: 0.9156010230179028
+ 46%|████▌     | 46/100 [15:40<17:56, 19.93s/it]token acceptance rate: 0.8352668213457076
+ 47%|████▋     | 47/100 [16:00<17:51, 20.21s/it]token acceptance rate: 0.8811369509043928
+ 48%|████▊     | 48/100 [16:21<17:37, 20.34s/it]token acceptance rate: 0.9336870026525199
+ 49%|████▉     | 49/100 [16:41<17:10, 20.20s/it]token acceptance rate: 0.9659685863874345
+ 50%|█████     | 50/100 [17:00<16:30, 19.82s/it]token acceptance rate: 0.8992443324937027
+ 51%|█████     | 51/100 [17:20<16:13, 19.88s/it]token acceptance rate: 0.9135135135135135
+ 52%|█████▏    | 52/100 [17:40<16:01, 20.04s/it]token acceptance rate: 0.9548022598870056
+ 53%|█████▎    | 53/100 [18:00<15:39, 19.99s/it]token acceptance rate: 0.8770685579196218
+ 54%|█████▍    | 54/100 [18:20<15:20, 20.01s/it]token acceptance rate: 0.9187817258883249
+ 55%|█████▌    | 55/100 [18:40<14:55, 19.91s/it]token acceptance rate: 0.811529933481153
+ 56%|█████▌    | 56/100 [19:01<14:50, 20.25s/it]token acceptance rate: 0.863080684596577
+ 57%|█████▋    | 57/100 [19:22<14:35, 20.35s/it]token acceptance rate: 0.8585858585858586
+ 58%|█████▊    | 58/100 [19:43<14:23, 20.56s/it]token acceptance rate: 0.9331550802139037
+ 59%|█████▉    | 59/100 [20:02<13:54, 20.34s/it]token acceptance rate: 0.9236842105263158
+ 60%|██████    | 60/100 [20:22<13:28, 20.21s/it]token acceptance rate: 0.9168765743073047
+ 61%|██████    | 61/100 [20:42<13:02, 20.06s/it]token acceptance rate: 0.9051490514905149
+ 62%|██████▏   | 62/100 [21:03<12:47, 20.19s/it]token acceptance rate: 0.8880407124681934
+ 63%|██████▎   | 63/100 [21:23<12:30, 20.28s/it]token acceptance rate: 0.9701897018970189
+ 64%|██████▍   | 64/100 [21:42<11:58, 19.96s/it]token acceptance rate: 0.8190709046454768
+ 65%|██████▌   | 65/100 [22:04<11:55, 20.44s/it]token acceptance rate: 0.9746478873239437
+ 66%|██████▌   | 66/100 [22:23<11:25, 20.17s/it]token acceptance rate: 0.9147869674185464
+ 67%|██████▋   | 67/100 [22:43<11:01, 20.04s/it]token acceptance rate: 0.8376470588235294
+ 68%|██████▊   | 68/100 [23:04<10:50, 20.34s/it]token acceptance rate: 0.8975
+ 69%|██████▉   | 69/100 [23:24<10:28, 20.26s/it]token acceptance rate: 0.8921052631578947
+ 70%|███████   | 70/100 [23:45<10:10, 20.34s/it]token acceptance rate: 0.941952506596306
+ 71%|███████   | 71/100 [24:04<09:43, 20.12s/it]token acceptance rate: 0.938337801608579
+ 72%|███████▏  | 72/100 [24:24<09:19, 20.00s/it]token acceptance rate: 0.9925558312655087
+ 73%|███████▎  | 73/100 [24:42<08:43, 19.39s/it]token acceptance rate: 0.907035175879397
+ 74%|███████▍  | 74/100 [25:02<08:28, 19.56s/it]token acceptance rate: 0.9037037037037037
+ 75%|███████▌  | 75/100 [25:22<08:11, 19.64s/it]token acceptance rate: 0.9635854341736695
+ 76%|███████▌  | 76/100 [25:41<07:51, 19.65s/it]token acceptance rate: 0.9978448275862069
+ 77%|███████▋  | 77/100 [25:58<07:08, 18.65s/it]token acceptance rate: 0.9305912596401028
+ 78%|███████▊  | 78/100 [26:17<06:56, 18.92s/it]token acceptance rate: 0.9394673123486683
+ 79%|███████▉  | 79/100 [26:36<06:36, 18.90s/it]token acceptance rate: 0.7969432314410481
+ 80%|████████  | 80/100 [26:58<06:32, 19.64s/it]token acceptance rate: 0.881578947368421
+ 81%|████████  | 81/100 [27:18<06:20, 20.00s/it]token acceptance rate: 0.8909090909090909
+ 82%|████████▏ | 82/100 [27:39<06:02, 20.16s/it]token acceptance rate: 0.9291139240506329
+ 83%|████████▎ | 83/100 [27:58<05:39, 19.95s/it]token acceptance rate: 0.8822055137844611
+ 84%|████████▍ | 84/100 [28:19<05:21, 20.07s/it]token acceptance rate: 0.9537275064267352
+ 85%|████████▌ | 85/100 [28:38<04:56, 19.77s/it]token acceptance rate: 0.9335038363171355
+ 86%|████████▌ | 86/100 [28:57<04:35, 19.70s/it]token acceptance rate: 0.9194805194805195
+ 87%|████████▋ | 87/100 [29:17<04:16, 19.75s/it]token acceptance rate: 0.8446601941747572
+ 88%|████████▊ | 88/100 [29:38<04:01, 20.12s/it]token acceptance rate: 0.8947368421052632
+ 89%|████████▉ | 89/100 [29:58<03:41, 20.12s/it]token acceptance rate: 0.9293193717277487
+ 90%|█████████ | 90/100 [30:18<03:20, 20.02s/it]token acceptance rate: 0.9209809264305178
+ 91%|█████████ | 91/100 [30:38<03:00, 20.10s/it]token acceptance rate: 0.8790123456790123
+ 92%|█████████▏| 92/100 [30:59<02:41, 20.18s/it]token acceptance rate: 0.9130434782608695
+ 93%|█████████▎| 93/100 [31:19<02:20, 20.10s/it]token acceptance rate: 0.8830845771144279
+ 94%|█████████▍| 94/100 [31:39<02:00, 20.16s/it]token acceptance rate: 0.8154897494305239
+ 95%|█████████▌| 95/100 [32:00<01:42, 20.47s/it]token acceptance rate: 0.7361419068736141
+ 96%|█████████▌| 96/100 [32:23<01:24, 21.21s/it]token acceptance rate: 0.9926108374384236
+ 97%|█████████▋| 97/100 [32:41<01:00, 20.22s/it]token acceptance rate: 0.8546365914786967
+ 98%|█████████▊| 98/100 [33:02<00:40, 20.46s/it]token acceptance rate: 0.8795180722891566
+ 99%|█████████▉| 99/100 [33:22<00:20, 20.37s/it]token acceptance rate: 0.8132387706855791
+100%|██████████| 100/100 [33:44<00:00, 20.72s/it]100%|██████████| 100/100 [33:44<00:00, 20.24s/it]
+#Mean accepted tokens: 3.2613636363636362
+Token acceptance rate: 0.8932046138415246

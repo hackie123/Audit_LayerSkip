@@ -1,0 +1,21 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=1.5b] QWEN_SPEC set to Qwen/Qwen2.5-1.5B-Instruct (28 layers, hidden=1536)
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   1%|▏         | 5/338 [00:00<00:07, 47.27it/s]Loading weights:  12%|█▏        | 39/338 [00:00<00:01, 203.99it/s]Loading weights:  19%|█▉        | 65/338 [00:00<00:01, 221.72it/s]Loading weights:  28%|██▊       | 93/338 [00:00<00:01, 241.74it/s]Loading weights:  36%|███▌      | 122/338 [00:00<00:00, 256.24it/s]Loading weights:  44%|████▍     | 148/338 [00:00<00:00, 252.83it/s]Loading weights:  51%|█████▏    | 174/338 [00:00<00:00, 252.66it/s]Loading weights:  61%|██████    | 207/338 [00:00<00:00, 251.78it/s]Loading weights:  72%|███████▏  | 243/338 [00:00<00:00, 282.47it/s]Loading weights:  80%|████████  | 272/338 [00:01<00:00, 268.46it/s]Loading weights:  90%|████████▉ | 303/338 [00:01<00:00, 279.96it/s]Loading weights:  98%|█████████▊| 332/338 [00:01<00:00, 275.74it/s]Loading weights: 100%|██████████| 338/338 [00:01<00:00, 259.18it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ LayerDrop: train-time rate=0.2, inference-time fixed drop set (6/28 layers): [1, 5, 9, 13, 17, 21]
+  [10/100] routed=29.4ms  baseline=40.7ms  identical_so_far=4/10
+  [20/100] routed=23.9ms  baseline=29.7ms  identical_so_far=10/20
+  [30/100] routed=23.8ms  baseline=29.4ms  identical_so_far=16/30
+  [40/100] routed=27.5ms  baseline=34.0ms  identical_so_far=20/40
+  [50/100] routed=23.9ms  baseline=31.9ms  identical_so_far=23/50
+  [60/100] routed=33.0ms  baseline=40.7ms  identical_so_far=29/60
+  [70/100] routed=24.3ms  baseline=29.4ms  identical_so_far=34/70
+  [80/100] routed=23.7ms  baseline=29.7ms  identical_so_far=38/80
+  [90/100] routed=916.2ms  baseline=1106.4ms  identical_so_far=40/90
+  [100/100] routed=23.9ms  baseline=29.7ms  identical_so_far=49/100
+
+Saved 100 query cost records -> results/layerdrop_timed_cnndm_15b_seed2024/layerdrop_query_costs.json
+Identical routed/baseline outputs: 49/100 (expected some overlap on short/easy prompts)

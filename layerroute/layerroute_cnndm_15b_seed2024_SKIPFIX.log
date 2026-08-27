@@ -1,0 +1,22 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=1.5b] QWEN_SPEC set to Qwen/Qwen2.5-1.5B-Instruct (28 layers, hidden=1536)
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   0%|          | 1/338 [00:01<07:03,  1.26s/it]Loading weights:   5%|▍         | 16/338 [00:01<00:20, 15.70it/s]Loading weights:   7%|▋         | 24/338 [00:01<00:14, 21.73it/s]Loading weights:   9%|▉         | 31/338 [00:01<00:14, 20.72it/s]Loading weights:  11%|█         | 36/338 [00:02<00:13, 23.05it/s]Loading weights:  12%|█▏        | 41/338 [00:02<00:15, 19.26it/s]Loading weights:  15%|█▌        | 51/338 [00:02<00:10, 27.06it/s]Loading weights:  16%|█▋        | 55/338 [00:02<00:12, 23.20it/s]Loading weights:  19%|█▉        | 64/338 [00:03<00:09, 29.29it/s]Loading weights:  20%|██        | 68/338 [00:03<00:10, 25.42it/s]Loading weights:  25%|██▌       | 85/338 [00:03<00:05, 46.17it/s]Loading weights:  27%|██▋       | 92/338 [00:03<00:08, 28.02it/s]Loading weights:  29%|██▉       | 99/338 [00:04<00:08, 29.14it/s]Loading weights:  31%|███       | 104/338 [00:04<00:08, 28.16it/s]Loading weights:  36%|███▌      | 121/338 [00:04<00:04, 47.33it/s]Loading weights:  38%|███▊      | 129/338 [00:04<00:05, 40.27it/s]Loading weights:  40%|████      | 136/338 [00:04<00:04, 40.86it/s]Loading weights:  42%|████▏     | 142/338 [00:05<00:04, 43.53it/s]Loading weights:  44%|████▍     | 148/338 [00:05<00:04, 42.26it/s]Loading weights:  46%|████▌     | 155/338 [00:05<00:03, 47.16it/s]Loading weights:  48%|████▊     | 161/338 [00:05<00:06, 25.39it/s]Loading weights:  51%|█████     | 171/338 [00:06<00:06, 24.75it/s]Loading weights:  52%|█████▏    | 175/338 [00:06<00:06, 24.36it/s]Loading weights:  54%|█████▍    | 183/338 [00:06<00:05, 27.53it/s]Loading weights:  55%|█████▌    | 187/338 [00:06<00:06, 23.32it/s]Loading weights:  58%|█████▊    | 197/338 [00:07<00:04, 29.79it/s]Loading weights:  62%|██████▏   | 208/338 [00:07<00:03, 39.14it/s]Loading weights:  64%|██████▍   | 218/338 [00:07<00:02, 46.47it/s]Loading weights:  66%|██████▋   | 224/338 [00:07<00:03, 37.95it/s]Loading weights:  71%|███████▏  | 241/338 [00:07<00:01, 58.05it/s]Loading weights:  74%|███████▎  | 249/338 [00:08<00:02, 41.99it/s]Loading weights:  78%|███████▊  | 262/338 [00:08<00:01, 52.82it/s]Loading weights:  80%|███████▉  | 270/338 [00:08<00:02, 30.91it/s]Loading weights:  83%|████████▎ | 279/338 [00:09<00:01, 34.31it/s]Loading weights:  84%|████████▍ | 285/338 [00:09<00:01, 32.90it/s]Loading weights:  88%|████████▊ | 296/338 [00:09<00:00, 43.08it/s]Loading weights:  90%|████████▉ | 303/338 [00:09<00:00, 41.49it/s]Loading weights:  91%|█████████▏| 309/338 [00:09<00:00, 41.02it/s]Loading weights:  93%|█████████▎| 315/338 [00:09<00:00, 38.35it/s]Loading weights:  95%|█████████▍| 320/338 [00:10<00:00, 36.81it/s]Loading weights:  97%|█████████▋| 327/338 [00:10<00:00, 22.10it/s]Loading weights: 100%|██████████| 338/338 [00:10<00:00, 31.30it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ RouterCollection: 43,036 params (28 × Linear(1536,1))
+  [10/100] routed=51.6ms  baseline=51.3ms  identical_so_far=8/10
+  [20/100] routed=46.2ms  baseline=47.3ms  identical_so_far=15/20
+  [30/100] routed=45.1ms  baseline=46.8ms  identical_so_far=24/30
+  [40/100] routed=45.9ms  baseline=46.7ms  identical_so_far=30/40
+  [50/100] routed=50.2ms  baseline=51.7ms  identical_so_far=37/50
+  [60/100] routed=45.0ms  baseline=47.0ms  identical_so_far=47/60
+  [70/100] routed=48.6ms  baseline=53.0ms  identical_so_far=56/70
+  [80/100] routed=62.4ms  baseline=56.1ms  identical_so_far=64/80
+  [90/100] routed=1744.1ms  baseline=1800.9ms  identical_so_far=71/90
+  [100/100] routed=46.5ms  baseline=48.0ms  identical_so_far=80/100
+
+Saved 100 query cost records -> results/layerroute_timed_cnndm_15b_seed2024_SKIPFIX/layerroute_query_costs.json
+Identical routed/baseline outputs: 80/100 (SUSPICIOUS -- gating may not be taking effect, investigate before trusting results)
+NOTE: verify `generated_text` against gold answers separately for quality_score (exact_match/ROUGE) before feeding into cost_accounting.py

@@ -1,0 +1,22 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+  [model_scale=1.5b] QWEN_SPEC set to Qwen/Qwen2.5-1.5B-Instruct (28 layers, hidden=1536)
+  Loading 'Qwen/Qwen2.5-1.5B-Instruct'...
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]Loading weights:   6%|▌         | 20/338 [00:00<00:01, 191.87it/s]Loading weights:  16%|█▌        | 53/338 [00:00<00:01, 269.27it/s]Loading weights:  26%|██▌       | 87/338 [00:00<00:00, 294.12it/s]Loading weights:  38%|███▊      | 130/338 [00:00<00:00, 344.53it/s]Loading weights:  51%|█████     | 173/338 [00:00<00:00, 374.02it/s]Loading weights:  62%|██████▏   | 211/338 [00:00<00:00, 375.60it/s]Loading weights:  74%|███████▎  | 249/338 [00:00<00:00, 375.10it/s]Loading weights:  87%|████████▋ | 293/338 [00:00<00:00, 393.59it/s]Loading weights: 100%|██████████| 338/338 [00:00<00:00, 369.45it/s]
+  ✓ Pretrained weights loaded
+  ✓ Frozen 1,543,714,304 backbone parameters
+  ✓ LoRA applied to 112 projections — 2,179,072 trainable params
+  ✓ RouterCollection: 43,036 params (28 × Linear(1536,1))
+  [10/100] routed=46.4ms  baseline=47.7ms  identical_so_far=7/10
+  [20/100] routed=2290.0ms  baseline=2373.7ms  identical_so_far=14/20
+  [30/100] routed=49.1ms  baseline=53.3ms  identical_so_far=21/30
+  [40/100] routed=54.8ms  baseline=56.4ms  identical_so_far=29/40
+  [50/100] routed=45.1ms  baseline=48.2ms  identical_so_far=35/50
+  [60/100] routed=1589.3ms  baseline=1697.6ms  identical_so_far=43/60
+  [70/100] routed=7040.2ms  baseline=7589.2ms  identical_so_far=50/70
+  [80/100] routed=50.3ms  baseline=49.1ms  identical_so_far=57/80
+  [90/100] routed=46.2ms  baseline=47.4ms  identical_so_far=66/90
+  [100/100] routed=50.5ms  baseline=51.4ms  identical_so_far=73/100
+
+Saved 100 query cost records -> results/layerroute_timed_cnndm_15b_seed42_SKIPFIX/layerroute_query_costs.json
+Identical routed/baseline outputs: 73/100 (SUSPICIOUS -- gating may not be taking effect, investigate before trusting results)
+NOTE: verify `generated_text` against gold answers separately for quality_score (exact_match/ROUGE) before feeding into cost_accounting.py

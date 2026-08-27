@@ -1,0 +1,2 @@
+gate_min,gate_max,gate_variance,n_skip_candidates,tool_avg_layers_run,tool_avg_skip_pct,plan_avg_layers_run,plan_avg_skip_pct,skip_diff_pct,ppl_full_tool,ppl_gated_tool,ppl_delta_tool,ppl_full_plan,ppl_gated_plan,ppl_delta_plan,flops_full,flops_tool,flops_plan,flops_reduction_tool,flops_reduction_plan,lora_loss_delta_tool,lora_loss_delta_plan,checkpoint,n_eval,lora_r,model_family
+0.2733,0.729,0.051507,9,19.2,12.71,17.46,20.63,-7.92,4.705,3.766,-0.94,7.784,6.133,-1.651,1015759765504,886481249894,806143886622,12.7,20.6,nan,nan,checkpoints_llama/best_adapters.pt,100,8,llama
