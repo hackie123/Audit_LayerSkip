@@ -14,7 +14,7 @@ flowchart LR
     B -->|periodic-step<br/>search-based| D[SWIFT]
     B -->|trained routing<br/>per-sequence| E[LayerRoute]
     B -->|trained routing<br/>fixed/global| F[LayerDrop]
-    C --> G[Main comparison<br/>Table 1 &amp; 2]
+    C --> G[Main comparison<br/>Table 2]
     D --> G
     E --> H[Supplemental analysis<br/>Table 4]
     F --> H
@@ -42,7 +42,7 @@ Audit_LayerSkip/
 ├── layerroute/                  # LayerRoute + LayerDrop: training & evaluation
 │   ├── models/
 │   │   ├── gated_qwen.py        # LayerRoute (Qwen2.5)
-│   │   ├── gated_llama.py       # LayerRoute (TinyLlama, §6)
+│   │   ├── gated_llama.py       # LayerRoute (TinyLlama) — not part of the published paper, see §5
 │   │   ├── layerdrop_qwen.py    # LayerDrop
 │   │   ├── router.py
 │   │   └── lora.py
@@ -59,7 +59,7 @@ Audit_LayerSkip/
 ├── results/                     # 12 "genuine" audit reports — main comparison (§3)
 ├── stage3_results/
 │   ├── STAGE3_NOTES.txt         # Running project notes / experiment log
-│   └── tinyllama_layerroute/    # TinyLlama generalization results (§6)
+│   └── tinyllama_layerroute/    # TinyLlama results — not part of the published paper, see §5
 ├── build_audit_report.py        # Combines a scale/task/seed's raw outputs into one report
 ├── multi_seed_sweep.sh
 └── cnndm_sweep.sh
@@ -124,8 +124,8 @@ flowchart LR
     A["eval.sh / eval_llama.sh<br/>(edit MODEL_PATH, DATA_NUM=100,<br/>SEED, TASK_NAME per cell)"] --> B[Per-query JSONL outputs]
     B --> C[build_audit_report.py]
     C --> D["audit_report_&lt;task&gt;_&lt;scale&gt;_seed&lt;seed&gt;_genuine.json<br/>(results/)"]
-    D --> E[Table 1: Accuracy]
-    D --> F[Table 2 &amp; 3: Cost + search-overhead decomposition]
+    D --> E[Table 2: Accuracy]
+    D --> F[Table 3: Cost + search-overhead decomposition]
 ```
 
 **Step 1 — run each method for one (task, scale, seed) cell.** Edit `eval.sh` / `eval_llama.sh` (or pass flags directly) for each combination:
@@ -157,7 +157,7 @@ python -m evaluation_llama.inference_swift \
 
 Repeat for `--task-name {gsm8k, cnndm}` × `--model-path {Qwen/Qwen2.5-0.5B-Instruct, Qwen/Qwen2.5-1.5B-Instruct}` × `--seed {2024, 42, 123}` — **12 cells total**.
 
-**Step 2 — combine into an audit report per cell.** `build_audit_report.py` merges ConfLayers, SWIFT, and LayerRoute's per-query cost files into one report (LayerRoute's file is also required — its CNN/DM gold summaries are reused to avoid a redundant dataset load, per the script's own docstring); the paper's Table 1/2 uses only the Vanilla/ConfLayers/SWIFT numbers from it:
+**Step 2 — combine into an audit report per cell.** `build_audit_report.py` merges ConfLayers, SWIFT, and LayerRoute's per-query cost files into one report (LayerRoute's file is also required — its CNN/DM gold summaries are reused to avoid a redundant dataset load, per the script's own docstring); the paper's Table 2/3 uses only the Vanilla/ConfLayers/SWIFT numbers from it:
 
 ```bash
 python build_audit_report.py \
@@ -182,14 +182,14 @@ for name, m in d['methods'].items():
 "
 ```
 
-### Expected results (Table 1 & 2 in the paper)
+### Expected results (Table 2 in the paper)
 
-| Task | Scale | Vanilla | ConfLayers | SWIFT |
-|---|---|---|---|---|
-| GSM8K | 0.5B | 0.180 | 0.147 | **0.303** |
-| GSM8K | 1.5B | **0.413** | 0.077 | 0.307 |
-| CNN/DM | 0.5B | 0.169 | 0.178 | **0.190** |
-| CNN/DM | 1.5B | 0.204 | 0.215 | **0.219** |
+| Task   | Scale | Vanilla   | ConfLayers | SWIFT     |
+| ------ | ----- | --------- | ---------- | --------- |
+| GSM8K  | 0.5B  | 0.180     | 0.147      | **0.303** |
+| GSM8K  | 1.5B  | **0.413** | 0.077      | 0.307     |
+| CNN/DM | 0.5B  | 0.169     | 0.178      | **0.190** |
+| CNN/DM | 1.5B  | 0.204     | 0.215      | **0.219** |
 
 ---
 
@@ -225,6 +225,8 @@ python main.py --mode train --method layerdrop --model_family qwen --model_scale
   --max_steps 3000 --output_dir ./checkpoints_layerdrop_15b
 ```
 
+> **Note:** `./checkpoints_0.5B_backup` is the live checkpoint feeding Table 4's 0.5B LayerRoute numbers, despite the `_backup` name — see the repo-hygiene note below.
+
 **Step 2 — measure accuracy + cost** for all 2 tasks × 2 scales × 3 seeds (24 cells total, per method):
 
 ```bash
@@ -237,7 +239,7 @@ python run_layerroute_timed.py \
 
 Repeat across `--dataset {gsm8k, cnndm}` × `--model_scale {0.5b, 1.5b}` × `--seed {2024, 42, 123}`, swapping `--ckpt` and the script (`run_layerdrop_timed.py`) for LayerDrop.
 
-> **Note on the measurement protocol** (paper §7.2): both scripts verify, not assume, three properties — the gated forward pass genuinely differs from an ungated one; the baseline genuinely forces every layer open (not just an unused flag); and inference genuinely skips closed-gate layers rather than computing and discarding them. If you modify these scripts, re-verify all three before trusting new numbers.
+> **Note on the measurement protocol** (paper §7.2): both scripts verify, not assume, three properties — the gated forward pass genuinely differs from an ungated one; the baseline genuinely forces every layer open (not just an unused flag); and inference genuinely skips closed-gate layers rather than computing and discarding them. If you modify these scripts, re-verify all three before trusting new numbers. LayerRoute is trained against a gate-regularized language-modeling objective only (Eq. 9 in the paper) — no auxiliary classification signal is used; its original release's tool-call/planning skip-differential claim did not reproduce under multi-seed testing and has been withdrawn (paper §7.1, footnote 1).
 
 **Step 3 — score the full matrix:**
 
@@ -247,18 +249,20 @@ python score_full_matrix.py
 
 ### Expected results (Table 4 in the paper)
 
-| Task | Scale | LayerRoute acc. | LayerRoute speedup | LayerDrop acc. | LayerDrop speedup |
-|---|---|---|---|---|---|
-| GSM8K | 0.5B | 0.137 | 1.08× | 0.010 | 1.30× |
-| GSM8K | 1.5B | 0.003 | 1.32× | 0.060 | 1.25× |
-| CNN/DM | 0.5B | 0.102 | 1.33× | 0.091 | 1.29× |
-| CNN/DM | 1.5B | 0.150 | 1.09× | 0.134 | 1.25× |
+| Task   | Scale | LayerRoute acc. | LayerRoute speedup | LayerDrop acc. | LayerDrop speedup |
+| ------ | ----- | --------------- | ------------------ | --------------- | ------------------ |
+| GSM8K  | 0.5B  | 0.137           | 1.08×              | 0.010           | 1.30×              |
+| GSM8K  | 1.5B  | 0.003           | 1.32×              | 0.060           | 1.25×              |
+| CNN/DM | 0.5B  | 0.102           | 1.33×              | 0.091           | 1.29×              |
+| CNN/DM | 1.5B  | 0.150           | 1.09×              | 0.134           | 1.25×              |
 
 ---
 
-## 5. Reproducing the TinyLlama generalization study (§8)
+## 5. Additional material: LayerRoute on TinyLlama (not part of the published paper)
 
-Tests whether LayerRoute's skip-differential (learned gate skips more on tool-call than planning steps) transfers to a different architecture.
+`layerroute/models/gated_llama.py`, `layerroute/checkpoints_llama*`, and `stage3_results/tinyllama_layerroute/` hold an earlier investigation into whether LayerRoute's behavior transfers to TinyLlama-1.1B. **This material was cut from the paper** — the generalization-limitation section it originally supported was removed in the v2 revision alongside the retraction of the tool-call/planning skip-differential claim it was testing (§7.1, footnote 1), so there is no longer a paper section or table for these results to reproduce against.
+
+The code and checkpoints are left in the repo for reference. If you want to run it anyway:
 
 ```bash
 cd layerroute
@@ -271,7 +275,7 @@ python evaluate.py --model_family llama --ckpt checkpoints_llama/best_adapters.p
 
 > **Gotcha:** several scripts in this repo (including `evaluate.py`) mutate a shared `QWEN_SPEC` dict in-place rather than taking an explicit `--model_scale` flag; its on-disk default may be left at whichever scale a previous run last set. `evaluate.py --model_family llama` uses `LLAMA_SPEC` instead, so this doesn't affect the TinyLlama study specifically — but if you see a `size mismatch` error when loading a Qwen checkpoint, check `utils/config.py`'s `QWEN_SPEC` default first.
 
-Results land in `stage3_results/tinyllama_layerroute/paper_results/` — expect the differential to invert in sign relative to Qwen2.5 (paper Table 5).
+Results land in `stage3_results/tinyllama_layerroute/paper_results/`.
 
 ---
 
@@ -282,11 +286,9 @@ flowchart TB
     Start([Start]) --> Env[§2 Environment setup]
     Env --> Main["§3 Main comparison<br/>ConfLayers + SWIFT"]
     Env --> Supp["§4 Supplemental analysis<br/>LayerRoute + LayerDrop"]
-    Main --> T12["Tables 1–2<br/>(main results)"]
+    Main --> T23["Tables 2-3<br/>(main results)"]
     Supp --> T4["Table 4<br/>(supplemental results)"]
-    Env --> Tiny["§5 TinyLlama study"]
-    Tiny --> T5["Table 5<br/>(generalization)"]
-    T12 & T4 & T5 --> Done([Reproduces paper.pdf])
+    T23 & T4 --> Done([Reproduces paper.pdf])
 ```
 
 ---
@@ -294,9 +296,14 @@ flowchart TB
 ## Citation
 
 ```bibtex
-@inproceedings{anonymous2027auditlayerskip,
+@article{sikdar2026auditlayerskip,
   title={A Rigor-Matched Audit of Periodic-Step Layer Skipping for Efficient LLM Inference: ConfLayers versus SWIFT, with a Supplemental Analysis of Trained Routing Alternatives},
-  author={Sikdar, Prateek Kumar and Anant, Atul and Ghosh, Arpan},
-  year={2027}
+  author={Sikdar, Prateek Kumar},
+  journal={arXiv preprint arXiv:2608.28846},
+  year={2026}
 }
 ```
+
+## About
+
+No description, website, or topics provided.
